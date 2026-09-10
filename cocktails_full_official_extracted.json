@@ -1,0 +1,290 @@
+[
+  {
+    "num": 1,
+    "id": "aviation",
+    "name": "Aviation",
+    "glass": "Nick & Nora",
+    "garnish": "Cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Nick & Nora de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre à la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie."
+  },
+  {
+    "num": 2,
+    "id": "bamboo",
+    "name": "Bamboo",
+    "glass": "Nick & Nora",
+    "garnish": "Zeste de citron exprimé",
+    "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’un zeste de citron exprimé."
+  },
+  {
+    "num": 3,
+    "id": "bramble",
+    "name": "Bramble",
+    "glass": "Rocks",
+    "garnish": "Demi-tranche de citron et deux mûres",
+    "technique": "Mirer et remplir le verre Rocks de glace pilée. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace pilée si besoin. Verser le sirop de sucre, le jus de citron et le gin. Mélanger à la cuillère de bar. Napper de crème de mûre. Garnir d’une demi-tranche de citron et de deux mûres. Ajouter une paille courte."
+  },
+  {
+    "num": 4,
+    "id": "caipirinha",
+    "name": "Caipirinha",
+    "glass": "Rocks",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir le verre Rocks de glace pilée. Rafraîchir le verre avec la cuillère de bar. Retirer la glace du verre. Piler le demi-citron vert coupé en morceaux et le sucre en poudre. Compléter le verre de glace pilée. Verser la mesure de cachaça. Mélanger et compléter de glace pilée. Ajouter une paille courte."
+  },
+  {
+    "num": 5,
+    "id": "cosmopolitan",
+    "name": "Cosmopolitan",
+    "glass": "Coupe",
+    "garnish": "Zeste de citron vert exprimé",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’un zeste de citron vert exprimé."
+  },
+  {
+    "num": 6,
+    "id": "daiquiri",
+    "name": "Daiquiri",
+    "glass": "Coupe",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Diluer le sucre en mélangeant quelques secondes avec une cuillère de bar. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi."
+  },
+  {
+    "num": 7,
+    "id": "dry_martini",
+    "name": "Dry Martini",
+    "glass": "Martini",
+    "garnish": "Olive verte ou zeste de citron exprimé",
+    "technique": "Mirer et remplir le verre Martini et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’une olive verte ou d’un zeste de citron exprimé."
+  },
+  {
+    "num": 8,
+    "id": "espresso_martini",
+    "name": "Espresso Martini",
+    "glass": "Coupe",
+    "garnish": "Trois grains de café déposés sur la mousse",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper énergiquement puis passer dans le verre rafraîchi. Garnir de trois grains de café déposés sur la mousse."
+  },
+  {
+    "num": 9,
+    "id": "gin_basil_smash",
+    "name": "Gin Basil Smash",
+    "glass": "Rocks",
+    "garnish": "Tête de basilic frais",
+    "technique": "Mirer et remplir le verre Rocks de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Déposer les feuilles de basilic dans la petite timbale du shaker, verser le jus de citron et le sirop de sucre. Piler délicatement. Verser le gin. Égoutter le verre et compléter de glace si besoin. Égoutter la grande timbale du shaker. Frapper puis double filtrer dans le verre rempli de glace. Garnir d’une tête de basilic frais."
+  },
+  {
+    "num": 10,
+    "id": "manhattan",
+    "name": "Manhattan",
+    "glass": "Nick & Nora",
+    "garnish": "Cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie."
+  },
+  {
+    "num": 11,
+    "id": "margarita",
+    "name": "Margarita",
+    "glass": "Coupe",
+    "garnish": "Givrage au sel fin",
+    "technique": "Mirer et givrer le verre Coupe au sel fin. Remplir le verre et la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi."
+  },
+  {
+    "num": 12,
+    "id": "mint_julep",
+    "name": "Mint Julep",
+    "glass": "Julep",
+    "garnish": "Tête de menthe fraîche",
+    "technique": "Mirer et rafraîchir le gobelet Julep. Piler délicatement la menthe et le sucre en poudre avec un peu d’eau-de-vie. Remplir de glace pilée, verser le reste d’eau-de-vie brune. Mélanger avec la cuillère de bar. Compléter de glace pilée en dôme. Garnir d’une tête de menthe fraîche et ajouter une paille courte."
+  },
+  {
+    "num": 13,
+    "id": "negroni",
+    "name": "Negroni",
+    "glass": "Rocks",
+    "garnish": "Demi-tranche d’orange",
+    "technique": "Mirer et remplir le verre Rocks de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser les ingrédients, mélanger à la cuillère de bar. Garnir d’une demi-tranche d’orange."
+  },
+  {
+    "num": 14,
+    "id": "old_fashioned",
+    "name": "Old-Fashioned",
+    "glass": "Rocks",
+    "garnish": "Zeste d’orange exprimé et cerise à l’eau-de-vie",
+    "technique": "Mirer le verre Rocks. Déposer le morceau de sucre brun au fond du verre, imbiber de 2 traits d’aromatic bitters et d’un filet d’eau ou soda. Écraser au pilon pour dissoudre le sucre. Remplir de glace, verser l’eau-de-vie brune progressivement en mélangeant à la cuillère de bar. Garnir d’un zeste d’orange exprimé et d’une cerise à l’eau-de-vie."
+  },
+  {
+    "num": 15,
+    "id": "penicillin",
+    "name": "Penicillin",
+    "glass": "Rocks",
+    "garnish": "Lamelle de gingembre",
+    "technique": "Mirer et remplir le verre Rocks de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le jus de citron, sirop de miel, jus de gingembre et blend whisky dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rafraîchi avec glace. Faire flotter (float) le whisky tourbé en surface. Garnir d’une lamelle de gingembre."
+  },
+  {
+    "num": 16,
+    "id": "pornstar_martini",
+    "name": "Pornstar Martini",
+    "glass": "Coupe",
+    "garnish": "Demi-fruit de la passion",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale. Frapper puis passer dans le verre rafraîchi. Garnir d’un demi-fruit de la passion déposé à la surface. Servir accompagné d’un shot de champagne."
+  },
+  {
+    "num": 17,
+    "id": "sidecar",
+    "name": "Sidecar",
+    "glass": "Coupe",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi."
+  },
+  {
+    "num": 18,
+    "id": "sour",
+    "name": "Sour",
+    "glass": "Rocks",
+    "garnish": "Cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Rocks de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Diluer le sucre en mélangeant quelques secondes avec une cuillère de bar. Égoutter le verre et compléter de glace si besoin. Frapper en dry shake (sans glace). Remplir la grande timbale de glace, frapper à nouveau puis passer dans le verre rempli de glace. Garnir d’une cerise à l’eau-de-vie."
+  },
+  {
+    "num": 19,
+    "id": "americano",
+    "name": "Americano",
+    "glass": "Highball",
+    "garnish": "Demi-tranche d’orange et demi-tranche de citron",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le vermouth rouge, le bitter et compléter d’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une demi-tranche d’orange et d’une demi-tranche de citron."
+  },
+  {
+    "num": 20,
+    "id": "bellini",
+    "name": "Bellini",
+    "glass": "Flûte",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir la Flûte de glace. Rafraîchir le verre avec la cuillère de bar. Retirer la glace du verre. Verser la purée de pêche blanche puis le champagne. Mélanger délicatement à la cuillère de bar."
+  },
+  {
+    "num": 21,
+    "id": "bloody_mary",
+    "name": "Bloody Mary",
+    "glass": "Highball",
+    "garnish": "Demi-tranche de citron et branche de céleri",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Assaisonner de sel au céleri, de quelques gouttes de Tabasco et d’un trait de sauce anglaise. Verser les ingrédients, puis mélanger. Garnir d’une demi-tranche de citron et d’une branche de céleri. Ajouter un agitateur."
+  },
+  {
+    "num": 22,
+    "id": "champagne_cocktail",
+    "name": "Champagne Cocktail",
+    "glass": "Flûte",
+    "garnish": "Zeste de citron exprimé",
+    "technique": "Mirer la Flûte. Placer le morceau de sucre blanc au fond du verre, imbiber d’un trait d’aromatic bitters. Verser le cognac puis compléter délicatement de champagne frais. Garnir d’un zeste de citron exprimé."
+  },
+  {
+    "num": 23,
+    "id": "dark_and_stormy",
+    "name": "Dark and Stormy",
+    "glass": "Highball",
+    "garnish": "Quartier de citron vert",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le jus de citron vert et la ginger beer. Verser le black rum délicatement en surface pour créer l’étage (float). Garnir d’un quartier de citron vert."
+  },
+  {
+    "num": 24,
+    "id": "fizz",
+    "name": "Fizz",
+    "glass": "Highball",
+    "garnish": "Tranche de citron",
+    "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le sirop de sucre, le jus de citron et l’eau-de-vie dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rempli de glace. Compléter d’eau gazeuse. Mélanger délicatement. Garnir d’une tranche de citron."
+  },
+  {
+    "num": 25,
+    "id": "french_75",
+    "name": "French 75",
+    "glass": "Flûte",
+    "garnish": "Zeste de citron exprimé",
+    "technique": "Mirer et remplir la Flûte de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le sirop de sucre, le jus de citron et le gin dans la petite timbale. Retirer la glace de la Flûte et égoutter la grande timbale. Frapper puis passer dans la Flûte rafraîchie. Compléter de champagne. Garnir d’un zeste de citron exprimé."
+  },
+  {
+    "num": 26,
+    "id": "horses_neck",
+    "name": "Horse's Neck",
+    "glass": "Highball",
+    "garnish": "Long zeste de citron exprimé en spirale",
+    "technique": "Mirer le verre Highball. Préparer un long zeste de citron prélevé en continu sur l’agrume et l’enrouler en spirale à l’intérieur du verre sur toute sa hauteur. Remplir de glace. Verser le cognac, les traits d’aromatic bitters et compléter de ginger ale. Mélanger délicatement à la cuillère de bar."
+  },
+  {
+    "num": 27,
+    "id": "mai_tai",
+    "name": "Mai Tai",
+    "glass": "Rocks",
+    "garnish": "Demi-tranche de citron vert et tête de menthe fraîche",
+    "technique": "Mirer et remplir le verre Rocks de glace pilée. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre de glace pilée. Garnir d’une demi-tranche de citron vert et d’une tête de menthe fraîche. Ajouter une paille courte."
+  },
+  {
+    "num": 28,
+    "id": "mojito",
+    "name": "Mojito",
+    "glass": "Highball",
+    "garnish": "Tranche de citron vert et tête de menthe fraîche",
+    "technique": "Mirer le verre Highball. Déposer les feuilles de menthe, le sucre en poudre et le jus de citron vert. Piler très délicatement pour exprimer les essences sans broyer la menthe. Remplir de glace pilée. Verser le rhum cubain et l’eau gazeuse. Mélanger à la cuillère de bar de bas en haut. Compléter de glace pilée. Garnir d’une tranche de citron vert et d’une belle tête de menthe fraîche. Ajouter une paille."
+  },
+  {
+    "num": 29,
+    "id": "moscow_mule",
+    "name": "Moscow Mule",
+    "glass": "Mule",
+    "garnish": "Tranche de citron vert",
+    "technique": "Mirer et remplir le mug Mule de glace. Rafraîchir le mug avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le jus de citron vert, la vodka et compléter de ginger beer. Mélanger délicatement à la cuillère de bar. Garnir d’une tranche de citron vert."
+  },
+  {
+    "num": 30,
+    "id": "paloma",
+    "name": "Paloma",
+    "glass": "Highball",
+    "garnish": "Demi-tranche de pamplemousse",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le sirop d’agave, le jus de citron vert, la tequila et le jus de pamplemousse. Compléter d’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une demi-tranche de pamplemousse."
+  },
+  {
+    "num": 31,
+    "id": "pina_colada",
+    "name": "Piña Colada",
+    "glass": "Highball",
+    "garnish": "Quartier d’ananas et cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper vigoureusement puis passer dans le verre rempli de glace. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille."
+  },
+  {
+    "num": 32,
+    "id": "planters_punch",
+    "name": "Planter's Punch",
+    "glass": "Highball",
+    "garnish": "Quartier d’ananas et cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser les traits d’aromatic bitters, les jus d’orange et d’ananas, et le rhum agricole blanc. Mélanger à la cuillère de bar. Faire flotter (float) le trait de rhum agricole ambré en surface. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille."
+  },
+  {
+    "num": 33,
+    "id": "rum_swizzle",
+    "name": "Rum Swizzle",
+    "glass": "Highball",
+    "garnish": "Zeste d’orange exprimé et tête de menthe fraîche",
+    "technique": "Mirer et remplir le verre Highball de glace pilée. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace pilée si besoin. Verser les ingrédients. Mélanger à l’aide d’un swizzle stick ou de la cuillère de bar. Garnir d’un zeste d’orange exprimé et décorer d’une tête de menthe fraîche. Ajouter une paille."
+  },
+  {
+    "num": 34,
+    "id": "sex_on_the_beach",
+    "name": "Sex on the Beach",
+    "glass": "Highball",
+    "garnish": "Demi-tranche d’orange",
+    "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rempli de glace. Garnir d’une demi-tranche d’orange."
+  },
+  {
+    "num": 35,
+    "id": "spritz",
+    "name": "Spritz",
+    "glass": "Verre à vin",
+    "garnish": "Décoration adaptée à la recette (ex. rondelle d’orange ou olive)",
+    "technique": "Mirer et remplir le verre à vin de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le bitter, le vin blanc effervescent (Prosecco) et l’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une décoration adaptée à la recette."
+  },
+  {
+    "num": 36,
+    "id": "tequila_sunrise",
+    "name": "Tequila Sunrise",
+    "glass": "Highball",
+    "garnish": "Demi-tranche d’orange et cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser la tequila et le jus d’orange, mélanger à la cuillère de bar. Verser délicatement le trait de sirop de grenadine pour créer le dégradé au fond du verre. Garnir d’une demi-tranche d’orange et d’une cerise à l’eau-de-vie."
+  }
+]

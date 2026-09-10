@@ -1,0 +1,257 @@
+{
+  "mai_tai": {
+    "name": "Mai Tai",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop d'orgeat",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Curaçao orange",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum vieux agricole",
+        "volume": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum vieux jamaïcain",
+        "volume": 25,
+        "unit": "ml"
+      }
+    ]
+  },
+  "mojito": {
+    "name": "Mojito",
+    "ingredientsDetailed": [
+      {
+        "name": "Feuilles de menthe",
+        "volume": 10,
+        "unit": "feuilles"
+      },
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum cubain",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "moscow_mule": {
+    "name": "Moscow Mule",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger beer",
+        "volume": 100,
+        "unit": "ml"
+      }
+    ]
+  },
+  "paloma": {
+    "name": "Paloma",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de pamplemousse",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop d'agave",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila blanco 100 % agave",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "pina_colada": {
+    "name": "Piña Colada",
+    "ingredientsDetailed": [
+      {
+        "name": "Crème de noix de coco",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus d'ananas",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum blanc",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "planters_punch": {
+    "name": "Planter's Punch",
+    "ingredientsDetailed": [
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      },
+      {
+        "name": "Jus d'orange",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus d'ananas",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum agricole blanc",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum agricole ambré",
+        "volume": 1,
+        "unit": "trait"
+      }
+    ]
+  },
+  "rum_swizzle": {
+    "name": "Rum Swizzle",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Falernum",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum ambré",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      }
+    ]
+  },
+  "sex_on_the_beach": {
+    "name": "Sex On The Beach",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus d'orange",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Nectar de cranberry",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Liqueur de pêche",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "spritz": {
+    "name": "Spritz",
+    "ingredientsDetailed": [
+      {
+        "name": "Bitter ou autre spiritueux",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Vin blanc effervescent",
+        "volume": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 20,
+        "unit": "ml"
+      }
+    ]
+  },
+  "tequila_sunrise": {
+    "name": "Tequila Sunrise",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus d'orange",
+        "volume": 80,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop de grenadine",
+        "volume": 1,
+        "unit": "trait"
+      }
+    ]
+  }
+}

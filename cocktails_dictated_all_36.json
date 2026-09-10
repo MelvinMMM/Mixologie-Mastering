@@ -1,0 +1,1097 @@
+{
+  "aviation": {
+    "name": "Aviation",
+    "ingredientsDetailed": [
+      {
+        "name": "Gin",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Maraschino",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de violette",
+        "volume": 5,
+        "unit": "ml"
+      }
+    ],
+    "number": 1,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "28 %",
+    "glass": "Nick & Nora",
+    "garnish": "Cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Nick & Nora de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre à la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie."
+  },
+  "bamboo": {
+    "name": "Bamboo",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth Dry",
+        "volume": 35,
+        "unit": "ml"
+      },
+      {
+        "name": "Sherry Fino",
+        "volume": 35,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitters orange",
+        "volume": 2,
+        "unit": "traits"
+      }
+    ],
+    "number": 2,
+    "type": "BEFORE DINNER",
+    "method": [
+      "Verre à mélange",
+      "Shaker"
+    ],
+    "tav": "15 %",
+    "glass": "Nick & Nora",
+    "garnish": "Zeste de citron exprimé",
+    "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’un zeste de citron exprimé."
+  },
+  "bramble": {
+    "name": "Bramble",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de mûre",
+        "volume": 10,
+        "unit": "ml"
+      }
+    ],
+    "number": 3,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "25 %",
+    "glass": "Rocks",
+    "garnish": "Demi-tranche de citron et deux mûres",
+    "technique": "Mirer et remplir le verre Rocks de glace pilée. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace pilée si besoin. Verser le sirop de sucre, le jus de citron et le gin. Mélanger à la cuillère de bar. Napper de crème de mûre. Garnir d’une demi-tranche de citron et de deux mûres. Ajouter une paille courte."
+  },
+  "caipirinha": {
+    "name": "Caipirinha",
+    "ingredientsDetailed": [
+      {
+        "name": "Citron vert en morceaux",
+        "volume": 0.5,
+        "unit": "citron vert (ou 1/2)"
+      },
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Cachaça",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 4,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "40 %",
+    "glass": "Rocks",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir le verre Rocks de glace pilée. Rafraîchir le verre avec la cuillère de bar. Retirer la glace du verre. Piler le demi-citron vert coupé en morceaux et le sucre en poudre. Compléter le verre de glace pilée. Verser la mesure de cachaça. Mélanger et compléter de glace pilée. Ajouter une paille courte."
+  },
+  "cosmopolitan": {
+    "name": "Cosmopolitan",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Nectar de cranberry",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple sec",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ],
+    "number": 5,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "27 %",
+    "glass": "Coupe",
+    "garnish": "Zeste de citron vert exprimé",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’un zeste de citron vert exprimé."
+  },
+  "daiquiri": {
+    "name": "Daiquiri",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum cubain",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 6,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "27 %",
+    "glass": "Coupe",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Diluer le sucre en mélangeant quelques secondes avec une cuillère de bar. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi."
+  },
+  "dry_martini": {
+    "name": "Dry Martini",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth dry",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 55,
+        "unit": "ml"
+      }
+    ],
+    "number": 7,
+    "type": "BEFORE DINNER",
+    "method": "Verre à mélange",
+    "tav": "35 %",
+    "glass": "Martini",
+    "garnish": "Olive verte ou zeste de citron exprimé",
+    "technique": "Mirer et remplir le verre Martini et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’une olive verte ou d’un zeste de citron exprimé."
+  },
+  "espresso_martini": {
+    "name": "Espresso Martini",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Café expresso",
+        "volume": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "Liqueur de café",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ],
+    "number": 8,
+    "type": "AFTER DINNER",
+    "method": "Shaker",
+    "tav": "27 %",
+    "glass": "Coupe",
+    "garnish": "Trois grains de café déposés sur la mousse",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper énergiquement puis passer dans le verre rafraîchi. Garnir de trois grains de café déposés sur la mousse."
+  },
+  "gin_basil_smash": {
+    "name": "Gin Basil Smash",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Feuilles de basilic",
+        "volume": 10,
+        "unit": "feuilles"
+      }
+    ],
+    "number": 9,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "25 %",
+    "glass": "Rocks",
+    "garnish": "Tête de basilic frais",
+    "technique": "Mirer et remplir le verre Rocks de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Déposer les feuilles de basilic dans la petite timbale du shaker, verser le jus de citron et le sirop de sucre. Piler délicatement. Verser le gin. Égoutter le verre et compléter de glace si besoin. Égoutter la grande timbale du shaker. Frapper puis double filtrer dans le verre rempli de glace. Garnir d’une tête de basilic frais."
+  },
+  "manhattan": {
+    "name": "Manhattan",
+    "ingredientsDetailed": [
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      },
+      {
+        "name": "Vermouth rouge",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Whisky américain",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 10,
+    "type": "BEFORE DINNER",
+    "method": "Verre à mélange",
+    "tav": "35 %",
+    "glass": "Nick & Nora",
+    "garnish": "Cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie."
+  },
+  "margarita": {
+    "name": "Margarita",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple sec",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 11,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "34 %",
+    "glass": "Coupe",
+    "garnish": "Givrage au sel fin",
+    "technique": "Mirer et givrer le verre Coupe au sel fin. Remplir le verre et la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi."
+  },
+  "mint_julep": {
+    "name": "Mint Julep",
+    "ingredientsDetailed": [
+      {
+        "name": "Feuilles de menthe",
+        "volume": 10,
+        "unit": "feuilles"
+      },
+      {
+        "name": "Sucre en poudre",
+        "volume": 2,
+        "unit": "bar spoons"
+      },
+      {
+        "name": "Eau-de-vie brune",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 12,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "40 %",
+    "glass": "Julep",
+    "garnish": "Tête de menthe fraîche",
+    "technique": "Mirer et rafraîchir le gobelet Julep. Piler délicatement la menthe et le sucre en poudre avec un peu d’eau-de-vie. Remplir de glace pilée, verser le reste d’eau-de-vie brune. Mélanger avec la cuillère de bar. Compléter de glace pilée en dôme. Garnir d’une tête de menthe fraîche et ajouter une paille courte."
+  },
+  "negroni": {
+    "name": "Negroni",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth rouge",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ],
+    "number": 13,
+    "type": "BEFORE DINNER",
+    "method": "Direct au verre",
+    "tav": "26 %",
+    "glass": "Rocks",
+    "garnish": "Demi-tranche d’orange",
+    "technique": "Mirer et remplir le verre Rocks de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser les ingrédients, mélanger à la cuillère de bar. Garnir d’une demi-tranche d’orange."
+  },
+  "old_fashioned": {
+    "name": "Old-Fashioned",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre brun",
+        "volume": 1,
+        "unit": "morceau"
+      },
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      },
+      {
+        "name": "Eau-de-vie brune",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 14,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "40 %",
+    "glass": "Rocks",
+    "garnish": "Zeste d’orange exprimé et cerise à l’eau-de-vie",
+    "technique": "Mirer le verre Rocks. Déposer le morceau de sucre brun au fond du verre, imbiber de 2 traits d’aromatic bitters et d’un filet d’eau ou soda. Écraser au pilon pour dissoudre le sucre. Remplir de glace, verser l’eau-de-vie brune progressivement en mélangeant à la cuillère de bar. Garnir d’un zeste d’orange exprimé et d’une cerise à l’eau-de-vie."
+  },
+  "penicillin": {
+    "name": "Penicillin",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop de miel",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de gingembre frais",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Blend whisky",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Whisky tourbé",
+        "volume": 10,
+        "unit": "ml"
+      }
+    ],
+    "number": 15,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "25 %",
+    "glass": "Rocks",
+    "garnish": "Lamelle de gingembre",
+    "technique": "Mirer et remplir le verre Rocks de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le jus de citron, sirop de miel, jus de gingembre et blend whisky dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rafraîchi avec glace. Faire flotter (float) le whisky tourbé en surface. Garnir d’une lamelle de gingembre."
+  },
+  "pornstar_martini": {
+    "name": "Pornstar Martini",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de vanille",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Purée fruit de la passion",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Liqueur fruit de la passion",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka vanille",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ],
+    "number": 16,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "18 %",
+    "glass": "Coupe",
+    "garnish": "Demi-fruit de la passion",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale. Frapper puis passer dans le verre rafraîchi. Garnir d’un demi-fruit de la passion déposé à la surface. Servir accompagné d’un shot de champagne."
+  },
+  "sidecar": {
+    "name": "Sidecar",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple sec",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Cognac",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 17,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "38 %",
+    "glass": "Coupe",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi."
+  },
+  "sour": {
+    "name": "Sour",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Blanc d'œuf ou aquafaba",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Spiritueux",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 18,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "28 %",
+    "glass": "Rocks",
+    "garnish": "Cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Rocks de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Diluer le sucre en mélangeant quelques secondes avec une cuillère de bar. Égoutter le verre et compléter de glace si besoin. Frapper en dry shake (sans glace). Remplir la grande timbale de glace, frapper à nouveau puis passer dans le verre rempli de glace. Garnir d’une cerise à l’eau-de-vie."
+  },
+  "americano": {
+    "name": "Americano",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth rouge",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 19,
+    "type": "BEFORE DINNER",
+    "method": "Direct au verre",
+    "tav": "13 %",
+    "glass": "Highball",
+    "garnish": "Demi-tranche d’orange et demi-tranche de citron",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le vermouth rouge, le bitter et compléter d’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une demi-tranche d’orange et d’une demi-tranche de citron."
+  },
+  "bellini": {
+    "name": "Bellini",
+    "ingredientsDetailed": [
+      {
+        "name": "Nectar ou purée de pêche blanche",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "volume": 80,
+        "unit": "ml"
+      }
+    ],
+    "number": 20,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "8 %",
+    "glass": "Flûte",
+    "garnish": "Sans garniture",
+    "technique": "Mirer et remplir la Flûte de glace. Rafraîchir le verre avec la cuillère de bar. Retirer la glace du verre. Verser la purée de pêche blanche puis le champagne. Mélanger délicatement à la cuillère de bar."
+  },
+  "bloody_mary": {
+    "name": "Bloody Mary",
+    "ingredientsDetailed": [
+      {
+        "name": "Sel au céleri",
+        "volume": 1,
+        "unit": "pincée"
+      },
+      {
+        "name": "Tabasco",
+        "volume": 2,
+        "unit": "gouttes"
+      },
+      {
+        "name": "Sauce anglaise",
+        "volume": 1,
+        "unit": "trait"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de tomate",
+        "volume": 70,
+        "unit": "ml"
+      }
+    ],
+    "number": 21,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "13 %",
+    "glass": "Highball",
+    "garnish": "Demi-tranche de citron et branche de céleri",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Assaisonner de sel au céleri, de quelques gouttes de Tabasco et d’un trait de sauce anglaise. Verser les ingrédients, puis mélanger. Garnir d’une demi-tranche de citron et d’une branche de céleri. Ajouter un agitateur."
+  },
+  "champagne_cocktail": {
+    "name": "Champagne Cocktail",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre blanc",
+        "volume": 1,
+        "unit": "morceau"
+      },
+      {
+        "name": "Aromatic bitters",
+        "volume": 1,
+        "unit": "trait"
+      },
+      {
+        "name": "Cognac",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "volume": 110,
+        "unit": "ml"
+      }
+    ],
+    "number": 22,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "8 %",
+    "glass": "Flûte",
+    "garnish": "Zeste de citron exprimé",
+    "technique": "Mirer la Flûte. Placer le morceau de sucre blanc au fond du verre, imbiber d’un trait d’aromatic bitters. Verser le cognac puis compléter délicatement de champagne frais. Garnir d’un zeste de citron exprimé."
+  },
+  "dark_and_stormy": {
+    "name": "Dark And Stormy",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger beer",
+        "volume": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Black rum",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 23,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "11 %",
+    "glass": "Highball",
+    "garnish": "Quartier de citron vert",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le jus de citron vert et la ginger beer. Verser le black rum délicatement en surface pour créer l’étage (float). Garnir d’un quartier de citron vert."
+  },
+  "fizz": {
+    "name": "Fizz",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau-de-vie",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 24,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "13 %",
+    "glass": "Highball",
+    "garnish": "Tranche de citron",
+    "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le sirop de sucre, le jus de citron et l’eau-de-vie dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rempli de glace. Compléter d’eau gazeuse. Mélanger délicatement. Garnir d’une tranche de citron."
+  },
+  "french_75": {
+    "name": "French 75",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 25,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "16 %",
+    "glass": "Flûte",
+    "garnish": "Zeste de citron exprimé",
+    "technique": "Mirer et remplir la Flûte de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le sirop de sucre, le jus de citron et le gin dans la petite timbale. Retirer la glace de la Flûte et égoutter la grande timbale. Frapper puis passer dans la Flûte rafraîchie. Compléter de champagne. Garnir d’un zeste de citron exprimé."
+  },
+  "horses_neck": {
+    "name": "Horse's Neck",
+    "ingredientsDetailed": [
+      {
+        "name": "Aromatic bitters",
+        "volume": 3,
+        "unit": "traits"
+      },
+      {
+        "name": "Cognac",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger ale",
+        "volume": 100,
+        "unit": "ml"
+      }
+    ],
+    "number": 26,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "11 %",
+    "glass": "Highball",
+    "garnish": "Long zeste de citron exprimé en spirale",
+    "technique": "Mirer le verre Highball. Préparer un long zeste de citron prélevé en continu sur l’agrume et l’enrouler en spirale à l’intérieur du verre sur toute sa hauteur. Remplir de glace. Verser le cognac, les traits d’aromatic bitters et compléter de ginger ale. Mélanger délicatement à la cuillère de bar."
+  },
+  "mai_tai": {
+    "name": "Mai Tai",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop d'orgeat",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Curaçao orange",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum vieux agricole",
+        "volume": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum vieux jamaïcain",
+        "volume": 25,
+        "unit": "ml"
+      }
+    ],
+    "number": 27,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "30 %",
+    "glass": "Rocks",
+    "garnish": "Demi-tranche de citron vert et tête de menthe fraîche",
+    "technique": "Mirer et remplir le verre Rocks de glace pilée. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre de glace pilée. Garnir d’une demi-tranche de citron vert et d’une tête de menthe fraîche. Ajouter une paille courte."
+  },
+  "mojito": {
+    "name": "Mojito",
+    "ingredientsDetailed": [
+      {
+        "name": "Feuilles de menthe",
+        "volume": 10,
+        "unit": "feuilles"
+      },
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum cubain",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 28,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "13 %",
+    "glass": "Highball",
+    "garnish": "Tranche de citron vert et tête de menthe fraîche",
+    "technique": "Mirer le verre Highball. Déposer les feuilles de menthe, le sucre en poudre et le jus de citron vert. Piler très délicatement pour exprimer les essences sans broyer la menthe. Remplir de glace pilée. Verser le rhum cubain et l’eau gazeuse. Mélanger à la cuillère de bar de bas en haut. Compléter de glace pilée. Garnir d’une tranche de citron vert et d’une belle tête de menthe fraîche. Ajouter une paille."
+  },
+  "moscow_mule": {
+    "name": "Moscow Mule",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger beer",
+        "volume": 100,
+        "unit": "ml"
+      }
+    ],
+    "number": 29,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "13 %",
+    "glass": "Mule",
+    "garnish": "Tranche de citron vert",
+    "technique": "Mirer et remplir le mug Mule de glace. Rafraîchir le mug avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le jus de citron vert, la vodka et compléter de ginger beer. Mélanger délicatement à la cuillère de bar. Garnir d’une tranche de citron vert."
+  },
+  "paloma": {
+    "name": "Paloma",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de pamplemousse",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop d'agave",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila blanco 100 % agave",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ],
+    "number": 30,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "10 %",
+    "glass": "Highball",
+    "garnish": "Demi-tranche de pamplemousse",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le sirop d’agave, le jus de citron vert, la tequila et le jus de pamplemousse. Compléter d’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une demi-tranche de pamplemousse."
+  },
+  "pina_colada": {
+    "name": "Piña Colada",
+    "ingredientsDetailed": [
+      {
+        "name": "Crème de noix de coco",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus d'ananas",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum blanc",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 31,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "13 %",
+    "glass": "Highball",
+    "garnish": "Quartier d’ananas et cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper vigoureusement puis passer dans le verre rempli de glace. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille."
+  },
+  "planters_punch": {
+    "name": "Planter's Punch",
+    "ingredientsDetailed": [
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      },
+      {
+        "name": "Jus d'orange",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus d'ananas",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum agricole blanc",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum agricole ambré",
+        "volume": 1,
+        "unit": "trait"
+      }
+    ],
+    "number": 32,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "16 %",
+    "glass": "Highball",
+    "garnish": "Quartier d’ananas et cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser les traits d’aromatic bitters, les jus d’orange et d’ananas, et le rhum agricole blanc. Mélanger à la cuillère de bar. Faire flotter (float) le trait de rhum agricole ambré en surface. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille."
+  },
+  "rum_swizzle": {
+    "name": "Rum Swizzle",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Falernum",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum ambré",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      }
+    ],
+    "number": 33,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "20 %",
+    "glass": "Highball",
+    "garnish": "Zeste d’orange exprimé et tête de menthe fraîche",
+    "technique": "Mirer et remplir le verre Highball de glace pilée. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace pilée si besoin. Verser les ingrédients. Mélanger à l’aide d’un swizzle stick ou de la cuillère de bar. Garnir d’un zeste d’orange exprimé et décorer d’une tête de menthe fraîche. Ajouter une paille."
+  },
+  "sex_on_the_beach": {
+    "name": "Sex On The Beach",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus d'orange",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Nectar de cranberry",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Liqueur de pêche",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ],
+    "number": 34,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Shaker",
+    "tav": "15 %",
+    "glass": "Highball",
+    "garnish": "Demi-tranche d’orange",
+    "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rempli de glace. Garnir d’une demi-tranche d’orange."
+  },
+  "spritz": {
+    "name": "Spritz",
+    "ingredientsDetailed": [
+      {
+        "name": "Bitter ou autre spiritueux",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Vin blanc effervescent",
+        "volume": 60,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 20,
+        "unit": "ml"
+      }
+    ],
+    "number": 35,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "16 %",
+    "glass": "Verre à vin",
+    "garnish": "Décoration adaptée à la recette",
+    "technique": "Mirer et remplir le verre à vin de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le bitter, le vin blanc effervescent (Prosecco) et l’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une décoration adaptée à la recette."
+  },
+  "tequila_sunrise": {
+    "name": "Tequila Sunrise",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus d'orange",
+        "volume": 80,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop de grenadine",
+        "volume": 1,
+        "unit": "trait"
+      }
+    ],
+    "number": 36,
+    "type": "ALL DAY COCKTAIL",
+    "method": "Direct au verre",
+    "tav": "13 %",
+    "glass": "Highball",
+    "garnish": "Demi-tranche d’orange et cerise à l’eau-de-vie",
+    "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser la tequila et le jus d’orange, mélanger à la cuillère de bar. Verser délicatement le trait de sirop de grenadine pour créer le dégradé au fond du verre. Garnir d’une demi-tranche d’orange et d’une cerise à l’eau-de-vie."
+  }
+}

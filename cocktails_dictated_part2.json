@@ -1,0 +1,257 @@
+{
+  "pornstar_martini": {
+    "name": "Pornstar Martini",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de vanille",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Purée fruit de la passion",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Liqueur fruit de la passion",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka vanille",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ]
+  },
+  "sidecar": {
+    "name": "Sidecar",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple sec",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Cognac",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "sour": {
+    "name": "Sour",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Blanc d'œuf ou aquafaba",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Spiritueux",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "americano": {
+    "name": "Americano",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth rouge",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "bellini": {
+    "name": "Bellini",
+    "ingredientsDetailed": [
+      {
+        "name": "Nectar ou purée de pêche blanche",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "volume": 80,
+        "unit": "ml"
+      }
+    ]
+  },
+  "bloody_mary": {
+    "name": "Bloody Mary",
+    "ingredientsDetailed": [
+      {
+        "name": "Sel au céleri",
+        "volume": 1,
+        "unit": "pincée"
+      },
+      {
+        "name": "Tabasco",
+        "volume": 2,
+        "unit": "gouttes"
+      },
+      {
+        "name": "Sauce anglaise",
+        "volume": 1,
+        "unit": "trait"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de tomate",
+        "volume": 70,
+        "unit": "ml"
+      }
+    ]
+  },
+  "champagne_cocktail": {
+    "name": "Champagne Cocktail",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre blanc",
+        "volume": 1,
+        "unit": "morceau"
+      },
+      {
+        "name": "Aromatic bitters",
+        "volume": 1,
+        "unit": "trait"
+      },
+      {
+        "name": "Cognac",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "volume": 110,
+        "unit": "ml"
+      }
+    ]
+  },
+  "dark_and_stormy": {
+    "name": "Dark And Stormy",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger beer",
+        "volume": 100,
+        "unit": "ml"
+      },
+      {
+        "name": "Black rum",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "fizz": {
+    "name": "Fizz",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau-de-vie",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Eau gazeuse",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "french_75": {
+    "name": "French 75",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Champagne",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "horses_neck": {
+    "name": "Horse's Neck",
+    "ingredientsDetailed": [
+      {
+        "name": "Aromatic bitters",
+        "volume": 3,
+        "unit": "traits"
+      },
+      {
+        "name": "Cognac",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Ginger ale",
+        "volume": 100,
+        "unit": "ml"
+      }
+    ]
+  }
+}

@@ -1,0 +1,287 @@
+{
+  "bramble": {
+    "name": "Bramble",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Crème de mûre",
+        "volume": 10,
+        "unit": "ml"
+      }
+    ]
+  },
+  "caipirinha": {
+    "name": "Caipirinha",
+    "ingredientsDetailed": [
+      {
+        "name": "Citron vert en morceaux",
+        "volume": 0.5,
+        "unit": "citron vert (ou 1/2)"
+      },
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Cachaça",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "cosmopolitan": {
+    "name": "Cosmopolitan",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Nectar de cranberry",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple sec",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ]
+  },
+  "daiquiri": {
+    "name": "Daiquiri",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre en poudre",
+        "volume": 1,
+        "unit": "bar spoon"
+      },
+      {
+        "name": "Jus de citron vert",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Rhum cubain",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "dry_martini": {
+    "name": "Dry Martini",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth dry",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 55,
+        "unit": "ml"
+      }
+    ]
+  },
+  "espresso_martini": {
+    "name": "Espresso Martini",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 5,
+        "unit": "ml"
+      },
+      {
+        "name": "Café expresso",
+        "volume": 25,
+        "unit": "ml"
+      },
+      {
+        "name": "Liqueur de café",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Vodka",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ]
+  },
+  "gin_basil_smash": {
+    "name": "Gin Basil Smash",
+    "ingredientsDetailed": [
+      {
+        "name": "Sirop de sucre",
+        "volume": 15,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 50,
+        "unit": "ml"
+      },
+      {
+        "name": "Feuilles de basilic",
+        "volume": 10,
+        "unit": "feuilles"
+      }
+    ]
+  },
+  "manhattan": {
+    "name": "Manhattan",
+    "ingredientsDetailed": [
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      },
+      {
+        "name": "Vermouth rouge",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Whisky américain",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "margarita": {
+    "name": "Margarita",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron vert",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Triple sec",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Tequila",
+        "volume": 40,
+        "unit": "ml"
+      }
+    ]
+  },
+  "mint_julep": {
+    "name": "Mint Julep",
+    "ingredientsDetailed": [
+      {
+        "name": "Feuilles de menthe",
+        "volume": 10,
+        "unit": "feuilles"
+      },
+      {
+        "name": "Sucre en poudre",
+        "volume": 2,
+        "unit": "bar spoons"
+      },
+      {
+        "name": "Eau-de-vie brune",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "negroni": {
+    "name": "Negroni",
+    "ingredientsDetailed": [
+      {
+        "name": "Vermouth rouge",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Bitter",
+        "volume": 30,
+        "unit": "ml"
+      },
+      {
+        "name": "Gin",
+        "volume": 30,
+        "unit": "ml"
+      }
+    ]
+  },
+  "old_fashioned": {
+    "name": "Old-Fashioned",
+    "ingredientsDetailed": [
+      {
+        "name": "Sucre brun",
+        "volume": 1,
+        "unit": "morceau"
+      },
+      {
+        "name": "Aromatic bitters",
+        "volume": 2,
+        "unit": "traits"
+      },
+      {
+        "name": "Eau-de-vie brune",
+        "volume": 50,
+        "unit": "ml"
+      }
+    ]
+  },
+  "penicillin": {
+    "name": "Penicillin",
+    "ingredientsDetailed": [
+      {
+        "name": "Jus de citron",
+        "volume": 20,
+        "unit": "ml"
+      },
+      {
+        "name": "Sirop de miel",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Jus de gingembre frais",
+        "volume": 10,
+        "unit": "ml"
+      },
+      {
+        "name": "Blend whisky",
+        "volume": 40,
+        "unit": "ml"
+      },
+      {
+        "name": "Whisky tourbé",
+        "volume": 10,
+        "unit": "ml"
+      }
+    ]
+  }
+}

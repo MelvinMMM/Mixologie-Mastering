@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Application QCM & Révision de Mixologie basée sur le Référentiel Officiel des Cocktails Classiques de Référence 2025/2026">
+  <meta name="theme-color" content="#0a0e17">
+  <title>Mixology Master — QCM & Révision Officielle</title>
+  
+  <!-- Favicon & Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', var(--font-sans);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Sticky Header -->
+  <header class="app-header">
+    <div class="app-container" style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
+      <div class="brand" onclick="navigateTo('home')">
+        <span class="brand-icon">🍸</span>
+        <div>
+          <div class="brand-title">MIXOLOGY MASTER</div>
+          <div class="brand-subtitle">Référentiel Officiel 2025/2026</div>
+        </div>
+      </div>
+      
+      <div class="header-actions">
+        <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 12px;" onclick="openOfficialModal()">
+          📜 Le Socle
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content Container -->
+  <main class="app-container">
+
+    <!-- ==========================================
+         VIEW 1 : HOME / DASHBOARD
+         ========================================== -->
+    <section id="view-home" class="view-section">
+      
+      <!-- Official Standard Attribution Banner -->
+      <div class="official-badge-banner" onclick="openOfficialModal()">
+        <div class="banner-content">
+          <span class="banner-icon">⭐</span>
+          <div class="banner-text">
+            <h4>Socle des Cocktails de Référence</h4>
+            <p>Conforme au programme officiel des formations barman & mixologie (2025/2026)</p>
+          </div>
+        </div>
+        <div class="banner-link-tag">
+          En savoir plus ➔
+        </div>
+      </div>
+
+      <!-- Stats & Global Progress Hero Card -->
+      <div class="stats-hero-card">
+        <div class="stat-item">
+          <div class="stat-label">Réussite Globale</div>
+          <div class="stat-value" id="global-score-display">0 <span>%</span></div>
+          <div class="stat-progress-bar">
+            <div class="stat-progress-fill" id="global-progress-bar" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <div class="stat-item">
+          <div class="stat-label">Modules Complétés</div>
+          <div class="stat-value" id="modules-completed-display">0 <span>/ 9</span></div>
+          <div class="stat-progress-bar">
+            <div class="stat-progress-fill" id="modules-progress-bar" style="width: 0%;"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Action Buttons -->
+      <div class="quick-actions-bar">
+        <button class="quick-action-btn" onclick="startRandomMixQuiz()">
+          <span class="quick-action-icon">⚡</span>
+          <div class="quick-action-info">
+            <h4>Grand Mix</h4>
+            <p>15 questions aléatoires</p>
+          </div>
+        </button>
+
+        <button class="quick-action-btn" id="btn-review-errors" onclick="startErrorsQuiz()">
+          <span class="quick-action-icon">🔄</span>
+          <div class="quick-action-info">
+            <h4>Mes Erreurs</h4>
+            <p id="errors-count-text">0 question à revoir</p>
+          </div>
+        </button>
+      </div>
+
+      <!-- Section Title -->
+      <div class="section-header">
+        <h2 class="section-title"><span>📚</span> Les 9 Modules de Révision</h2>
+        <span class="section-badge" id="total-questions-badge">95 Questions</span>
+      </div>
+
+      <!-- Modules Grid -->
+      <div class="modules-grid" id="modules-grid-container">
+        <!-- Injected via JavaScript -->
+      </div>
+
+      <!-- ==========================================
+           SECTION RADE EXTRA (POUR ALLER PLUS LOIN)
+           ========================================== -->
+      <div class="section-header" style="margin-top: 36px;">
+        <h2 class="section-title"><span style="color: #f59e0b;">⚡</span> Rade Extra</h2>
+        <span class="section-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.3);">
+          Pour aller plus loin
+        </span>
+      </div>
+
+      <div class="extra-grid">
+        <!-- Card 1: Le Défi de l'Écriture -->
+        <div class="module-card extra-card" style="border-left: 3px solid #f59e0b;">
+          <div>
+            <div class="module-card-header">
+              <span class="module-number-badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
+                Mode Écriture
+              </span>
+              <span class="module-icon">✍️</span>
+            </div>
+            <h3 class="module-title">Le Défi de l'Écriture</h3>
+            <p class="module-subtitle">
+              À partir de la liste des ingrédients, écrivez sans aucune faute d'orthographe le nom exact du cocktail classique.
+            </p>
+          </div>
+
+          <div class="module-footer">
+            <span class="module-score-status">Épellation & Récitation</span>
+            <span class="module-number-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border-color: var(--border-color);">
+              🔒 Bientôt disponible
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 2: Les Autres Familles de Cocktails -->
+        <div class="module-card extra-card" style="border-left: 3px solid #10b981;">
+          <div>
+            <div class="module-card-header">
+              <span class="module-number-badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+                Culture Bar
+              </span>
+              <span class="module-icon">🌍</span>
+            </div>
+            <h3 class="module-title">Les Autres Familles de Cocktails</h3>
+            <p class="module-subtitle">
+              Explorez toutes les familles historiques et modernes qui vont au-delà du socle officiel : Collins, Daisy, Flip, Cobbler, Fix, Sling...
+            </p>
+          </div>
+
+          <div class="module-footer">
+            <span class="module-score-status">Encyclopédie étendue</span>
+            <span class="module-number-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border-color: var(--border-color);">
+              🔒 Bientôt disponible
+            </span>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         VIEW 2 : QUIZ PLAYER
+         ========================================== -->
+    <section id="view-quiz" class="view-section hidden">
+      <div class="quiz-view-container">
+        
+        <!-- Top Navigation / Progress -->
+        <div class="quiz-top-bar">
+          <button class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.8rem;" onclick="confirmExitQuiz()">
+            ✕ Quitter
+          </button>
+          <div class="quiz-badge-module" id="quiz-module-title">Module 1</div>
+          <div class="quiz-counter" id="quiz-question-counter">1 / 10</div>
+        </div>
+
+        <div class="quiz-progress-track">
+          <div class="quiz-progress-fill" id="quiz-progress-indicator" style="width: 10%;"></div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card" id="question-card">
+          <span class="question-tag" id="question-badge-tag">Règle officielle</span>
+          <h3 class="question-text" id="question-text-content">Chargement de la question...</h3>
+
+          <div class="answers-container" id="answers-container">
+            <!-- Answer buttons injected via JS -->
+          </div>
+
+          <!-- Explanation Container (Appears after answer) -->
+          <div class="explanation-card hidden" id="explanation-container">
+            <div class="explanation-header">
+              <span>💡</span> Note du Référentiel Officiel :
+            </div>
+            <p class="explanation-text" id="explanation-text-content"></p>
+          </div>
+        </div>
+
+        <!-- Next / Action Button -->
+        <div class="quiz-footer-actions">
+          <button class="btn btn-primary hidden" id="btn-next-question" onclick="handleNextQuestion()">
+            Question Suivante ➔
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 3 : RESULTS VIEW
+         ========================================== -->
+    <section id="view-results" class="view-section hidden">
+      <div class="results-card">
+        <div class="results-trophy" id="results-trophy-icon">🏆</div>
+        <h2 class="results-title" id="results-title-text">Session Terminée !</h2>
+        <p class="results-subtitle" id="results-subtitle-text">Voici votre résultat pour ce module</p>
+
+        <div class="score-display-circle">
+          <div class="score-number" id="results-score-value">8/10</div>
+          <div class="score-total" id="results-percentage-value">80% Réussite</div>
+        </div>
+
+        <div class="results-actions-grid">
+          <button class="btn btn-secondary" id="btn-results-retry-errors" onclick="startErrorsQuiz()">
+            🔄 Revoir mes erreurs
+          </button>
+          <button class="btn btn-primary" onclick="restartCurrentModule()">
+            ▶ Rejouer le module
+          </button>
+          <button class="btn btn-secondary" style="grid-column: 1 / -1;" onclick="navigateTo('home')">
+            🏠 Retour à l'accueil
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 7-HUB : PARTIE 7 COCKTAIL HUBS (SHORT VS LONG)
+         ========================================== -->
+    <section id="view-module7-hub" class="view-section hidden">
+      <div class="module7-header-box">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px;">
+          <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.82rem;" onclick="navigateTo('home')">
+            ← Modules
+          </button>
+          <span class="module-number-badge" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border-color: rgba(244, 63, 94, 0.3);">
+            Partie 7 du Socle
+          </span>
+        </div>
+
+        <h2 style="font-size: 1.45rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">
+          🍹 Fiches Cocktails de Référence
+        </h2>
+        <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">
+          Complétez les 36 fiches techniques officielles : ingrédients, dosages en ml, méthode, type, TAV et garniture.
+        </p>
+
+        <!-- Mastery Progress -->
+        <div class="module7-progress-card">
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;">
+            <span style="font-size: 0.85rem; font-weight: 700; color: #fbbf24;">Progression de maîtrise :</span>
+            <span style="font-size: 0.9rem; font-weight: 800; color: #ffffff;" id="m7-mastery-count">0 / 36</span>
+          </div>
+          <div class="quiz-progress-track">
+            <div class="quiz-progress-fill" id="m7-mastery-bar" style="width: 0%; background: linear-gradient(90deg, #f43f5e, #fbbf24);"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2 Columns Grid : Short Drinks vs Long Drinks -->
+      <div class="module7-columns-grid">
+        <!-- Left Column : Short Drinks (18) -->
+        <div class="module7-col">
+          <div class="module7-col-header">
+            <span class="col-icon">🍸</span>
+            <div>
+              <h3 class="col-title">Short Drinks (18)</h3>
+              <span class="col-desc">Moins de 100 ml au service</span>
+            </div>
+          </div>
+          <div class="cocktail-cards-col-list" id="m7-short-drinks-list">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+
+        <!-- Right Column : Long Drinks (18) -->
+        <div class="module7-col">
+          <div class="module7-col-header">
+            <span class="col-icon">🍹</span>
+            <div>
+              <h3 class="col-title">Long Drinks (18)</h3>
+              <span class="col-desc">100 ml ou plus au service</span>
+            </div>
+          </div>
+          <div class="cocktail-cards-col-list" id="m7-long-drinks-list">
+            <!-- Injected via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 7-PRACTICE : INTERACTIVE COCKTAIL SHEET
+         ========================================== -->
+    <section id="view-cocktail-practice" class="view-section hidden">
+      <div class="cocktail-practice-container" id="cocktail-practice-content">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 4 : COCKTAILS EXPLORER (36 RECETTES)
+         ========================================== -->
+    <section id="view-cocktails" class="view-section hidden">
+      <div class="section-header">
+        <h2 class="section-title"><span>🍹</span> Les 36 Cocktails Officiels</h2>
+        <span class="section-badge">Partie 7 du Socle</span>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="cocktail-search-input" class="search-input" placeholder="Rechercher un cocktail, ingrédient, verre..." oninput="filterCocktails()">
+        </div>
+
+        <div class="filter-pills-row" id="cocktail-filter-pills">
+          <button class="filter-pill active" onclick="setCocktailFilter('all')">Tous (36)</button>
+          <button class="filter-pill" onclick="setCocktailFilter('short')">Short Drinks</button>
+          <button class="filter-pill" onclick="setCocktailFilter('long')">Long Drinks</button>
+          <button class="filter-pill" onclick="setCocktailFilter('gin')">Gin</button>
+          <button class="filter-pill" onclick="setCocktailFilter('rhum')">Rhum</button>
+          <button class="filter-pill" onclick="setCocktailFilter('vodka')">Vodka</button>
+          <button class="filter-pill" onclick="setCocktailFilter('whisky')">Whisky</button>
+          <button class="filter-pill" onclick="setCocktailFilter('tequila')">Tequila</button>
+        </div>
+      </div>
+
+      <!-- Cocktails Grid -->
+      <div class="cocktails-grid" id="cocktails-grid-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 5 : LEXIQUE DU BARMAN (PARTIE 9)
+         ========================================== -->
+    <section id="view-lexique" class="view-section hidden">
+      <div class="section-header">
+        <h2 class="section-title"><span>📖</span> Lexique Professionnel</h2>
+        <span class="section-badge">Partie 9 du Socle</span>
+      </div>
+
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="lexique-search-input" class="search-input" placeholder="Rechercher un terme technique (ex: Aquafaba, Float...)" oninput="filterLexique()">
+        </div>
+      </div>
+
+      <div class="lexique-list" id="lexique-list-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       MODAL : SOCLE OFFICIEL NOTICE
+       ========================================== -->
+  <div class="modal-overlay" id="modal-official" onclick="closeModalOnOverlay(event, 'modal-official')">
+    <div class="modal-card">
+      <button class="modal-close-btn" onclick="closeOfficialModal()">✕</button>
+      <div style="font-size: 2.2rem; margin-bottom: 8px;">📜</div>
+      <h3 style="font-size: 1.3rem; font-weight: 800; margin-bottom: 8px; color: #fbbf24;">
+        Référentiel Officiel des Cocktails Classiques de Référence
+      </h3>
+      <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 16px;">
+        Édition 2025 / 2026 — Document National Pédagogique
+      </p>
+
+      <div style="font-size: 0.92rem; color: #e2e8f0; line-height: 1.6; display: flex; flex-direction: column; gap: 12px;">
+        <p>
+          Cette application interactive a été conçue pour offrir un outil d'apprentissage et de révision exhaustif, fondé à 100% sur le document officiel <strong>« Socle des cocktails de référence »</strong>.
+        </p>
+        <p>
+          Ce référentiel constitue la base réglementaire et technique pour les formations de barmans et mixologues en France (Mention Complémentaire Barman, Brevet Professionnel, concours et examens officiels).
+        </p>
+        <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 12px; border-radius: 4px; font-size: 0.85rem;">
+          <strong>Les 9 axes d'apprentissage :</strong>
+          <ul style="margin-left: 18px; margin-top: 6px;">
+            <li>1. Guide des bonnes pratiques pour les créations</li>
+            <li>2. Catégories & Types de cocktails (Short/Long, Before/After/All Day)</li>
+            <li>3. Familles de cocktails (Sour, Fizz, Colada, Julep, Tiki...)</li>
+            <li>4. Méthodes de réalisation (Shaker, Verre à mélange, Direct, Blender)</li>
+            <li>5. Verrerie de service (Incontournables et Complémentaires)</li>
+            <li>6. Matériel et ustensiles du barman</li>
+            <li>7. Fiches techniques des 36 cocktails cultes</li>
+            <li>8. Calcul du Titre Alcoométrique Volumique (TAV)</li>
+            <li>9. Lexique professionnel officiel</li>
+          </ul>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="closeOfficialModal()">
+        J'ai compris, place aux révisions !
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL : COCKTAIL RECIPE DETAIL
+       ========================================== -->
+  <div class="modal-overlay" id="modal-cocktail" onclick="closeModalOnOverlay(event, 'modal-cocktail')">
+    <div class="modal-card" id="cocktail-detail-content">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- ==========================================
+       BOTTOM MOBILE NAVIGATION BAR
+       ========================================== -->
+  <nav class="bottom-nav">
+    <button class="nav-item active" id="nav-home" onclick="navigateTo('home')">
+      <span class="nav-item-icon">🏠</span>
+      <span>Modules QCM</span>
+    </button>
+    <button class="nav-item" id="nav-cocktails" onclick="navigateTo('cocktails')">
+      <span class="nav-item-icon">🍹</span>
+      <span>36 Cocktails</span>
+    </button>
+    <button class="nav-item" id="nav-lexique" onclick="navigateTo('lexique')">
+      <span class="nav-item-icon">📖</span>
+      <span>Lexique</span>
+    </button>
+  </nav>
+
+  <!-- Application Logic & Data -->
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

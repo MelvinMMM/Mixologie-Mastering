@@ -1,0 +1,4368 @@
+{
+  "modules": [
+    {
+      "id": 1,
+      "title": "Guide des bonnes pratiques",
+      "subtitle": "Pour les créations et revisites",
+      "icon": "✨",
+      "description": "Règles d'or des créations : valorisation de l'eau-de-vie, règle des 3 S, ordre de verse, notation en ml et éco-responsabilité.",
+      "gradient": "from-amber-500 to-orange-600"
+    },
+    {
+      "id": 2,
+      "title": "Catégories et Types",
+      "subtitle": "Contenances & Moments de dégustation",
+      "icon": "🍸",
+      "description": "Short drinks vs Long drinks (Moyen mémo : Catégorie = Contenance) et Before dinner, After dinner, All day (Type = Temps).",
+      "gradient": "from-emerald-500 to-teal-700"
+    },
+    {
+      "id": 3,
+      "title": "Familles de cocktails",
+      "subtitle": "Structures et recettes types",
+      "icon": "🏷️",
+      "description": "Sour, Fizz, Colada, Julep, Tiki, Smash, Old-Fashioned, Flip, Collins, Daisy...",
+      "gradient": "from-blue-500 to-indigo-700"
+    },
+    {
+      "id": 4,
+      "title": "Méthodes de réalisation",
+      "subtitle": "Gestes et étapes techniques",
+      "icon": "🥄",
+      "description": "Les 4 techniques officielles : Shaker, Verre à mélange, Direct au verre, Blender. Ordre strict des étapes (mirer, rafraîchir, égoutter...).",
+      "gradient": "from-purple-500 to-pink-600"
+    },
+    {
+      "id": 5,
+      "title": "Verrerie de service",
+      "subtitle": "Incontournables et Complémentaires",
+      "icon": "🥂",
+      "description": "Nick & Nora, Rocks, Highball, Coupe, Flûte, Mule, Copa, Absinthe, Toddy, Hurricane, Julep, Tiki...",
+      "gradient": "from-cyan-500 to-blue-600"
+    },
+    {
+      "id": 6,
+      "title": "Matériel du barman",
+      "subtitle": "Outils indispensables et shakers",
+      "icon": "🛠️",
+      "description": "Shakers Boston vs Continental vs 3 pièces (Cobbler), Passoires (Hawthorne, Julep, Fine), Jigger, Pilon, Bar spoon...",
+      "gradient": "from-amber-600 to-yellow-500"
+    },
+    {
+      "id": 7,
+      "title": "Fiches Cocktails de référence",
+      "subtitle": "Recettes cultes Short & Long drinks",
+      "icon": "🍹",
+      "description": "Les 36 cocktails officiels : Aviation, Negroni, Margarita, Mojito, Spritz, Caipirinha, Mai Tai, Dry Martini, Manhattan...",
+      "gradient": "from-rose-500 to-red-600"
+    },
+    {
+      "id": 8,
+      "title": "Calcul du TAV",
+      "subtitle": "Titre Alcoométrique Volumique",
+      "icon": "🧮",
+      "description": "Formule mathématique officielle de calcul du degré d'alcool d'un cocktail, volumes d'alcool pur et calculs pratiques.",
+      "gradient": "from-violet-600 to-purple-800"
+    },
+    {
+      "id": 9,
+      "title": "Lexique professionnel",
+      "subtitle": "Le vocabulaire officiel du bar",
+      "icon": "📖",
+      "description": "Albédos, Aquafaba, Cuban roll, Dry shake, Fat washing, Float, Stir, Strain, Muter, Pourer, Pre-batch, Zeste...",
+      "gradient": "from-teal-600 to-emerald-800"
+    }
+  ],
+  "questions": [
+    {
+      "id": "m1_q1",
+      "moduleId": 1,
+      "badge": "Règle d'or",
+      "question": "Lors d'une création de cocktail, quel est le nombre maximal d'ingrédients recommandé pour veiller à l'équilibre organoleptique ?",
+      "options": [
+        "4 ingrédients maximum",
+        "6 ingrédients maximum",
+        "8 ingrédients maximum",
+        "10 ingrédients maximum"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Selon le Guide des bonnes pratiques (Partie 1), il est recommandé de se limiter à 6 ingrédients maximum pour veiller à l'équilibre organoleptique du cocktail."
+    },
+    {
+      "id": "m1_q2",
+      "moduleId": 1,
+      "badge": "Eau-de-vie",
+      "question": "Selon les règles d'usage du référentiel, combien d'eaux-de-vie est-il d'usage d'utiliser dans une recette afin de respecter ses caractéristiques gustatives ?",
+      "options": [
+        "Une seule eau-de-vie",
+        "Au minimum deux eaux-de-vie",
+        "Toujours trois eaux-de-vie complémentaires",
+        "Le nombre d'eaux-de-vie est libre et sans règle"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Il est d'usage d'utiliser une seule eau-de-vie afin de respecter ses caractéristiques gustatives (bien que des exceptions existent)."
+    },
+    {
+      "id": "m1_q3",
+      "moduleId": 1,
+      "badge": "Ordre de verse",
+      "question": "Dans quel ordre doit-on verser les ingrédients lors d'une création ou d'une revisite afin de limiter les pertes en cas d'erreur de dosage ?",
+      "options": [
+        "Du plus cher au moins cher",
+        "Du moins cher au plus cher",
+        "Du plus alcoolisé au moins alcoolisé",
+        "Dans l'ordre alphabétique des ingrédients"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le référentiel indique expressément de verser les ingrédients du moins cher au plus cher (ex: sirops/jus d'abord, puis spiritueux nobles) pour limiter les coûts de perte en cas d'erreur."
+    },
+    {
+      "id": "m1_q4",
+      "moduleId": 1,
+      "badge": "Règle des 3 S",
+      "question": "Que signifient les « 3 S » de la règle d'équilibre d'un cocktail selon le référentiel ?",
+      "options": [
+        "Sweet , Sour , Strong",
+        "Shaker, Stir, Strain",
+        "Saison, Service, Saveur",
+        "Smooth, Spicy, Salty"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La règle des 3 S repose sur : SWEET (la douceur / sucre), SOUR (l'acidité / lien), et STRONG (la puissance / alcool apporté par le spiritueux)."
+    },
+    {
+      "id": "m1_q5",
+      "moduleId": 1,
+      "badge": "Unités de mesure",
+      "question": "Quelle unité de mesure est désormais privilégiée pour rédiger les recettes afin de simplifier l'exportation à l'international et l'adaptation à la verrerie ?",
+      "options": [
+        "Le Centilitre",
+        "Le Millilitre",
+        "L'Once liquide",
+        "La Goutte"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le référentiel préconise de privilégier les dosages exprimés en ml (1 cl = 10 ml) pour faciliter l'exportation internationale et l'ajustement précis à la verrerie."
+    },
+    {
+      "id": "m1_q6",
+      "moduleId": 1,
+      "badge": "Éco-responsabilité",
+      "question": "Concernant l'utilisation des pailles au bar, quelle est la règle officielle formulée dans le référentiel ?",
+      "options": [
+        "Mettre obligatoirement deux pailles en plastique dans chaque Long drink",
+        "Utiliser des pailles en matière écoresponsable et uniquement à la demande du client",
+        "Ne jamais fournir de paille sous aucun prétexte",
+        "Mettre une paille systématiquement dans tous les Short drinks"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le référentiel mentionne en N.B. : « Utiliser des pailles en matière écoresponsable et à la demande du client »."
+    },
+    {
+      "id": "m1_q7",
+      "moduleId": 1,
+      "badge": "Garniture",
+      "question": "Dans un esprit éco-responsable et anti-gaspillage, que peut-on utiliser pour remplacer les fruits frais en garniture ?",
+      "options": [
+        "Des décors en plastique réutilisables",
+        "Des fruits déshydratés",
+        "Des colorants artificiels",
+        "Des ombrelles en papier"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Le référentiel précise que dans un esprit éco-responsable et anti-gaspillage, les fruits déshydratés peuvent remplacer les fruits frais lorsque c'est possible."
+    },
+    {
+      "id": "m1_q9",
+      "moduleId": 1,
+      "badge": "Verrerie",
+      "question": "Pourquoi est-il crucial d'adapter le dosage de la recette à la taille de la verrerie utilisée ?",
+      "options": [
+        "Car selon les fournisseurs, les verres possèdent une contenance différente pour un même type de verre",
+        "Pour que le cocktail coûte toujours le même prix peu importe le bar",
+        "Pour changer obligatoirement le nom du cocktail",
+        "Pour respecter la loi sur la vaisselle de bar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon les fournisseurs, les verres possèdent une contenance différente. Il est donc indispensable d'adapter la recette à la contenance réelle du verre de service."
+    },
+    {
+      "id": "m1_q_sour",
+      "moduleId": 1,
+      "badge": "Équilibre - Sour",
+      "question": "Dans la règle d’équilibre des « 3 S », par quoi est apporté l’élément « SOUR » ?",
+      "options": [
+        "Par un agrume , du verjus ou une solution acide",
+        "Par du sucre de canne liquide et du miel",
+        "Par une crème de cacao et du lait concentré",
+        "Par du gin et du tonic"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le SOUR représente l’acidité et le lien du cocktail. Il peut être apporté par un agrume, du verjus ou encore une solution acide."
+    },
+    {
+      "id": "m1_q_sweet",
+      "moduleId": 1,
+      "badge": "Équilibre - Sweet",
+      "question": "Dans la règle d’équilibre des « 3 S », par quoi peut être apporté l’élément « SWEET » ?",
+      "options": [
+        "Par une liqueur, une crème, un fruit, un sirop ou du sucre en poudre extra fin",
+        "Uniquement par des glaçons d’eau pure",
+        "Par du jus de citron jaune et du sel",
+        "Par de l’eau-de-vie pure à 50% vol"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le SWEET apporte le sucré et la douceur du cocktail. Il peut être apporté par une liqueur, une crème, un fruit, un sirop ou tout simplement du sucre en poudre extra fin."
+    },
+    {
+      "id": "m1_q_strong",
+      "moduleId": 1,
+      "badge": "Équilibre - Strong",
+      "question": "Dans la règle d’équilibre des « 3 S », quel est le rôle de l’élément « STRONG » et par quoi est-il apporté ?",
+      "options": [
+        "Il représente la puissance et le corps du cocktail, apporté principalement par l’eau-de-vie",
+        "Il représente la quantité de glaçons dans le verre",
+        "Il représente l’amertume extrême apportée par 10 traits de bitter",
+        "Il représente le volume total de soda gazeux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le STRONG est la puissance et le corps du cocktail. L’eau-de-vie (ou le spiritueux) est le principal ingrédient apportant cette force et cette structure aromatique."
+    },
+    {
+      "id": "m1_q_shaker",
+      "moduleId": 1,
+      "badge": "Technique Shaker",
+      "question": "Selon le guide des bonnes pratiques, dans quel cas doit-on privilégier l’utilisation du SHAKER ?",
+      "options": [
+        "Pour mélanger, émulsionner et rafraîchir en limitant la fonte de la glace",
+        "Uniquement pour les alcools purs sans aucun jus ni fruit",
+        "Pour faire chauffer les ingrédients avant de servir",
+        "Uniquement pour les boissons gazeuses et le champagne"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 1 du référentiel : le Shaker est utilisé pour mélanger, émulsionner et rafraîchir, en limitant la fonte de la glace (pour les jus, crème, œuf, etc.)."
+    },
+    {
+      "id": "m1_q_verre_melange",
+      "moduleId": 1,
+      "badge": "Verre à mélange",
+      "question": "Selon le référentiel, quel est l’objectif principal du VERRE À MÉLANGE et quels ingrédients y sont proscrits ?",
+      "options": [
+        "Mélanger et rafraîchir en apportant la dilution nécessaire aux produits alcooliques",
+        "Écraser des fruits frais avec de la glace pilée",
+        "Faire mousser les blancs d’œufs sans glaçons",
+        "Chauffer les cocktails d’hiver"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Verre à mélange est utilisé pour mélanger et rafraîchir, en apportant une dilution nécessaire à l’homogénéisation des produits notamment alcooliques. Il ne doit pas être utilisé pour les jus, sodas, crèmes ou émulsifiants."
+    },
+    {
+      "id": "m1_q_direct_verre",
+      "moduleId": 1,
+      "badge": "Direct au verre",
+      "question": "Dans quel cas le référentiel préconise-t-il la réalisation DIRECTE AU VERRE ?",
+      "options": [
+        "Lorsque les ingrédients de la recette se mélangent facilement sans nécessiter d’émulsion",
+        "Uniquement lorsqu’on n’a pas le temps de laver son shaker",
+        "Pour tous les cocktails à base d’œufs et de purées très denses",
+        "Exclusivement pour les cocktails flambés"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 1 du référentiel : la technique Direct au verre est préconisée « lorsque les ingrédients de la recette se mélangent facilement »."
+    },
+    {
+      "id": "m2_q1",
+      "moduleId": 2,
+      "badge": "Moyen mémotechnique",
+      "question": "Quels sont les deux moyens mémotechniques officiels indiqués dans le référentiel pour Catégorie et Type ?",
+      "options": [
+        "Catégorie = Contenance / Type = Temps",
+        "Catégorie = Couleur / Type = Teneur",
+        "Catégorie = Client / Type = Tarif",
+        "Catégorie = Chaleur / Type = Texture"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les moyens mémotechniques officiels sont : « Catégorie = Contenance » et « Type = Temps » (moment de dégustation)."
+    },
+    {
+      "id": "m2_q2",
+      "moduleId": 2,
+      "badge": "Contenance Short Drink",
+      "question": "Quelle est la contenance maximale d'un SHORT DRINK selon le référentiel ?",
+      "options": [
+        "Ne dépasse pas 50 ml",
+        "Ne dépasse pas 100 ml",
+        "Ne dépasse pas 150 ml",
+        "Ne dépasse pas 250 ml"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un SHORT DRINK est plutôt puissant et ne dépasse pas 100 ml (inférieur à 10 cl)."
+    },
+    {
+      "id": "m2_q3",
+      "moduleId": 2,
+      "badge": "Contenance Long Drink",
+      "question": "À partir de quel volume un cocktail est-il classé dans la catégorie LONG DRINK ?",
+      "options": [
+        "À partir de 60 ml",
+        "À partir de 100 ml",
+        "À partir de 200 ml",
+        "À partir de 330 ml"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un LONG DRINK est plutôt allongé et sa contenance démarre à partir de 100 ml (à partir de 10 cl)."
+    },
+    {
+      "id": "m2_q4",
+      "moduleId": 2,
+      "badge": "Types de cocktails",
+      "question": "Quels sont les 3 TYPES officiels de cocktails ?",
+      "options": [
+        "Before Dinner , After Dinner , All Day Cocktail",
+        "Matin, Midi, Soir",
+        "Hiver, Printemps, Été",
+        "Alcoolisé, Sans alcool, Faiblement alcoolisé"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les 3 types officiels sont : Before Dinner (Apéritif), After Dinner (Digestif) et All Day Cocktail (Tout moment)."
+    },
+    {
+      "id": "m2_q5",
+      "moduleId": 2,
+      "badge": "Before Dinner",
+      "question": "Quel est le profil gustatif typique d'un cocktail de type BEFORE DINNER ?",
+      "options": [
+        "Très onctueux, chaud et chocolaté",
+        "Plus ou moins amer, parfois sec, consommé avant le repas pour ouvrir l'appétit",
+        "Exclusivement très sucré et crémeux",
+        "Obligatoirement sans alcool et gazeux"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Un Before Dinner est plus ou moins amer, parfois sec, consommé de préférence avant le repas."
+    },
+    {
+      "id": "m2_q6",
+      "moduleId": 2,
+      "badge": "After Dinner",
+      "question": "Quel est le profil gustatif d'un cocktail de type AFTER DINNER ?",
+      "options": [
+        "Plus ou moins liquoreux, parfois puissant, consommé de préférence après le repas",
+        "Hyper acide et effervescent",
+        "Composé uniquement d'eau et d'agrumes",
+        "Toujours servi dans un verre shooter avec du sel"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un After Dinner est plus ou moins liquoreux, parfois puissant, consommé de préférence après le repas (ex: Espresso Martini, Alexander...)."
+    },
+    {
+      "id": "m2_q7",
+      "moduleId": 2,
+      "badge": "All Day",
+      "question": "Comment est décrit un cocktail de type ALL DAY COCKTAIL ?",
+      "options": [
+        "Plus ou moins fruité, souvent désaltérant, consommé quel que soit le moment de la journée",
+        "Un cocktail servi uniquement entre minuit et 6h du matin",
+        "Un cocktail contenant au minimum 50% de caféine",
+        "Un cocktail exclusivement servi au pichet"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un All Day Cocktail est plus ou moins fruité, souvent désaltérant, consommé quel que soit le moment de la journée (ex: Mojito, Piña Colada, Caipirinha...)."
+    },
+    {
+      "id": "m2_q8",
+      "moduleId": 2,
+      "badge": "Classification",
+      "question": "Le cocktail NEGRONI est classé dans quelle catégorie et quel type ?",
+      "options": [
+        "Short drink / Before dinner",
+        "Long drink / After dinner",
+        "Long drink / All day cocktail",
+        "Short drink / After dinner"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Negroni fait 90 ml au total (Short drink) et présente une amertume apéritive marquée (Before dinner)."
+    },
+    {
+      "id": "m3_colada_cat",
+      "moduleId": 3,
+      "badge": "Famille Colada",
+      "question": "Dans quelle catégorie de contenance se classe la famille des Coladas selon le référentiel ?",
+      "options": [
+        "Long drink",
+        "Short drink",
+        "Shooter",
+        "Hot drink"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 3 du référentiel, le Colada est un Long drink."
+    },
+    {
+      "id": "m3_colada_method",
+      "moduleId": 3,
+      "badge": "Famille Colada",
+      "question": "Avec quelles méthodes de réalisation prépare-t-on un cocktail de la famille des Coladas ?",
+      "options": [
+        "Au shaker ou au blender",
+        "Au verre à mélange",
+        "Directement au verre",
+        "Directement dans une timbale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le référentiel précise que le Colada est réalisé au shaker ou au blender."
+    },
+    {
+      "id": "m3_colada_comp",
+      "moduleId": 3,
+      "badge": "Famille Colada",
+      "question": "De quoi se compose principalement la recette type d’un Colada selon le référentiel ?",
+      "options": [
+        "Eau-de-vie, crème de coco et jus de fruit",
+        "Eau-de-vie, vermouth rouge et bitter",
+        "Spiritueux, sucre, citron et eau gazeuse",
+        "Eau-de-vie vieillie, sucre et menthe fraîche"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Colada se compose traditionnellement d’eau-de-vie, de crème de coco et de jus de fruit (ex: jus d’ananas)."
+    },
+    {
+      "id": "m3_colada_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Colada",
+      "question": "Quel est le cocktail le plus célèbre de la famille des Coladas cité dans le référentiel ?",
+      "options": [
+        "La Piña Colada",
+        "Le Chi-Chi",
+        "Le Blue Hawaiian",
+        "L’Apple Colada"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le cocktail le plus connu de cette famille est la Piña Colada (le Chi-Chi, le Blue Hawaiian et l’Apple Colada étant des variantes officielles)."
+    },
+    {
+      "id": "m3_fizz_cat",
+      "moduleId": 3,
+      "badge": "Famille Fizz",
+      "question": "Dans quelle catégorie de boisson se classe la famille des Fizz ?",
+      "options": [
+        "Long drink",
+        "Short drink",
+        "Shooter",
+        "After dinner uniquement"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Fizz est un Long drink allongé d’eau gazeuse."
+    },
+    {
+      "id": "m3_fizz_method",
+      "moduleId": 3,
+      "badge": "Famille Fizz",
+      "question": "Quelle est la méthode de réalisation officielle d’un cocktail de la famille des Fizz ?",
+      "options": [
+        "Au shaker",
+        "Au verre à mélange",
+        "Directement au verre",
+        "Au blender"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 3 du référentiel, le Fizz est un Long drink réalisé au shaker."
+    },
+    {
+      "id": "m3_fizz_comp",
+      "moduleId": 3,
+      "badge": "Famille Fizz",
+      "question": "De quoi se compose la recette type d’un Fizz ?",
+      "options": [
+        "Eau-de-vie, sucre, citron et eau gazeuse",
+        "Eau-de-vie, crème de coco et jus d’ananas",
+        "Whisky, vermouth rouge et bitters",
+        "Liqueur de café, vodka et crème"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un Fizz se compose d’eau-de-vie, de sucre, de citron et d’eau gazeuse."
+    },
+    {
+      "id": "m3_fizz_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Fizz",
+      "question": "Quel est le cocktail le plus connu de la famille des Fizz ?",
+      "options": [
+        "Le Gin Fizz",
+        "Le Tom Collins",
+        "Le French 75",
+        "Le Ramos Gin Fizz"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le plus connu de la famille des Fizz est le Gin Fizz."
+    },
+    {
+      "id": "m3_julep_cat",
+      "moduleId": 3,
+      "badge": "Famille Julep",
+      "question": "Dans quelle catégorie de contenance se classe la famille des Juleps ?",
+      "options": [
+        "Short drink",
+        "Long drink",
+        "Shooter",
+        "Hot drink"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Julep est un Short drink."
+    },
+    {
+      "id": "m3_julep_method",
+      "moduleId": 3,
+      "badge": "Famille Julep",
+      "question": "Comment réalise-t-on un cocktail de la famille des Juleps selon le référentiel ?",
+      "options": [
+        "Directement dans une timbale",
+        "Au shaker",
+        "Au verre à mélange",
+        "Au blender"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 3 du référentiel : le Julep est « réalisé directement dans une timbale »."
+    },
+    {
+      "id": "m3_julep_comp",
+      "moduleId": 3,
+      "badge": "Famille Julep",
+      "question": "Quels sont les composants de base d’un cocktail de la famille des Juleps ?",
+      "options": [
+        "Eau-de-vie vieillie, sucre et menthe fraîche",
+        "Vodka, jus de tomate et épices",
+        "Rhum blanc, curaçao et jus d’orange",
+        "Gin, vermouth sec et olive"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Julep se compose d’eau-de-vie vieillie, de sucre et de menthe fraîche."
+    },
+    {
+      "id": "m3_julep_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Julep",
+      "question": "Quel est le cocktail le plus célèbre de la famille des Juleps ?",
+      "options": [
+        "Le Mint Julep",
+        "Le Mojito",
+        "Le Moscow Mule",
+        "Le Smash"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le cocktail le plus connu de cette famille est le Mint Julep."
+    },
+    {
+      "id": "m3_of_cat",
+      "moduleId": 3,
+      "badge": "Famille Old-Fashioned",
+      "question": "Dans quelle catégorie se classe la famille des Old-Fashioned ?",
+      "options": [
+        "Short drink",
+        "Long drink",
+        "Shooter",
+        "Digestif chaud"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Old-Fashioned est un Short drink servi sur gros glaçons."
+    },
+    {
+      "id": "m3_of_method",
+      "moduleId": 3,
+      "badge": "Famille Old-Fashioned",
+      "question": "Comment réalise-t-on un cocktail de la famille Old-Fashioned ?",
+      "options": [
+        "Directement au verre",
+        "Au shaker",
+        "Au verre à mélange",
+        "Au blender"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L’Old-Fashioned est réalisé directement au verre en dissolvant le sucre avec les bitters."
+    },
+    {
+      "id": "m3_of_comp",
+      "moduleId": 3,
+      "badge": "Famille Old-Fashioned",
+      "question": "De quoi se compose la recette d’un Old-Fashioned ?",
+      "options": [
+        "Eau-de-vie vieillie, sucre et aromatic bitters",
+        "Gin, vermouth dry et zeste de citron",
+        "Tequila, triple sec et citron vert",
+        "Rhum blanc, menthe et eau gazeuse"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La famille Old-Fashioned se compose d’eau-de-vie vieillie, de sucre et d’aromatic bitters."
+    },
+    {
+      "id": "m3_of_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Old-Fashioned",
+      "question": "Quel est le cocktail le plus connu de la famille des Old-Fashioned ?",
+      "options": [
+        "Le Rye Whiskey Old-Fashioned",
+        "Le Manhattan",
+        "Le Sazerac",
+        "Le Godfather"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le plus célèbre est le Rye Whiskey Old-Fashioned (ou Bourbon Old-Fashioned)."
+    },
+    {
+      "id": "m3_smash_cat",
+      "moduleId": 3,
+      "badge": "Famille Smash",
+      "question": "Dans quelle catégorie se classe la famille des Smash ?",
+      "options": [
+        "Short drink",
+        "Long drink",
+        "Shooter",
+        "Hot drink"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Smash est un Short drink rafraîchissant."
+    },
+    {
+      "id": "m3_smash_method",
+      "moduleId": 3,
+      "badge": "Famille Smash",
+      "question": "Quelle est la méthode de réalisation d’un cocktail de la famille des Smash selon le référentiel ?",
+      "options": [
+        "Au shaker",
+        "Au verre à mélange",
+        "Directement au verre",
+        "Au blender"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 3 du référentiel, le Smash est un Short drink « réalisé au shaker »."
+    },
+    {
+      "id": "m3_smash_comp",
+      "moduleId": 3,
+      "badge": "Famille Smash",
+      "question": "Quelle est la composition d’un Smash selon le référentiel ?",
+      "options": [
+        "Eau-de-vie, herbe aromatique, sucre et citron ou autre agrume",
+        "Vodka, liqueur de café et crème fraîche",
+        "Cognac, crème de menthe blanche et glace",
+        "Rhum blanc, eau de coco et jus d’ananas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un Smash se compose d’une eau-de-vie, d’une herbe aromatique (basilic, menthe...), de sucre et de citron ou autre agrume."
+    },
+    {
+      "id": "m3_smash_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Smash",
+      "question": "Quel est le cocktail moderne le plus célèbre de la famille des Smash ?",
+      "options": [
+        "Le Gin Basil Smash",
+        "Le Bramble",
+        "Le Mojito",
+        "Le Southside"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le cocktail le plus connu de cette famille est le Gin Basil Smash (créé en 2008)."
+    },
+    {
+      "id": "m3_tiki_cat",
+      "moduleId": 3,
+      "badge": "Famille Tiki",
+      "question": "Dans quelle catégorie se classe la famille des cocktails Tiki ?",
+      "options": [
+        "Long drink",
+        "Short drink",
+        "Shooter",
+        "After dinner sec"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les cocktails Tiki sont des Long drinks généreux servis sur glace pilée."
+    },
+    {
+      "id": "m3_tiki_method",
+      "moduleId": 3,
+      "badge": "Famille Tiki",
+      "question": "Avec quelles méthodes prépare-t-on les cocktails de la famille Tiki ?",
+      "options": [
+        "Au shaker ou au blender",
+        "Au verre à mélange",
+        "Directement au verre",
+        "Directement dans une timbale"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Les cocktails Tiki se réalisent au shaker ou au blender avec beaucoup de glace."
+    },
+    {
+      "id": "m3_tiki_comp",
+      "moduleId": 3,
+      "badge": "Famille Tiki",
+      "question": "De quoi se compose typiquement la structure d’un cocktail Tiki ?",
+      "options": [
+        "Eau-de-vie notamment rhums, sucre ou sirop d’épices, agrume et plusieurs jus de fruits",
+        "Gin, vermouth dry et olive",
+        "Bourbon, vermouth rouge et cerise",
+        "Vodka, curaçao bleu et limonade"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un cocktail Tiki rassemble une eau-de-vie (généralement un ou plusieurs rhums), du sucre ou sirop d’épices, du citron vert ou autre agrume, et plusieurs jus de fruits."
+    },
+    {
+      "id": "m3_tiki_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Tiki",
+      "question": "Quel est le cocktail le plus connu et emblématique de la culture Tiki selon le référentiel ?",
+      "options": [
+        "Le Mai Tai",
+        "Le Zombie",
+        "Le Hurricane",
+        "Le Painkiller"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le cocktail le plus connu de la famille Tiki est le Mai Tai (créé par Trader Vic en 1944)."
+    },
+    {
+      "id": "m3_sour_cat",
+      "moduleId": 3,
+      "badge": "Famille Sour",
+      "question": "Dans quelle catégorie se classe la famille des Sour ?",
+      "options": [
+        "Short drink",
+        "Long drink",
+        "Shooter",
+        "Hot drink"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Sour est un Short drink équilibré entre sucre et acidité."
+    },
+    {
+      "id": "m3_sour_method",
+      "moduleId": 3,
+      "badge": "Famille Sour",
+      "question": "Quelle méthode de réalisation utilise-t-on pour un cocktail de la famille des Sour ?",
+      "options": [
+        "Au shaker",
+        "Au verre à mélange",
+        "Directement au verre",
+        "Au blender"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Sour est réalisé au shaker (souvent avec dry shake pour monter le blanc d’œuf ou l’aquafaba)."
+    },
+    {
+      "id": "m3_sour_comp",
+      "moduleId": 3,
+      "badge": "Famille Sour",
+      "question": "Quelle est la composition officielle d’un Sour selon le référentiel ?",
+      "options": [
+        "Un spiritueux, du sucre, du citron ou autre agrume, et souvent un émulsifiant",
+        "Une liqueur de menthe, du cognac et du lait",
+        "Du rhum, de la crème de coco et du jus d’ananas",
+        "Du vin blanc et de la crème de cassis"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Un Sour se compose d’un spiritueux, de sucre, de citron ou d’un autre agrume, et souvent de blanc d’œuf ou d’un autre émulsifiant."
+    },
+    {
+      "id": "m3_sour_cocktail",
+      "moduleId": 3,
+      "badge": "Famille Sour",
+      "question": "Quel est le cocktail le plus célèbre de la famille des Sour ?",
+      "options": [
+        "Le Whiskey Sour",
+        "Le Pisco Sour",
+        "L’Amaretto Sour",
+        "Le New York Sour"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le plus célèbre de cette famille est le Whiskey Sour (et sa variante le Pisco Sour)."
+    },
+    {
+      "id": "m3_sour_emulsifiant",
+      "moduleId": 3,
+      "badge": "Famille Sour",
+      "question": "Selon le référentiel, avec quel ingrédient spécifique le cocktail de la famille des Sour est-il souvent réalisé pour sa texture ?",
+      "options": [
+        "Du blanc d’œuf ou un autre émulsifiant",
+        "Du lait concentré sucré",
+        "De la crème fleurette liquide",
+        "Du beurre clarifié fondu"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Selon la Partie 3 du référentiel : le Sour « est souvent réalisé avec du blanc d’œuf ou un autre émulsifiant » (comme l’aquafaba)."
+    },
+    {
+      "id": "m4_reorder_shaker",
+      "moduleId": 4,
+      "type": "reorder",
+      "badge": "Protocole Shaker",
+      "question": "Remettez dans l’ordre chronologique officiel les étapes de réalisation d’un cocktail AU SHAKER :",
+      "steps": [
+        "Mirer le verre",
+        "Remplir le verre de glace",
+        "Remplir la grande timbale du shaker de glace",
+        "Rafraîchir avec la cuillère de bar",
+        "Verser les ingrédients dans l’ordre de la recette dans la petite timbale",
+        "Retirer les glaçons ou égoutter la glace en fonction de la recette",
+        "Compléter de glace si besoin",
+        "Égoutter la glace de la grande timbale du shaker",
+        "Fermer le shaker et frapper 7 à 10 secondes",
+        "Passer dans le verre",
+        "Rafraîchir le complément dans la grande timbale du shaker avant de compléter le verre",
+        "Mélanger si ajout d’un complément",
+        "Selon la recette : garnir, ajouter stick et/ou une paille"
+      ],
+      "explanation": "Protocole officiel AU SHAKER (page 6 du socle) : 1. Mirer le verre ➔ 2. Remplir le verre de glace ➔ 3. Remplir la grande timbale de glace ➔ 4. Rafraîchir à la cuillère ➔ 5. Verser les ingrédients dans la petite timbale ➔ 6. Retirer les glaçons ou égoutter ➔ 7. Compléter de glace si besoin ➔ 8. Égoutter la grande timbale ➔ 9. Frapper 7 à 10s ➔ 10. Passer dans le verre ➔ 11. Rafraîchir le complément ➔ 12. Mélanger si complément ➔ 13. Garnir, stick et paille."
+    },
+    {
+      "id": "m4_reorder_verre_melange",
+      "moduleId": 4,
+      "type": "reorder",
+      "badge": "Protocole Verre à mélange",
+      "question": "Remettez dans l’ordre chronologique officiel les étapes de réalisation d’un cocktail AU VERRE À MÉLANGE :",
+      "steps": [
+        "Mirer le verre",
+        "Remplir le verre de glace",
+        "Mirer le verre à mélange",
+        "Remplir le verre à mélange de glace",
+        "Rafraîchir avec la cuillère de bar",
+        "Retirer les glaçons du verre de service",
+        "Égoutter les glaçons du verre à mélange",
+        "Verser les ingrédients dans l’ordre de la recette dans le verre à mélange",
+        "Mélanger à l’aide de la cuillère de bar pendant 15 à 20 secondes",
+        "Passer dans le verre de service",
+        "Garnir si besoin"
+      ],
+      "explanation": "Protocole officiel AU VERRE À MÉLANGE (page 6 du socle) : 1. Mirer le verre ➔ 2. Remplir le verre de glace ➔ 3. Mirer le verre à mélange ➔ 4. Remplir le verre à mélange de glace ➔ 5. Rafraîchir à la cuillère ➔ 6. Retirer les glaçons du verre de service ➔ 7. Égoutter les glaçons du verre à mélange ➔ 8. Verser les ingrédients ➔ 9. Mélanger 15 à 20s ➔ 10. Passer dans le verre ➔ 11. Garnir si besoin."
+    },
+    {
+      "id": "m4_reorder_direct_verre",
+      "moduleId": 4,
+      "type": "reorder",
+      "badge": "Protocole Direct au verre",
+      "question": "Remettez dans l’ordre chronologique officiel les étapes de réalisation DIRECTE AU VERRE :",
+      "steps": [
+        "Mirer le verre",
+        "Remplir le verre de glace",
+        "Rafraîchir avec la cuillère de bar",
+        "Égoutter le verre",
+        "Compléter de glaçons si besoin",
+        "Verser les ingrédients dans l’ordre de la recette",
+        "Selon la recette : mélanger, garnir, ajouter stick et/ou une paille"
+      ],
+      "explanation": "Protocole officiel DIRECT AU VERRE (page 7 du socle) : 1. Mirer le verre ➔ 2. Remplir le verre de glace ➔ 3. Rafraîchir à la cuillère de bar ➔ 4. Égoutter le verre ➔ 5. Compléter de glaçons si besoin ➔ 6. Verser les ingrédients ➔ 7. Selon la recette : mélanger, garnir, ajouter stick et/ou une paille."
+    },
+    {
+      "id": "m5_glass_shot",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/shot.png",
+      "badge": "Verrerie en image",
+      "glassName": "Shot",
+      "acceptedNames": [
+        "shot",
+        "verre shot",
+        "shooter",
+        "verre shooter"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Shot (Shooter) — Catégorie : LES INCONTOURNABLES (Partie 5 du référentiel)."
+    },
+    {
+      "id": "m5_glass_mule",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/mule.png",
+      "badge": "Verrerie en image",
+      "glassName": "Mule (ou Mug)",
+      "acceptedNames": [
+        "mule",
+        "mug",
+        "timbale mule",
+        "mule mug",
+        "verre mule",
+        "verre mug",
+        "timbale mug",
+        "moscow mule",
+        "mug cuivre"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Selon la page 8 du référentiel officiel, la Timbale Mule / Mug fait partie de la liste des 10 INCONTOURNABLES."
+    },
+    {
+      "id": "m5_glass_rocks",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/rocks.png",
+      "badge": "Verrerie en image",
+      "glassName": "Rocks",
+      "acceptedNames": [
+        "rocks",
+        "verre rocks",
+        "old fashioned",
+        "old-fashioned",
+        "verre old fashioned",
+        "tumbler bas",
+        "lowball"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Rocks (Old-Fashioned) — Catégorie : LES INCONTOURNABLES."
+    },
+    {
+      "id": "m5_glass_highball",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/highball.png",
+      "badge": "Verrerie en image",
+      "glassName": "Highball",
+      "acceptedNames": [
+        "highball",
+        "verre highball",
+        "tumbler",
+        "tumbler haut"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Highball (Tumbler haut) — Catégorie : LES INCONTOURNABLES."
+    },
+    {
+      "id": "m5_glass_degustation",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/degustation.png",
+      "badge": "Verrerie en image",
+      "glassName": "Dégustation",
+      "acceptedNames": [
+        "degustation",
+        "dégustation",
+        "verre degustation",
+        "verre dégustation",
+        "digestaton",
+        "tulipe",
+        "verre tulipe"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Dégustation — Catégorie : LES INCONTOURNABLES."
+    },
+    {
+      "id": "m5_glass_nick_nora",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/nick_nora.png",
+      "badge": "Verrerie en image",
+      "glassName": "Nick & Nora",
+      "acceptedNames": [
+        "nick & nora",
+        "nick and nora",
+        "nick et nora",
+        "nick&nora",
+        "nick nora",
+        "verre nick & nora",
+        "verre nick and nora",
+        "verre nick nora"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Nick & Nora — Catégorie : LES INCONTOURNABLES (utilisé pour Aviation, Cosmopolitan, Daiquiri, Dry Martini, Manhattan, etc.)."
+    },
+    {
+      "id": "m5_glass_coupe",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/coupe.png",
+      "badge": "Verrerie en image",
+      "glassName": "Coupe",
+      "acceptedNames": [
+        "coupe",
+        "verre coupe",
+        "coupe a champagne",
+        "coupe à champagne"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Coupe — Catégorie : LES INCONTOURNABLES."
+    },
+    {
+      "id": "m5_glass_martini",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/martini.png",
+      "badge": "Verrerie en image",
+      "glassName": "Martini",
+      "acceptedNames": [
+        "martini",
+        "verre martini",
+        "verre a martini",
+        "verre à martini",
+        "verre a cocktail",
+        "verre à cocktail"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Martini — Catégorie : LES INCONTOURNABLES."
+    },
+    {
+      "id": "m5_glass_vin",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/vin.png",
+      "badge": "Verrerie en image",
+      "glassName": "Vin",
+      "acceptedNames": [
+        "vin",
+        "verre a vin",
+        "verre à vin",
+        "verre vin"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre à Vin — Catégorie : LES INCONTOURNABLES (utilisé pour le Spritz)."
+    },
+    {
+      "id": "m5_glass_flute",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/flute.png",
+      "badge": "Verrerie en image",
+      "glassName": "Flûte",
+      "acceptedNames": [
+        "flute",
+        "flûte",
+        "flute a champagne",
+        "flûte à champagne",
+        "verre flute",
+        "verre flûte"
+      ],
+      "category": "incontournable",
+      "categoryLabel": "Incontournable",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Flûte — Catégorie : LES INCONTOURNABLES (utilisée pour Bellini, French 75, Champagne Cocktail)."
+    },
+    {
+      "id": "m5_glass_digestif",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/digestif.png",
+      "badge": "Verrerie en image",
+      "glassName": "Digestif",
+      "acceptedNames": [
+        "digestif",
+        "verre digestif"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Digestif — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_absinthe",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/absinthe.png",
+      "badge": "Verrerie en image",
+      "glassName": "Absinthe",
+      "acceptedNames": [
+        "absinthe",
+        "verre a absinthe",
+        "verre à absinthe",
+        "verre absinthe"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre à Absinthe — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_toddy",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/toddy.png",
+      "badge": "Verrerie en image",
+      "glassName": "Toddy",
+      "acceptedNames": [
+        "toddy",
+        "verre toddy",
+        "hot toddy"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Toddy — Catégorie : LES COMPLÉMENTAIRES (pour boissons et cocktails chauds)."
+    },
+    {
+      "id": "m5_glass_punch",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/punch.png",
+      "badge": "Verrerie en image",
+      "glassName": "Punch",
+      "acceptedNames": [
+        "punch",
+        "verre punch",
+        "tasse punch",
+        "tasse a punch",
+        "tasse à punch"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Punch — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_hurricane",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/hurricane.png",
+      "badge": "Verrerie en image",
+      "glassName": "Hurricane",
+      "acceptedNames": [
+        "hurricane",
+        "verre hurricane"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Hurricane — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_copa",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/copa.png",
+      "badge": "Verrerie en image",
+      "glassName": "Copa",
+      "acceptedNames": [
+        "copa",
+        "verre copa",
+        "piscine",
+        "verre piscine",
+        "verre ballon"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Copa (grand ballon) — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_biere",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/biere.png",
+      "badge": "Verrerie en image",
+      "glassName": "Bière",
+      "acceptedNames": [
+        "biere",
+        "bière",
+        "verre a biere",
+        "verre à bière",
+        "chope",
+        "chope a biere",
+        "chope à bière"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre / Chope à Bière — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_julep",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/julep.png",
+      "badge": "Verrerie en image",
+      "glassName": "Julep",
+      "acceptedNames": [
+        "julep",
+        "timbale julep",
+        "verre julep",
+        "mint julep"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Timbale Julep — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_tiki",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/tiki.png",
+      "badge": "Verrerie en image",
+      "glassName": "Tiki",
+      "acceptedNames": [
+        "tiki",
+        "verre tiki",
+        "tiki mug",
+        "mug tiki"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Tiki (Mug Tiki) — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m5_glass_fantaisie",
+      "moduleId": 5,
+      "type": "glass_identify",
+      "image": "assets/verres/fantaisie.png",
+      "badge": "Verrerie en image",
+      "glassName": "Fantaisie",
+      "acceptedNames": [
+        "fantaisie",
+        "verre fantaisie",
+        "fantaisie glass"
+      ],
+      "category": "complémentaire",
+      "categoryLabel": "Complémentaire",
+      "question": "Identifiez ce verre et choisissez sa catégorie officielle :",
+      "explanation": "Nom officiel : Verre Fantaisie — Catégorie : LES COMPLÉMENTAIRES."
+    },
+    {
+      "id": "m6_tool_doseur",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/doseur.png",
+      "badge": "Matériel officiel",
+      "toolName": "Doseur",
+      "acceptedNames": [
+        "doseur",
+        "jigger",
+        "le doseur",
+        "un doseur",
+        "verre doseur",
+        "doseur jigger",
+        "jigger doseur"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Mesurer avec précision les volumes de liquides pour respecter les équilibres des recettes",
+        "Filtrer les résidus de glace et de pulpe lors du service dans le verre",
+        "Écraser les herbes fraîches et les agrumes au fond du verre",
+        "Réguler l’écoulement continu des bouteilles de spiritueux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Doseur. Il permet de mesurer au millilitre près les spiritueux, sirops et jus afin de garantir l’équilibre parfait de chaque cocktail."
+    },
+    {
+      "id": "m6_tool_passoire_fine",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/passoire_fine.png",
+      "badge": "Matériel officiel",
+      "toolName": "Passoire fine",
+      "acceptedNames": [
+        "passoire fine",
+        "la passoire fine",
+        "une passoire fine",
+        "tamis",
+        "passoire a tamis",
+        "passoire à tamis",
+        "passoire tamis",
+        "chinois",
+        "chinois fin",
+        "fine strainer"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Retenir les micro-morceaux de glace brisée et les pulpes fines lors d’une double filtration",
+        "Presser des quartiers de citron vert directement au-dessus du verre",
+        "Mélanger les liquides et les glaçons dans le verre à mélange",
+        "Mesurer les doses d’alcool pour les verres de dégustation"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Passoire fine ou tamis. Placée au-dessus du verre lors d’un double passage, elle retient les éclats de glace et pulpes pour une texture soyeuse et limpide."
+    },
+    {
+      "id": "m6_tool_passoire_cocktail",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/passoire_cocktail.png",
+      "badge": "Matériel officiel",
+      "toolName": "Passoire à cocktail",
+      "acceptedNames": [
+        "passoire a cocktail",
+        "passoire à cocktail",
+        "passoire cocktail",
+        "la passoire a cocktail",
+        "passoire hawthorne",
+        "hawthorne",
+        "passoire a ressort",
+        "une passoire a cocktail"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "S’adapter au col de la timbale du shaker grâce à son ressort pour retenir la glace lors de la verse",
+        "Prélever des zestes d’agrumes fins sans entamer la membrane blanche amère",
+        "Égoutter exclusivement le verre à mélange sans aucun ressort",
+        "Broyer les glaçons en glace pilée dans un linge propre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Passoire à cocktail ou passoire Hawthorne. Son ressort épouse la paroi de la timbale de shaker pour retenir la glace lors du passage dans le verre de service."
+    },
+    {
+      "id": "m6_tool_verre_a_melange",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/verre_a_melange.png",
+      "badge": "Matériel officiel",
+      "toolName": "Verre à mélange",
+      "acceptedNames": [
+        "verre a melange",
+        "verre à mélange",
+        "le verre a melange",
+        "le verre à mélange",
+        "un verre a melange",
+        "mixing glass",
+        "verre melangeur"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Rafraîchir et diluer avec précision les cocktails composés d’ingrédients limpides comme le Negroni ou le Dry Martini",
+        "Frapper énergiquement les cocktails contenant des jus de fruits épais ou de la crème",
+        "Allonger les boissons gazeuses avec de l’eau gazeuse ou du tonic",
+        "Flamber les spiritueux servis à température ambiante"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Verre à mélange. Il permet de rafraîchir et mélanger harmonieusement les ingrédients limpides sans troubler la brillance du cocktail par une aération violente."
+    },
+    {
+      "id": "m6_tool_shaker_boston",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/shaker_boston.png",
+      "badge": "Matériel officiel",
+      "toolName": "Shaker Boston",
+      "acceptedNames": [
+        "shaker boston",
+        "boston shaker",
+        "le shaker boston",
+        "un shaker boston",
+        "shaker deux pieces",
+        "shaker 2 pieces",
+        "boston"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Emboîter deux timbales pour offrir un grand volume utile favorisant un refroidissement et une aération ultra rapides",
+        "Filtrer directement grâce à une grille intégrée au bouchon supérieur",
+        "Broyer automatiquement les glaçons par une lame rotative interne",
+        "Servir exclusivement à mesurer les doses de spiritueux"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Shaker Boston. Composé de deux timbales emboîtables, il offre une large chambre de frappe idéale pour refroidir, diluer et émulsionner rapidement les cocktails."
+    },
+    {
+      "id": "m6_tool_pilon",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/pilon.png",
+      "badge": "Matériel officiel",
+      "toolName": "Pilon",
+      "acceptedNames": [
+        "pilon",
+        "le pilon",
+        "un pilon",
+        "muddler"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Presser délicatement les agrumes, herbes aromatiques ou fruits au fond du récipient pour libérer sucs et arômes",
+        "Broyer brutalement les glaçons pour les transformer en neige",
+        "Mélanger circulairement les spiritueux dans le verre à mélange",
+        "Déboucher les bouteilles de vin et les flacons de bitters"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Pilon ou muddler. Il permet d’extraire le jus des fruits et les essences aromatiques des herbes fraîches comme la menthe sans les déchiqueter."
+    },
+    {
+      "id": "m6_tool_cuillere_de_bar",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/cuillere_de_bar.png",
+      "badge": "Matériel officiel",
+      "toolName": "Cuillère de bar",
+      "acceptedNames": [
+        "cuillere de bar",
+        "cuillère de bar",
+        "la cuillere de bar",
+        "la cuillère de bar",
+        "une cuillere de bar",
+        "cuillere a cocktail",
+        "cuillere torsee",
+        "barspoon",
+        "bar spoon"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Faciliter la rotation fluide le long des parois du verre à mélange grâce à sa tige torsadée et guider les liquides gazeux",
+        "Mesurer une dose standard de cinquante millilitres d’alcool",
+        "Bloquer les glaçons au fond du shaker pendant la frappe",
+        "Percer les opercules des bouteilles et canettes de soda"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Cuillère de bar. Son long manche torsadé pivote entre les doigts pour un mouvement fluide et silencieux, et sert aussi à faire couler des liquides délicatement."
+    },
+    {
+      "id": "m6_tool_presse_agrumes",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/presse_agrumes.png",
+      "badge": "Matériel officiel",
+      "toolName": "Presse-agrumes",
+      "acceptedNames": [
+        "presse agrumes",
+        "presse agrume",
+        "presse-agrumes",
+        "presse-agrume",
+        "le presse agrumes",
+        "le presse-agrumes",
+        "un presse agrumes",
+        "presse citron",
+        "presse-citron",
+        "mexican elbow",
+        "juicer"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Extraire instantanément un jus frais minute en évitant d’écraser la membrane blanche amère du zeste",
+        "Filtrer les pépins de grenade et les grains de café torréfiés",
+        "Tailler de fines lanières de concombre régulières pour le décor",
+        "Chauffer les jus de fruits destinés aux boissons chaudes"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Presse-agrumes. Le modèle manuel à levier extrait le jus pur des demi-agrumes rapidement sans broyer le blanc de l’écorce qui apporterait de l’amertume."
+    },
+    {
+      "id": "m6_tool_passoire_a_julep",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/passoire_a_julep.png",
+      "badge": "Matériel officiel",
+      "toolName": "Passoire à julep",
+      "acceptedNames": [
+        "passoire a julep",
+        "passoire à julep",
+        "passoire julep",
+        "la passoire a julep",
+        "une passoire a julep",
+        "julep strainer"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "S’insérer parfaitement dans le col du verre à mélange pour retenir les gros glaçons lors du versement",
+        "Remplacer la passoire fine lors d’une double filtration au shaker",
+        "Calibrer les millilitres de spiritueux lors de la verse",
+        "Réguler le flux de sortie des bouteilles de liqueur"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Passoire à julep. Sa forme incurvée perforée sans ressort s’adapte idéalement au verre à mélange pour retenir la glace rafraîchie."
+    },
+    {
+      "id": "m6_tool_eplucheur",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/eplucheur.png",
+      "badge": "Matériel officiel",
+      "toolName": "Éplucheur",
+      "acceptedNames": [
+        "eplucheur",
+        "éplucheur",
+        "l eplucheur",
+        "l'eplucheur",
+        "l'éplucheur",
+        "un eplucheur",
+        "un éplucheur",
+        "econome",
+        "économe",
+        "zesteur",
+        "peeler",
+        "eplucheur a zeste"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Prélever de larges bandes d’écorce d’agrumes riches en huiles essentielles pour exprimer un zeste et décorer",
+        "Doser les liqueurs denses et les sirops concentrés au millilitre près",
+        "Râper les épices dures comme la muscade ou la fève tonka",
+        "Égoutter la glace fondue du verre de service avant le versement"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Éplucheur ou économe. Il prélève un ruban de zeste net sans la partie blanche amère afin de parfumer la surface du verre et orner le cocktail."
+    },
+    {
+      "id": "m6_tool_bec_verseur",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/bec_verseur.png",
+      "badge": "Matériel officiel",
+      "toolName": "Bec verseur",
+      "acceptedNames": [
+        "bec verseur",
+        "le bec verseur",
+        "un bec verseur",
+        "bouchon verseur",
+        "speed pourer",
+        "pourer"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Assurer un écoulement fluide et régulier des bouteilles pour un versement précis, propre et rapide",
+        "Filtrer les résidus de fruits et impuretés contenus dans les bouteilles",
+        "Diviser par deux le titre alcoométrique des spiritueux versés",
+        "Empêcher le dégazage des vins effervescents après débouchage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Bec verseur ou speed pourer. Fixé sur le goulot, il régule le flux d’air et de liquide pour des verses nettes et maîtrisées."
+    },
+    {
+      "id": "m6_tool_shaker_continental",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/shaker_continental.png",
+      "badge": "Matériel officiel",
+      "toolName": "Shaker continental",
+      "acceptedNames": [
+        "shaker continental",
+        "shaker parisien",
+        "le shaker continental",
+        "un shaker continental",
+        "french shaker",
+        "shaker french",
+        "continental"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Proposer un ensemble de deux pièces métalliques ajustées sans filtre intégré, nécessitant une passoire à cocktail pour le service",
+        "Offrir une passoire intégrée dans le couvercle avec bouchon dévissable",
+        "Associer une grande timbale en métal avec un gobelet en verre épais",
+        "Chauffer les spiritueux pour les préparations d’hiver"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Shaker continental ou shaker parisien. Composé de deux pièces en métal sans passoire interne, il requiert l’usage d’une passoire à cocktail pour filtrer la boisson."
+    },
+    {
+      "id": "m6_tool_shaker_trois_pieces",
+      "moduleId": 6,
+      "type": "equipment_identify",
+      "image": "assets/materiel/shaker_trois_pieces.png",
+      "badge": "Matériel officiel",
+      "toolName": "Shaker trois pièces",
+      "acceptedNames": [
+        "shaker trois pieces",
+        "shaker trois pièces",
+        "shaker 3 pieces",
+        "shaker 3 pièces",
+        "le shaker trois pieces",
+        "le shaker 3 pieces",
+        "un shaker trois pieces",
+        "shaker cobbler",
+        "cobbler shaker",
+        "shaker standard"
+      ],
+      "question": "Identifiez ce matériel et choisissez son rôle officiel :",
+      "options": [
+        "Rassembler une timbale principale, un couvercle intermédiaire muni d’une grille filtrante et un bouchon supérieur amovible",
+        "Combiner deux timbales métalliques et une cuillère de bar intégrée",
+        "Intégrer un verre doseur en verre, un pilon et un tamis fin",
+        "Disposer d’un compartiment broyeur de glaçons manuel dans sa base"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Nom officiel : Shaker trois pièces ou Cobbler shaker. Il intègre directement son propre filtre perforé sous le bouchon supérieur pour servir sans passoire supplémentaire."
+    },
+    {
+      "id": "m7_q1",
+      "moduleId": 7,
+      "badge": "Aviation",
+      "question": "Quels sont les ingrédients et dosages officiels du cocktail AVIATION (Short drink) ?",
+      "options": [
+        "40 ml Gin, 15 ml Marasquin, 15 ml Jus de citron jaune, 5 ml Crème de violette",
+        "50 ml Vodka, 20 ml Sirop de fraise, 10 ml Citron vert",
+        "40 ml Rhum blanc, 20 ml Jus d'ananas, 10 ml Menthe",
+        "50 ml Tequila, 20 ml Triple sec, 20 ml Citron"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Recette officielle Aviation : 40 ml Gin, 15 ml Marasquin, 15 ml Jus de citron jaune, 5 ml Crème de violette. Servi dans un verre Nick & Nora avec une cerise à l'eau-de-vie."
+    },
+    {
+      "id": "m7_q2",
+      "moduleId": 7,
+      "badge": "Aviation - Histoire",
+      "question": "Dans quel livre et en quelle année la recette de l'Aviation a-t-elle été publiée pour la première fois ?",
+      "options": [
+        "« Recipes for mixed drinks » de Hugo Ensslin à New York en 1916",
+        "« The Savoy Cocktail Book » de Harry Craddock à Londres en 1930",
+        "« American Bar » de Frank Newman à Paris en 1904",
+        "« Bartender's Guide » de Jerry Thomas en 1862"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Aviation a été publié dans le livre « Recipes for mixed drinks » par Hugo Ensslin à New York en 1916."
+    },
+    {
+      "id": "m7_q3",
+      "moduleId": 7,
+      "badge": "Negroni",
+      "question": "Quelle est la composition exacte du NEGRONI selon la fiche officielle ?",
+      "options": [
+        "30 ml Gin, 30 ml Vermouth rouge, 30 ml Bitter (ex: Campari)",
+        "40 ml Vodka, 20 ml Vermouth blanc, 10 ml Angostura",
+        "50 ml Bourbon, 20 ml Sirop de sucre, 2 traits de bitter",
+        "30 ml Tequila, 30 ml Mezcal, 30 ml Citron vert"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Negroni est un classique aux proportions parfaites : 30 ml Gin, 30 ml Vermouth rouge, 30 ml Bitter. Réalisé au verre à mélange (ou direct) dans un verre Rocks avec un zeste d'orange exprimé."
+    },
+    {
+      "id": "m7_q4",
+      "moduleId": 7,
+      "badge": "Negroni Sbagliato",
+      "question": "Dans la variante « NEGRONI SBAGLIATO », quel ingrédient remplace le Gin ?",
+      "options": [
+        "Le Prosecco (vin effervescent)",
+        "La Vodka",
+        "Le Mezcal",
+        "Le Cognac"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dans le Negroni Sbagliato (« mal fait » / « raté » en italien), le Prosecco remplace le Gin."
+    },
+    {
+      "id": "m7_q5",
+      "moduleId": 7,
+      "badge": "Dry Martini",
+      "question": "Quels sont les dosages officiels du DRY MARTINI dans le référentiel ?",
+      "options": [
+        "50 ml Gin, 10 ml Vermouth Dry, 1 trait Bitter orange (facultatif)",
+        "30 ml Gin, 30 ml Vermouth Dry, 30 ml Eau gazeuse",
+        "60 ml Vodka, 30 ml Liqueur de café",
+        "40 ml Rhum, 20 ml Vermouth rouge"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Fiche technique officielle : 50 ml Gin, 10 ml Vermouth Dry, 1 trait Bitters orange. Préparé au verre à mélange, servi en verre Nick & Nora (ou Martini) avec une olive ou un zeste de citron."
+    },
+    {
+      "id": "m7_q6",
+      "moduleId": 7,
+      "badge": "Gibson",
+      "question": "Quelle est la garniture spécifique qui transforme un Dry Martini en GIBSON ?",
+      "options": [
+        "Un oignon au vinaigre (petit oignon blanc perlé)",
+        "Une tranche de concombre",
+        "Une cerise à l'eau-de-vie",
+        "Un piment oiseau"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Gibson est un Dry Martini garni d'un oignon au vinaigre (cocktail onion) à la place de l'olive ou du zeste de citron."
+    },
+    {
+      "id": "m7_q7",
+      "moduleId": 7,
+      "badge": "Cosmopolitan",
+      "question": "Quels ingrédients composent le COSMOPOLITAN officiel ?",
+      "options": [
+        "40 ml Vodka citron, 15 ml Triple sec, 15 ml Jus de citron vert, 30 ml Nectar de cranberry",
+        "50 ml Gin, 20 ml Sirop de grenadine, 20 ml Jus de pamplemousse",
+        "40 ml Rhum blanc, 20 ml Jus de framboise, 10 ml Citron jaune",
+        "50 ml Tequila, 20 ml Nectar de cranberry, 10 ml Lait d'amande"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Recette officielle : 40 ml Vodka citron, 15 ml Triple sec, 15 ml Jus de citron vert, 30 ml Nectar de cranberry. Shaker, servi en Nick & Nora avec un zeste d'orange exprimé."
+    },
+    {
+      "id": "m7_q8",
+      "moduleId": 7,
+      "badge": "Daiquiri",
+      "question": "Quelle est la recette officielle du DAIQUIRI classique ?",
+      "options": [
+        "50 ml Rhum blanc cubain, 20 ml Jus de citron vert, 15 ml Sirop de sucre",
+        "40 ml Rhum ambré, 40 ml Jus d'ananas, 20 ml Lait de coco",
+        "50 ml Cachaça, 1 citron vert entier, 2 cuillères de sucre",
+        "40 ml Tequila, 20 ml Sirop d'agave, 20 ml Citron vert"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Daiquiri : 50 ml Rhum blanc cubain, 20 ml Jus de citron vert, 15 ml Sirop de sucre. Frappé au shaker et servi en Nick & Nora."
+    },
+    {
+      "id": "m7_q9",
+      "moduleId": 7,
+      "badge": "Caipirinha",
+      "question": "Quel spiritueux brésilien constitue la base obligatoire de la CAIPIRINHA ?",
+      "options": [
+        "La Cachaça (50 ml)",
+        "Le Pisco",
+        "Le Mezcal",
+        "Le Rhum Agricole"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Caipirinha se réalise au verre avec 50 ml de Cachaça, 1 citron vert coupé en morceaux et 15 g / 1 bar spoon de sucre en poudre (sur glace pilée)."
+    },
+    {
+      "id": "m7_q10",
+      "moduleId": 7,
+      "badge": "Espresso Martini",
+      "question": "Quelle est la composition de l'ESPRESSO MARTINI ?",
+      "options": [
+        "40 ml Vodka, 20 ml Liqueur de café, 30 ml Café espresso, 10 ml Sirop de sucre",
+        "50 ml Whisky irlandais, 100 ml Café chaud, 30 ml Crème fouettée",
+        "40 ml Gin, 20 ml Crème de café, 20 ml Lait",
+        "50 ml Rhum ambré, 20 ml Café froid, 20 ml Baileys"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Espresso Martini : 40 ml Vodka, 20 ml Liqueur de café, 30 ml Café espresso, 10 ml Sirop de sucre. Shaker vigoureusement pour créer la mousse onctueuse, garni de 3 grains de café."
+    },
+    {
+      "id": "m7_q11",
+      "moduleId": 7,
+      "badge": "Gin Basil Smash",
+      "question": "Qui a créé le GIN BASIL SMASH et en quelle année à Hambourg ?",
+      "options": [
+        "Jörg Meyer au bar 'Le Lion' en 2008",
+        "Dick Bradsell au 'Fred's Club' en 1984",
+        "Victor Bergeron à San Francisco en 1944",
+        "Ada Coleman au 'Savoy' en 1903"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Gin Basil Smash a été créé par Jörg Meyer au bar « Le Lion • Bar de Paris » à Hambourg (Allemagne) en 2008."
+    },
+    {
+      "id": "m7_q12",
+      "moduleId": 7,
+      "badge": "Manhattan",
+      "question": "Quels sont les composants du MANHATTAN ?",
+      "options": [
+        "50 ml Rye Whiskey, 20 ml Vermouth rouge, 2 traits Aromatic bitters",
+        "50 ml Bourbon, 20 ml Vermouth dry, 1 trait de grenadine",
+        "40 ml Cognac, 20 ml Cointreau, 20 ml Jus de citron",
+        "50 ml Scotch Whisky, 20 ml Liqueur Drambuie"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Manhattan se prépare au verre à mélange avec 50 ml Rye Whiskey, 20 ml Vermouth rouge et 2 traits Aromatic bitters. Servi en Nick & Nora avec une cerise à l'eau-de-vie."
+    },
+    {
+      "id": "m7_q13",
+      "moduleId": 7,
+      "badge": "Margarita",
+      "question": "Quelle est la verrerie et la finition traditionnelle du bord du verre pour la MARGARITA ?",
+      "options": [
+        "Verre Nick & Nora (ou Coupe/Margarita) givré au sel fin",
+        "Verre Highball givré au sucre roux",
+        "Chope en cuivre givrée au cacao",
+        "Verre Flûte sans aucun givrage"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La Margarita (50 ml Tequila, 20 ml Triple Sec, 20 ml Jus de citron vert) est servie dans un verre préalablement givré au sel fin."
+    },
+    {
+      "id": "m7_q14",
+      "moduleId": 7,
+      "badge": "Old-Fashioned",
+      "question": "En quelle année la première mention de la recette du OLD-FASHIONED est-elle apparue aux États-Unis ?",
+      "options": [
+        "1806",
+        "1920",
+        "1954",
+        "1988"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La première recette d'un cocktail Old-Fashioned (cocktail au sens originel : spiritueux, sucre, eau, bitters) fut mise au point aux USA en 1806."
+    },
+    {
+      "id": "m7_q15",
+      "moduleId": 7,
+      "badge": "Penicillin",
+      "question": "Quel ingrédient très tourbé est versé en 'float' (à la surface) sur le PENICILLIN ?",
+      "options": [
+        "10 ml Scotch Whisky tourbé (Islay Single Malt)",
+        "10 ml de Mezcal",
+        "10 ml d'Absinthe",
+        "10 ml d'Eau gazeuse"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Penicillin (créé par Sam Ross en 2005) utilise du Blended Scotch, du citron, du sirop miel-gingembre, et se termine par un float de Scotch tourbé."
+    },
+    {
+      "id": "m7_q16",
+      "moduleId": 7,
+      "badge": "Pornstar Martini",
+      "question": "Quel accompagnement est obligatoirement servi à côté d'un PORNSTAR MARTINI ?",
+      "options": [
+        "Un shot de Prosecco / vin blanc effervescent (30 ml)",
+        "Un verre d'eau plate avec une rondelle de concombre",
+        "Un shooter d'espresso bien serré",
+        "Une coupelle d'olives vertes farcies"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Pornstar Martini (Vodka vanille, Passoa, purée de passion, citron vert, sirop de vanille) est traditionnellement servi avec un shot de Prosecco (30 ml) et un demi fruit de la passion flottant."
+    },
+    {
+      "id": "m7_q17",
+      "moduleId": 7,
+      "badge": "Sidecar",
+      "question": "Quelle est la base alcoolique noble du SIDECAR ?",
+      "options": [
+        "Le Cognac (50 ml)",
+        "Le Gin (50 ml)",
+        "Le Rhum blanc (50 ml)",
+        "Le Bourbon (50 ml)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Sidecar est un Short drink classique composé de 50 ml Cognac, 20 ml Triple sec et 20 ml Jus de citron jaune (shaker, verre Nick & Nora)."
+    },
+    {
+      "id": "m7_q18",
+      "moduleId": 7,
+      "badge": "Americano",
+      "question": "Quels sont les composants et la méthode de l'AMERICANO (Long drink) ?",
+      "options": [
+        "30 ml Campari/Bitter, 30 ml Vermouth rouge, 50 ml Eau gazeuse (Direct au verre Rocks ou Highball)",
+        "50 ml Bourbon, 1 café allongé, 20 ml Sirop d'érable",
+        "40 ml Gin, 20 ml Vermouth rouge, 100 ml Cola",
+        "30 ml Tequila, 30 ml Pamplemousse, 60 ml Bière"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'Americano : 30 ml Vermouth rouge, 30 ml Bitter, complété d'eau gazeuse (direct au verre Rocks avec tranche d'orange et zeste de citron)."
+    },
+    {
+      "id": "m7_q19",
+      "moduleId": 7,
+      "badge": "Bellini",
+      "question": "Qui a inventé le BELLINI au Harry's Bar de Venise en 1948 ?",
+      "options": [
+        "Giuseppe Cipriani",
+        "Fernand Petiot",
+        "Victor Bergeron",
+        "Donn Beach"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Bellini (purée de pêche blanche + Prosecco) a été inventé par Giuseppe Cipriani au Harry's Bar de Venise en 1948, nommé d'après le peintre Giovanni Bellini."
+    },
+    {
+      "id": "m7_q20",
+      "moduleId": 7,
+      "badge": "Bloody Mary",
+      "question": "Quels sont les assaisonnements et épices caractéristiques du BLOODY MARY ?",
+      "options": [
+        "Sel de céleri, poivre noir moulu, sauce Tabasco, sauce Worcestershire et jus de citron",
+        "Cannelle en poudre, clou de girofle et noix de muscade",
+        "Sirop d'agave, piment doux et menthe fraîche",
+        "Curry jaune, curcuma et lait de coco"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Bloody Mary assaisonne son jus de tomate avec sel de céleri, poivre, Tabasco, sauce Worcestershire et citron vert/jaune (Vodka 40 ml + Jus de tomate 100 ml)."
+    },
+    {
+      "id": "m7_q21",
+      "moduleId": 7,
+      "badge": "Dark and Stormy",
+      "question": "Quelle marque a déposé la marque du DARK AND STORMY pour garantir l'utilisation de son rhum ambré des Bermudes ?",
+      "options": [
+        "Gosling's Black Seal",
+        "Bacardi",
+        "Havana Club",
+        "Captain Morgan"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La famille Gosling a déposé la marque du Dark 'N Stormy en 1991 : 50 ml Rhum ambré Gosling's + 100 ml Ginger Beer + 15 ml Jus de citron vert."
+    },
+    {
+      "id": "m7_q22",
+      "moduleId": 7,
+      "badge": "French 75",
+      "question": "De quoi se compose le FRENCH 75 selon la fiche technique ?",
+      "options": [
+        "30 ml Gin, 15 ml Jus de citron jaune, 10 ml Sirop de sucre, 60 ml Champagne brut",
+        "40 ml Cognac, 20 ml Triple sec, 100 ml Bière blonde",
+        "50 ml Vodka, 20 ml Liqueur de framboise, 40 ml Jus d'ananas",
+        "30 ml Pastis, 15 ml Sirop d'orgeat, 60 ml Eau gazeuse"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le French 75 : 30 ml Gin, 15 ml Jus de citron jaune, 10 ml Sirop de sucre, complété de 60 ml Champagne brut en verre Flûte."
+    },
+    {
+      "id": "m7_q23",
+      "moduleId": 7,
+      "badge": "Horse's Neck",
+      "question": "Quelle est la garniture spectaculaire emblématique du HORSE'S NECK ?",
+      "options": [
+        "Un long zeste de citron jaune taillé en spirale continue placé dans le verre Highball",
+        "Trois brochettes d'olives noires",
+        "Une tranche d'ananas flambée",
+        "Une fleur d'orchidée comestible"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Horse's Neck (Cognac ou Bourbon + Ginger Ale + Angostura) est caractérisé par son long ruban / serpentin de zeste de citron ('cou de cheval')."
+    },
+    {
+      "id": "m7_q24",
+      "moduleId": 7,
+      "badge": "Mai Tai",
+      "question": "Qui est le créateur légendaire du MAI TAI en 1944 ?",
+      "options": [
+        "Victor Bergeron, dit « Trader Vic »",
+        "Harry MacElhone",
+        "Ernest Hemingway",
+        "Jerry Thomas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Mai Tai a été créé par Victor Bergeron (« Trader Vic ») à San Francisco / Oakland en 1944, figure majeure de la culture Tiki."
+    },
+    {
+      "id": "m7_q25",
+      "moduleId": 7,
+      "badge": "Mojito",
+      "question": "Quelle est la signification du mot « MOJITO » en espagnol d'après son historique officiel ?",
+      "options": [
+        "« Petit jus »",
+        "« Feuille magique »",
+        "« Vent du sud »",
+        "« Sucre glacé »"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Mojito provient de 'mojo' et signifie « petit jus » en espagnol. Première publication à Cuba dans le 'Libro de Cocktail' en 1929."
+    },
+    {
+      "id": "m7_q26",
+      "moduleId": 7,
+      "badge": "Moscow Mule",
+      "question": "Dans quel verre/récipient sert-on impérativement un MOSCOW MULE traditionnel ?",
+      "options": [
+        "Une timbale Mule en cuivre (ou verre Mule)",
+        "Une coupe en cristal",
+        "Un verre à martini",
+        "Un bocal Mason jar"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Moscow Mule (Vodka + Ginger Beer + Jus de citron vert) se sert dans une timbale Mule en cuivre avec de la glace."
+    },
+    {
+      "id": "m7_q27",
+      "moduleId": 7,
+      "badge": "Paloma",
+      "question": "Que signifie le mot espagnol « PALOMA » ?",
+      "options": [
+        "Colombe",
+        "Soleil",
+        "Palmier",
+        "Papillon"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Paloma signifie « colombe » en espagnol. C'est un Long drink originaire de la région de Guadalajara au Mexique (Tequila, citron vert, agave, pamplemousse, eau gazeuse)."
+    },
+    {
+      "id": "m7_q28",
+      "moduleId": 7,
+      "badge": "Piña Colada",
+      "question": "À qui attribue-t-on la création de la PIÑA COLADA en 1954 à l'hôtel Hilton de San Juan à Porto Rico ?",
+      "options": [
+        "Ramon Marrero Perez, surnommé « Monchito »",
+        "Don Facundo Bacardi",
+        "Ada Coleman",
+        "Hugo Ensslin"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La création de la Piña Colada est attribuée à Ramon Marrero Perez (« Monchito ») à l'hôtel Caribe Hilton de San Juan en 1954."
+    },
+    {
+      "id": "m7_q29",
+      "moduleId": 7,
+      "badge": "Planter's Punch",
+      "question": "Quelle est la particularité de finition du PLANTER'S PUNCH lors de son élaboration au verre ?",
+      "options": [
+        "On verse tous les ingrédients, on mélange, puis on ajoute 1 trait de rhum agricole ambré en surface SANS mélanger",
+        "On verse une boule de glace vanille sur le cocktail",
+        "On flambe le verre avec du cognac",
+        "On le sert bouillant"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dans la technique officielle : on mélange rhum blanc, jus d'ananas, jus d'orange et bitters, puis on ajoute 1 trait de rhum agricole ambré en float sans mélanger."
+    },
+    {
+      "id": "m7_q30",
+      "moduleId": 7,
+      "badge": "Rum Swizzle",
+      "question": "Quel outil traditionnel à 5 branches naturelles est utilisé pour brasser le RUM SWIZZLE ?",
+      "options": [
+        "Le Bois Lélé (Swizzle stick)",
+        "Un fouet à matcha en bambou",
+        "Une spatule en silicone",
+        "Une branche de cannelle entière"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Swizzle stick (bâton lélé) est une ramification naturelle à 5 branches des Caraïbes qui permet de faire tourner le mélange sur glace pilée entre ses paumes."
+    },
+    {
+      "id": "m7_q31",
+      "moduleId": 7,
+      "badge": "Sex on the Beach",
+      "question": "Quels sont les ingrédients exacts du SEX ON THE BEACH (Long drink) ?",
+      "options": [
+        "40 ml Vodka, 10 ml Liqueur de pêche, 40 ml Nectar de cranberry, 40 ml Jus d'orange",
+        "50 ml Rhum, 20 ml Sirop de fraise, 80 ml Jus de goyave",
+        "40 ml Gin, 20 ml Curaçao bleu, 60 ml Tonic",
+        "50 ml Tequila, 20 ml Sirop de grenadine, 80 ml Jus d'ananas"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Recette officielle : 40 ml Vodka, 10 ml Liqueur de pêche, 40 ml Nectar de cranberry, 40 ml Jus d'orange. Shaker puis verre Highball avec demi-tranche d'orange."
+    },
+    {
+      "id": "m7_q32",
+      "moduleId": 7,
+      "badge": "Spritz",
+      "question": "Quelle est la proportion officielle du SPRITZ dans le référentiel ?",
+      "options": [
+        "50 ml Bitter / Spiritueux amer, 60 ml Vin blanc effervescent (Prosecco), 20 ml Eau gazeuse",
+        "30 ml Vodka, 100 ml Soda au citron, 10 ml Grenadine",
+        "50 ml Pastis, 50 ml Sirop de menthe, 50 ml Eau",
+        "70 ml Gin, 70 ml Tonic, 10 ml Citron vert"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Fiche Spritz officielle : 50 ml Bitter ou autre spiritueux, 60 ml Vin blanc effervescent (Prosecco privilégié), 20 ml Eau gazeuse. Servi en verre à vin sur glace."
+    },
+    {
+      "id": "m7_q33",
+      "moduleId": 7,
+      "badge": "Tequila Sunrise",
+      "question": "Quel célèbre groupe de rock a popularisé la version moderne de la TEQUILA SUNRISE lors de sa tournée en 1972 ?",
+      "options": [
+        "The Rolling Stones",
+        "The Beatles",
+        "Queen",
+        "Led Zeppelin"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La version moderne de la Tequila Sunrise a été mise au point en 1972 et popularisée par les Rolling Stones durant leur tournée américaine."
+    },
+    {
+      "id": "m8_q1",
+      "moduleId": 8,
+      "badge": "Définition TAV",
+      "question": "Que signifie le sigle « TAV » dans le vocabulaire officiel du bar ?",
+      "options": [
+        "Titre Alcoométrique Volumique",
+        "Temps d'Action du Vermouth",
+        "Teneur en Alcool et Vinaigre",
+        "Total Alcoolique du Verre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "TAV signifie Titre Alcoométrique Volumique, exprimé en pourcentage du volume d'alcool pur rapporté au volume total du cocktail."
+    },
+    {
+      "id": "m8_q2",
+      "moduleId": 8,
+      "badge": "Formule de calcul",
+      "question": "Quelle est la formule générale pour calculer le TAV global d'un cocktail composé de plusieurs ingrédients ?",
+      "options": [
+        "Somme des (Volume en ml × Degré d'alcool) ÷ Volume total du cocktail en ml",
+        "Somme des degrés d'alcool divisée par le nombre de bouteilles",
+        "Volume total du cocktail multiplié par le prix de vente",
+        "Degré de l'ingrédient le plus fort divisé par 2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Pour calculer le TAV : on calcule pour chaque ingrédient Volume × Degré, on additionne tous les résultats, puis on divise par le volume total du cocktail."
+    },
+    {
+      "id": "m8_q3",
+      "moduleId": 8,
+      "badge": "Exemple officiel Americano",
+      "question": "Dans l'exemple officiel du cocktail Americano (20 ml Vermouth rouge à 14,5% + 50 ml Bitter à 25% + 50 ml Eau gazeuse à 0%), quel est le calcul exact du TAV ?",
+      "options": [
+        "(290 + 1250 + 0) = 1540  puis  1540 ÷ 120 ml = 12,83 % (arrondi à 13 %)",
+        "(20 + 50 + 50) ÷ 3 = 40 %",
+        "(14,5 + 25) ÷ 2 = 19,75 %",
+        "120 × 25 % = 30 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "20 × 14,5 = 290 | 50 × 25 = 1250 | 50 × 0 = 0. Total = 1540. Contenance totale = 120 ml. 1540 ÷ 120 = 12,83% soit un TAV d'environ 13%."
+    },
+    {
+      "id": "m8_q4",
+      "moduleId": 8,
+      "badge": "Calcul Pratique",
+      "question": "Si vous servez 50 ml de Vodka titrant à 40% vol avec 150 ml de jus d'orange (0% vol), quel est le TAV du cocktail (volume total 200 ml) ?",
+      "options": [
+        "10 %",
+        "20 %",
+        "40 %",
+        "5 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "(50 ml × 40) + (150 ml × 0) = 2000. Volume total = 200 ml. 2000 ÷ 200 = 10 %."
+    },
+    {
+      "id": "m8_q5",
+      "moduleId": 8,
+      "badge": "Alcool Pur",
+      "question": "Combien de millilitres d'alcool pur contient une dose de 40 ml de Gin à 40% vol ?",
+      "options": [
+        "16 ml d'alcool pur",
+        "40 ml d'alcool pur",
+        "10 ml d'alcool pur",
+        "4 ml d'alcool pur"
+      ],
+      "correctAnswer": 0,
+      "explanation": "40 ml × (40 / 100) = 16 ml d'alcool pur."
+    },
+    {
+      "id": "m8_q6",
+      "moduleId": 8,
+      "badge": "Responsabilité",
+      "question": "Pourquoi la maîtrise du calcul du TAV est-elle exigée dans le référentiel de formation ?",
+      "options": [
+        "Pour adapter l'offre à une consommation responsable et informer précisément les clients sur la puissance alcoolique",
+        "Pour payer des taxes supplémentaires sur chaque verre servi",
+        "Pour déterminer obligatoirement la couleur du cocktail",
+        "Pour accélérer la fonte des glaçons"
+      ],
+      "correctAnswer": 0,
+      "explanation": "La connaissance du TAV permet de veiller à la santé publique, au respect de la législation et à la promotion d'une consommation responsable."
+    },
+    {
+      "id": "m9_q1",
+      "moduleId": 9,
+      "badge": "Albédos",
+      "question": "Qu'est-ce que l'« ALBÉDOS » (parfois appelé 'ziste') selon le lexique ?",
+      "options": [
+        "La partie intérieure blanche et amère de l'écorce d'un agrume",
+        "Un cocktail sans alcool à base de concombre",
+        "Le nom commercial d'un bitter italien",
+        "La mousse blanche produite par le blanc d'œuf"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'ALBÉDOS est la partie intérieure blanche de l'écorce d'un agrume (souvent très amère, qu'il convient de retirer lors des zestes)."
+    },
+    {
+      "id": "m9_q2",
+      "moduleId": 9,
+      "badge": "Aquafaba",
+      "question": "Qu'est-ce que l'« AQUAFABA » et à quoi sert-il au bar ?",
+      "options": [
+        "Le jus de cuisson de pois chiche, utilisé comme émulsifiant végétal alternatif au blanc d'œuf",
+        "Une liqueur brésilienne à base de fèves de cacao",
+        "Une eau minérale pétillante d'origine espagnole",
+        "Un sel aromatisé aux herbes pour givrer les verres"
+      ],
+      "correctAnswer": 0,
+      "explanation": "L'AQUAFABA désigne le jus de pois chiche utilisé au bar comme émulsifiant (alternative vegan au blanc d'œuf) pour créer une mousse onctueuse."
+    },
+    {
+      "id": "m9_q3",
+      "moduleId": 9,
+      "badge": "Cuban Roll",
+      "question": "En quoi consiste la technique du « CUBAN ROLL » (autrefois appelée 'throwing') ?",
+      "options": [
+        "Transvaser les liquides d'une timbale à une autre avec un grand jet afin de les oxygéner et de les rafraîchir en limitant la dilution",
+        "Faire tourner le shaker sur le plancher du bar",
+        "Écraser des feuilles de menthe au pilon dans une timbale",
+        "Rouler un cigare cubain autour du pied du verre"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Cuban Roll (throwing) consiste à transvaser les liquides avec une passoire d'une timbale à une autre tenue à distance pour aérer et rafraîchir le cocktail."
+    },
+    {
+      "id": "m9_q4",
+      "moduleId": 9,
+      "badge": "Dry Shake",
+      "question": "Qu'est-ce qu'un « DRY SHAKE » ?",
+      "options": [
+        "Frapper une première fois au shaker SANS GLACE avec un émulsifiant (blanc d'œuf, aquafaba) pour créer l'émulsion",
+        "Shaker sans aucun liquide dans la timbale",
+        "Servir un cocktail sans verre",
+        "Utiliser uniquement du vermouth dry dans le shaker"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le DRY SHAKE consiste à frapper les ingrédients sans glaçons avec l'émulsifiant afin de développer une texture mousseuse avant d'ajouter la glace."
+    },
+    {
+      "id": "m9_q5",
+      "moduleId": 9,
+      "badge": "Reverse Dry Shake",
+      "question": "Qu'est-ce que le « REVERSE DRY SHAKE » ?",
+      "options": [
+        "Frapper d'abord AVEC glace, filtrer les glaçons, puis frapper une seconde fois SANS glace avec l'émulsifiant",
+        "Frapper le shaker à l'envers",
+        "Boire le cocktail à la paille avant de le secouer",
+        "Mélanger à la cuillère puis frapper au blender"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Le Reverse Dry Shake consiste à frapper une 2e fois sans glace après avoir refroidi le mélange, pour maximiser le volume et la tenue de la mousse."
+    },
+    {
+      "id": "m9_q6",
+      "moduleId": 9,
+      "badge": "Exprimer",
+      "question": "Que signifie le verbe « EXPRIMER » dans le domaine du bar ?",
+      "options": [
+        "Presser et plier un zeste d'agrume au-dessus du verre pour en libérer les huiles essentielles parfumées",
+        "Demander au client ses goûts préférés",
+        "Calculer le degré d'alcool à voix haute",
+        "Faire passer le cocktail à travers une passoire fine"
+      ],
+      "correctAnswer": 0,
+      "explanation": "EXPRIMER : libérer les essences aromatiques contenues dans les alvéoles de l'écorce (zeste) d'un agrume à la surface du cocktail."
+    },
+    {
+      "id": "m9_q7",
+      "moduleId": 9,
+      "badge": "Float",
+      "question": "Que signifie faire un « FLOAT » ?",
+      "options": [
+        "Verser délicatement un filet de liquide à la surface d'un cocktail sans le mélanger",
+        "Faire flotter un canard en plastique dans le cocktail",
+        "Ajouter de la glace pilée jusqu'en haut",
+        "Nettoyer le bar à grande eau"
+      ],
+      "correctAnswer": 0,
+      "explanation": "FLOAT : action de verser un liquide moins dense (ou à la cuillère) au-dessus d'un cocktail pour qu'il reste en nappe à la surface sans se mélanger."
+    },
+    {
+      "id": "m9_q8",
+      "moduleId": 9,
+      "badge": "Muter",
+      "question": "Que signifie l'action de « MUTER » en œnologie et mixologie ?",
+      "options": [
+        "Empêcher ou stopper la fermentation alcoolique par l'ajout d'un alcool afin de conserver les sucres naturels",
+        "Changer le nom d'un cocktail quand il est réinventé",
+        "Passer un cocktail au blender à puissance maximale",
+        "Remplacer le gin par de la vodka"
+      ],
+      "correctAnswer": 0,
+      "explanation": "MUTER : stopper la fermentation alcoolique des levures en ajoutant de l'alcool pur ou une eau-de-vie (ex: pour fabriquer les vins doux naturels, Pineau, Porto...)."
+    },
+    {
+      "id": "m9_q9",
+      "moduleId": 9,
+      "badge": "Fat Washing",
+      "question": "En quoi consiste la technique du « FAT WASHING » ?",
+      "options": [
+        "Aromatiser un alcool à partir d'un corps gras (beurre noisette, huile de sésame, graisse de canard...) puis le figer au froid et le filtrer",
+        "Nettoyer les timbales de shaker avec du savon dégraissant",
+        "Ajouter du fromage râpé dans le shaker",
+        "Laver les verres à l'eau très chaude"
+      ],
+      "correctAnswer": 0,
+      "explanation": "FAT WASHING : technique consistant à infuser un alcool avec un corps gras liquide puis à congeler le mélange pour figer et retirer le gras, laissant un arôme riche et soyeux."
+    },
+    {
+      "id": "m9_q10",
+      "moduleId": 9,
+      "badge": "No Low",
+      "question": "Que désigne l'expression « NO LOW » ?",
+      "options": [
+        "La contraction de 'No Alcohol' et 'Low Alcohol by volume', désignant les cocktails sans alcool ou à très faible degré d'alcool",
+        "Un cocktail sans sucre et sans glaçons",
+        "Un bar sans musique et sans lumière vive",
+        "Une méthode pour ne jamais remplir les verres à ras bord"
+      ],
+      "correctAnswer": 0,
+      "explanation": "NO LOW : contraction anglaise 'no alcohol' et 'low ABV', tendance de fond pour une consommation modérée et responsable."
+    },
+    {
+      "id": "m9_q11",
+      "moduleId": 9,
+      "badge": "Trait (Dash)",
+      "question": "Combien de gouttes environ représente la mesure officielle d'un « TRAIT » (dash) ?",
+      "options": [
+        "Environ 3 à 5 gouttes",
+        "Environ 50 gouttes",
+        "Une cuillère à soupe (15 ml)",
+        "Une seule gouttelette microscopique"
+      ],
+      "correctAnswer": 0,
+      "explanation": "TRAIT (dash) : terme de mesure représentant environ 3 à 5 gouttes (soit environ 0,5 à 1 ml)."
+    },
+    {
+      "id": "m9_q12",
+      "moduleId": 9,
+      "badge": "Mesure standard",
+      "question": "Dans le standard français de bar, quel volume en millilitres représente le terme « UNE MESURE » ?",
+      "options": [
+        "40 ml (4 cl)",
+        "20 ml (2 cl)",
+        "60 ml (6 cl)",
+        "100 ml (10 cl)"
+      ],
+      "correctAnswer": 0,
+      "explanation": "MESURE : terme officiel désignant un volume standard français de 40 ml (4 cl)."
+    }
+  ],
+  "cocktails": [
+    {
+      "id": "aviation",
+      "name": "Aviation",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Nick & Nora",
+      "method": "Shaker",
+      "tav": "28 %",
+      "profile": "Floral, acidulé et fruité",
+      "ingredientsDetailed": [
+        {
+          "name": "Gin",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Maraschino",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Crème de violette",
+          "volume": 5,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "20 %",
+        "22 %",
+        "23 %",
+        "28 %"
+      ],
+      "history": "Cocktail publié dans le livre « Recipes for mixed drinks » de Hugo Ensslin à New York en 1916.",
+      "technique": "Mirer et remplir le verre Nick & Nora de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre à la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie."
+    },
+    {
+      "id": "bamboo",
+      "name": "Bamboo",
+      "category": "SHORT drink",
+      "type": "BEFORE DINNER",
+      "glass": "Nick & Nora",
+      "method": [
+        "Verre à mélange",
+        "Shaker"
+      ],
+      "tav": "15 %",
+      "profile": "Vineux, sec et épicé",
+      "ingredientsDetailed": [
+        {
+          "name": "Vermouth Dry",
+          "volume": 35,
+          "unit": "ml"
+        },
+        {
+          "name": "Sherry Fino",
+          "volume": 35,
+          "unit": "ml"
+        },
+        {
+          "name": "Bitters orange",
+          "volume": 2,
+          "unit": "traits"
+        }
+      ],
+      "garnish": "Zeste de citron exprimé",
+      "garnishOptions": [
+        "Zeste de citron exprimé",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "7 %",
+        "9 %",
+        "10 %",
+        "15 %"
+      ],
+      "history": "Créé à la fin du XIXe siècle par Louis Eppinger à l’hôtel Grand de Yokohama au Japon.",
+      "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’un zeste de citron exprimé."
+    },
+    {
+      "id": "bramble",
+      "name": "Bramble",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Direct au verre",
+      "tav": "25 %",
+      "profile": "Fruité, acidulé et gourmand",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de sucre",
+          "volume": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Gin",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Crème de mûre",
+          "volume": 10,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche de citron et deux mûres",
+      "garnishOptions": [
+        "Demi-tranche de citron et deux mûres",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "17 %",
+        "19 %",
+        "20 %",
+        "25 %"
+      ],
+      "history": "Créé par Dick Bradsell à Londres en 1984 au Fred’s Club.",
+      "technique": "Mirer et remplir le verre Rocks de glace pilée. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace pilée si besoin. Verser le sirop de sucre, le jus de citron et le gin. Mélanger à la cuillère de bar. Napper de crème de mûre. Garnir d’une demi-tranche de citron et de deux mûres. Ajouter une paille courte.",
+      "ingredients": [
+        "5 ml Sirop de sucre",
+        "15 ml Jus de citron",
+        "40 ml Gin",
+        "10 ml Crème de mûre"
+      ]
+    },
+    {
+      "id": "caipirinha",
+      "name": "Caipirinha",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Direct au verre",
+      "tav": "40 %",
+      "profile": "Végétal, acidulé et puissant",
+      "ingredientsDetailed": [
+        {
+          "name": "Citron vert en morceaux",
+          "volume": 0.5,
+          "unit": "citron vert (ou 1/2)"
+        },
+        {
+          "name": "Sucre en poudre",
+          "volume": 1,
+          "unit": "bar spoon"
+        },
+        {
+          "name": "Cachaça",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Sans garniture",
+      "garnishOptions": [
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "32 %",
+        "34 %",
+        "35 %",
+        "40 %"
+      ],
+      "history": "Cocktail brésilien emblématique issu de traditions paysannes au début du XXe siècle.",
+      "technique": "Mirer et remplir le verre Rocks de glace pilée. Rafraîchir le verre avec la cuillère de bar. Retirer la glace du verre. Piler le demi-citron vert coupé en morceaux et le sucre en poudre. Compléter le verre de glace pilée. Verser la mesure de cachaça. Mélanger et compléter de glace pilée. Ajouter une paille courte.",
+      "ingredients": [
+        "0.5 citron vert (ou 1/2) Citron vert en morceaux",
+        "1 bar spoon Sucre en poudre",
+        "40 ml Cachaça"
+      ]
+    },
+    {
+      "id": "cosmopolitan",
+      "name": "Cosmopolitan",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Coupe",
+      "method": "Shaker",
+      "tav": "27 %",
+      "profile": "Fruité, acidulé et gourmand",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron vert",
+          "volume": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "Nectar de cranberry",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Triple sec",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Vodka",
+          "volume": 30,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Zeste de citron vert exprimé",
+      "garnishOptions": [
+        "Zeste de citron vert exprimé",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "19 %",
+        "21 %",
+        "22 %",
+        "27 %"
+      ],
+      "history": "Recette modernisée par Toby Cecchini au restaurant Odeon à New York en 1988.",
+      "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’un zeste de citron vert exprimé.",
+      "ingredients": [
+        "5 ml Jus de citron vert",
+        "20 ml Nectar de cranberry",
+        "15 ml Triple sec",
+        "30 ml Vodka"
+      ]
+    },
+    {
+      "id": "daiquiri",
+      "name": "Daiquiri",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Coupe",
+      "method": "Shaker",
+      "tav": "27 %",
+      "profile": "Puissant, acidulé et frais",
+      "ingredientsDetailed": [
+        {
+          "name": "Sucre en poudre",
+          "volume": 1,
+          "unit": "bar spoon"
+        },
+        {
+          "name": "Jus de citron vert",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum cubain",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Sans garniture",
+      "garnishOptions": [
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "19 %",
+        "21 %",
+        "22 %",
+        "27 %"
+      ],
+      "history": "Cocktail national de Cuba créé par Jennings S. Cox à la mine de Daiquiri vers 1900.",
+      "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Diluer le sucre en mélangeant quelques secondes avec une cuillère de bar. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi.",
+      "ingredients": [
+        "1 bar spoon Sucre en poudre",
+        "20 ml Jus de citron vert",
+        "40 ml Rhum cubain"
+      ]
+    },
+    {
+      "id": "dry_martini",
+      "name": "Dry Martini",
+      "category": "SHORT drink",
+      "type": "BEFORE DINNER",
+      "glass": "Martini",
+      "method": "Verre à mélange",
+      "tav": "35 %",
+      "profile": "Sec, puissant et aromatique",
+      "ingredientsDetailed": [
+        {
+          "name": "Vermouth dry",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Gin",
+          "volume": 55,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Olive verte ou zeste de citron exprimé",
+      "garnishOptions": [
+        "Olive verte ou zeste de citron exprimé",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "27 %",
+        "29 %",
+        "30 %",
+        "35 %"
+      ],
+      "history": "Le roi des cocktails classiques, immortalisé au début du XXe siècle.",
+      "technique": "Mirer et remplir le verre Martini et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’une olive verte ou d’un zeste de citron exprimé.",
+      "ingredients": [
+        "15 ml Vermouth dry",
+        "55 ml Gin"
+      ]
+    },
+    {
+      "id": "espresso_martini",
+      "name": "Espresso Martini",
+      "category": "SHORT drink",
+      "type": "AFTER DINNER",
+      "glass": "Coupe",
+      "method": "Shaker",
+      "tav": "27 %",
+      "profile": "Corsé, complexe et gourmand",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de sucre",
+          "volume": 5,
+          "unit": "ml"
+        },
+        {
+          "name": "Café expresso",
+          "volume": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "Liqueur de café",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Vodka",
+          "volume": 30,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Trois grains de café déposés sur la mousse",
+      "garnishOptions": [
+        "Trois grains de café déposés sur la mousse",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "19 %",
+        "21 %",
+        "22 %",
+        "27 %"
+      ],
+      "history": "Créé par Dick Bradsell au Soho Brasserie de Londres en 1983.",
+      "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper énergiquement puis passer dans le verre rafraîchi. Garnir de trois grains de café déposés sur la mousse.",
+      "ingredients": [
+        "5 ml Sirop de sucre",
+        "25 ml Café expresso",
+        "10 ml Liqueur de café",
+        "30 ml Vodka"
+      ]
+    },
+    {
+      "id": "gin_basil_smash",
+      "name": "Gin Basil Smash",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Shaker",
+      "tav": "25 %",
+      "profile": "Herbacé, acidulé et vif",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de sucre",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Gin",
+          "volume": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Feuilles de basilic",
+          "volume": 10,
+          "unit": "feuilles"
+        }
+      ],
+      "garnish": "Tête de basilic frais",
+      "garnishOptions": [
+        "Tête de basilic frais",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "17 %",
+        "19 %",
+        "20 %",
+        "25 %"
+      ],
+      "history": "Créé par Jörg Meyer au bar Le Lion à Hambourg en 2008.",
+      "technique": "Mirer et remplir le verre Rocks de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Déposer les feuilles de basilic dans la petite timbale du shaker, verser le jus de citron et le sirop de sucre. Piler délicatement. Verser le gin. Égoutter le verre et compléter de glace si besoin. Égoutter la grande timbale du shaker. Frapper puis double filtrer dans le verre rempli de glace. Garnir d’une tête de basilic frais.",
+      "ingredients": [
+        "15 ml Sirop de sucre",
+        "20 ml Jus de citron",
+        "50 ml Gin",
+        "10 feuilles Feuilles de basilic"
+      ]
+    },
+    {
+      "id": "manhattan",
+      "name": "Manhattan",
+      "category": "SHORT drink",
+      "type": "BEFORE DINNER",
+      "glass": "Nick & Nora",
+      "method": "Verre à mélange",
+      "tav": "35 %",
+      "profile": "Boisé, riche et épicé",
+      "ingredientsDetailed": [
+        {
+          "name": "Aromatic bitters",
+          "volume": 2,
+          "unit": "traits"
+        },
+        {
+          "name": "Vermouth rouge",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Whisky américain",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "27 %",
+        "29 %",
+        "30 %",
+        "35 %"
+      ],
+      "history": "Créé au Manhattan Club de New York vers 1874.",
+      "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie.",
+      "ingredients": [
+        "2 traits Aromatic bitters",
+        "20 ml Vermouth rouge",
+        "50 ml Whisky américain"
+      ]
+    },
+    {
+      "id": "margarita",
+      "name": "Margarita",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Coupe",
+      "method": "Shaker",
+      "tav": "34 %",
+      "profile": "Vif, acidulé et salin",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron vert",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Triple sec",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Tequila",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Givrage au sel fin",
+      "garnishOptions": [
+        "Givrage au sel fin",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "26 %",
+        "28 %",
+        "29 %",
+        "34 %"
+      ],
+      "history": "Cocktail mexicain culte apparu dans les années 1930 ou 1940.",
+      "technique": "Mirer et givrer le verre Coupe au sel fin. Remplir le verre et la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi.",
+      "ingredients": [
+        "10 ml Jus de citron vert",
+        "20 ml Triple sec",
+        "40 ml Tequila"
+      ]
+    },
+    {
+      "id": "mint_julep",
+      "name": "Mint Julep",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Julep",
+      "method": "Direct au verre",
+      "tav": "40 %",
+      "profile": "Frais, mentholé et boisé",
+      "ingredientsDetailed": [
+        {
+          "name": "Feuilles de menthe",
+          "volume": 10,
+          "unit": "feuilles"
+        },
+        {
+          "name": "Sucre en poudre",
+          "volume": 2,
+          "unit": "bar spoons"
+        },
+        {
+          "name": "Eau-de-vie brune",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Tête de menthe fraîche",
+      "garnishOptions": [
+        "Tête de menthe fraîche",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "32 %",
+        "34 %",
+        "35 %",
+        "40 %"
+      ],
+      "history": "Boisson emblématique du Kentucky Derby depuis 1938.",
+      "technique": "Mirer et rafraîchir le gobelet Julep. Piler délicatement la menthe et le sucre en poudre avec un peu d’eau-de-vie. Remplir de glace pilée, verser le reste d’eau-de-vie brune. Mélanger avec la cuillère de bar. Compléter de glace pilée en dôme. Garnir d’une tête de menthe fraîche et ajouter une paille courte.",
+      "ingredients": [
+        "10 feuilles Feuilles de menthe",
+        "2 bar spoons Sucre en poudre",
+        "50 ml Eau-de-vie brune"
+      ]
+    },
+    {
+      "id": "negroni",
+      "name": "Negroni",
+      "category": "SHORT drink",
+      "type": "BEFORE DINNER",
+      "glass": "Rocks",
+      "method": "Direct au verre",
+      "tav": "26 %",
+      "profile": "Amer, complexe et équilibré",
+      "ingredientsDetailed": [
+        {
+          "name": "Vermouth rouge",
+          "volume": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "Bitter",
+          "volume": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "Gin",
+          "volume": 30,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche d’orange",
+      "garnishOptions": [
+        "Demi-tranche d’orange",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "18 %",
+        "20 %",
+        "21 %",
+        "26 %"
+      ],
+      "history": "Créé à Florence en 1919 au Caffè Casoni par le comte Camillo Negroni.",
+      "technique": "Mirer et remplir le verre Rocks de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser les ingrédients, mélanger à la cuillère de bar. Garnir d’une demi-tranche d’orange.",
+      "ingredients": [
+        "30 ml Vermouth rouge",
+        "30 ml Bitter",
+        "30 ml Gin"
+      ]
+    },
+    {
+      "id": "old_fashioned",
+      "name": "Old-Fashioned",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Direct au verre",
+      "tav": "40 %",
+      "profile": "Boisé, vanillé et chaleureux",
+      "ingredientsDetailed": [
+        {
+          "name": "Sucre brun",
+          "volume": 1,
+          "unit": "morceau"
+        },
+        {
+          "name": "Aromatic bitters",
+          "volume": 2,
+          "unit": "traits"
+        },
+        {
+          "name": "Eau-de-vie brune",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Zeste d’orange exprimé et cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Zeste d’orange exprimé et cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "32 %",
+        "34 %",
+        "35 %",
+        "40 %"
+      ],
+      "history": "L’ancêtre de tous les cocktails, né au Pendennis Club de Louisville au XIXe siècle.",
+      "technique": "Mirer le verre Rocks. Déposer le morceau de sucre brun au fond du verre, imbiber de 2 traits d’aromatic bitters et d’un filet d’eau ou soda. Écraser au pilon pour dissoudre le sucre. Remplir de glace, verser l’eau-de-vie brune progressivement en mélangeant à la cuillère de bar. Garnir d’un zeste d’orange exprimé et d’une cerise à l’eau-de-vie.",
+      "ingredients": [
+        "1 morceau Sucre brun",
+        "2 traits Aromatic bitters",
+        "50 ml Eau-de-vie brune"
+      ]
+    },
+    {
+      "id": "penicillin",
+      "name": "Penicillin",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Shaker",
+      "tav": "25 %",
+      "profile": "Tourbé, fumé, miellé et épicé",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Sirop de miel",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de gingembre frais",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Blend whisky",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Whisky tourbé",
+          "volume": 10,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Lamelle de gingembre",
+      "garnishOptions": [
+        "Lamelle de gingembre",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "17 %",
+        "19 %",
+        "20 %",
+        "25 %"
+      ],
+      "history": "Créé par Sam Ross au Milk and Honey de New York en 2005.",
+      "technique": "Mirer et remplir le verre Rocks de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le jus de citron, sirop de miel, jus de gingembre et blend whisky dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rafraîchi avec glace. Faire flotter float le whisky tourbé en surface. Garnir d’une lamelle de gingembre.",
+      "ingredients": [
+        "20 ml Jus de citron",
+        "10 ml Sirop de miel",
+        "10 ml Jus de gingembre frais",
+        "40 ml Blend whisky",
+        "10 ml Whisky tourbé"
+      ]
+    },
+    {
+      "id": "pornstar_martini",
+      "name": "Pornstar Martini",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Coupe",
+      "method": "Shaker",
+      "tav": "18 %",
+      "profile": "Exotique, vanillé et acidulé",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de vanille",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Purée fruit de la passion",
+          "volume": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "Liqueur fruit de la passion",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Vodka vanille",
+          "volume": 30,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-fruit de la passion",
+      "garnishOptions": [
+        "Demi-fruit de la passion",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "10 %",
+        "12 %",
+        "13 %",
+        "18 %"
+      ],
+      "history": "Créé par Douglas Ankrah au LAB bar de Londres en 2002.",
+      "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale. Frapper puis passer dans le verre rafraîchi. Garnir d’un demi-fruit de la passion déposé à la surface. Servir accompagné d’un shot de champagne.",
+      "ingredients": [
+        "10 ml Sirop de vanille",
+        "30 ml Purée fruit de la passion",
+        "20 ml Liqueur fruit de la passion",
+        "30 ml Vodka vanille"
+      ]
+    },
+    {
+      "id": "sidecar",
+      "name": "Sidecar",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Coupe",
+      "method": "Shaker",
+      "tav": "38 %",
+      "profile": "Riche, hespéridé et puissant",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Triple sec",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Cognac",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Sans garniture",
+      "garnishOptions": [
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "30 %",
+        "32 %",
+        "33 %",
+        "38 %"
+      ],
+      "history": "Classique des années 1920 popularisé à Paris et Londres durant l’entre-deux-guerres.",
+      "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi.",
+      "ingredients": [
+        "10 ml Jus de citron",
+        "20 ml Triple sec",
+        "40 ml Cognac"
+      ]
+    },
+    {
+      "id": "sour",
+      "name": "Sour",
+      "category": "SHORT drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Shaker",
+      "tav": "28 %",
+      "profile": "Onctueux, acidulé et équilibré",
+      "ingredientsDetailed": [
+        {
+          "name": "Sucre en poudre",
+          "volume": 1,
+          "unit": "bar spoon"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Blanc d'œuf ou aquafaba",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Spiritueux",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "20 %",
+        "22 %",
+        "23 %",
+        "28 %"
+      ],
+      "history": "Structure de cocktail historique apparue au milieu du XIXe siècle.",
+      "technique": "Mirer et remplir le verre Rocks de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Diluer le sucre en mélangeant quelques secondes avec une cuillère de bar. Égoutter le verre et compléter de glace si besoin. Frapper en dry shake sans glace. Remplir la grande timbale de glace, frapper à nouveau puis passer dans le verre rempli de glace. Garnir d’une cerise à l’eau-de-vie.",
+      "ingredients": [
+        "1 bar spoon Sucre en poudre",
+        "20 ml Jus de citron",
+        "20 ml Blanc d'œuf ou aquafaba",
+        "50 ml Spiritueux"
+      ]
+    },
+    {
+      "id": "americano",
+      "name": "Americano",
+      "category": "LONG drink",
+      "type": "BEFORE DINNER",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "13 %",
+      "profile": "Amer, désaltérant et pétillant",
+      "ingredientsDetailed": [
+        {
+          "name": "Vermouth rouge",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Bitter",
+          "volume": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Eau gazeuse",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche d’orange et demi-tranche de citron",
+      "garnishOptions": [
+        "Demi-tranche d’orange et demi-tranche de citron",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Créé en Italie vers 1860 par Gaspare Campari sous le nom de Milano-Torino.",
+      "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le vermouth rouge, le bitter et compléter d’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une demi-tranche d’orange et d’une demi-tranche de citron.",
+      "ingredients": [
+        "20 ml Vermouth rouge",
+        "50 ml Bitter",
+        "50 ml Eau gazeuse"
+      ]
+    },
+    {
+      "id": "bellini",
+      "name": "Bellini",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Flûte",
+      "method": "Direct au verre",
+      "tav": "8 %",
+      "profile": "Fruité, délicat et effervescent",
+      "ingredientsDetailed": [
+        {
+          "name": "Nectar ou purée de pêche blanche",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Champagne",
+          "volume": 80,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Sans garniture",
+      "garnishOptions": [
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "8 %",
+        "11 %",
+        "12 %"
+      ],
+      "history": "Créé par Giuseppe Cipriani au Harry’s Bar de Venise en 1948.",
+      "technique": "Mirer et remplir la Flûte de glace. Rafraîchir le verre avec la cuillère de bar. Retirer la glace du verre. Verser la purée de pêche blanche puis le champagne. Mélanger délicatement à la cuillère de bar.",
+      "ingredients": [
+        "40 ml Nectar ou purée de pêche blanche",
+        "80 ml Champagne"
+      ]
+    },
+    {
+      "id": "bloody_mary",
+      "name": "Bloody Mary",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "13 %",
+      "profile": "Épicé, savoureux et umami",
+      "ingredientsDetailed": [
+        {
+          "name": "Sel au céleri",
+          "volume": 1,
+          "unit": "pincée"
+        },
+        {
+          "name": "Tabasco",
+          "volume": 2,
+          "unit": "gouttes"
+        },
+        {
+          "name": "Sauce anglaise",
+          "volume": 1,
+          "unit": "trait"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Vodka",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de tomate",
+          "volume": 70,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche de citron et branche de céleri",
+      "garnishOptions": [
+        "Demi-tranche de citron et branche de céleri",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Créé par Fernand Petiot au New York Bar à Paris au début des années 1920.",
+      "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Assaisonner de sel au céleri, de quelques gouttes de Tabasco et d’un trait de sauce anglaise. Verser les ingrédients, puis mélanger. Garnir d’une demi-tranche de citron et d’une branche de céleri. Ajouter un agitateur.",
+      "ingredients": [
+        "1 pincée Sel au céleri",
+        "2 gouttes Tabasco",
+        "1 trait Sauce anglaise",
+        "10 ml Jus de citron",
+        "40 ml Vodka",
+        "70 ml Jus de tomate"
+      ]
+    },
+    {
+      "id": "champagne_cocktail",
+      "name": "Champagne Cocktail",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Flûte",
+      "method": "Direct au verre",
+      "tav": "8 %",
+      "profile": "Pétillant, vineux et élégant",
+      "ingredientsDetailed": [
+        {
+          "name": "Sucre blanc",
+          "volume": 1,
+          "unit": "morceau"
+        },
+        {
+          "name": "Aromatic bitters",
+          "volume": 1,
+          "unit": "trait"
+        },
+        {
+          "name": "Cognac",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Champagne",
+          "volume": 110,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Zeste de citron exprimé",
+      "garnishOptions": [
+        "Zeste de citron exprimé",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "8 %",
+        "11 %",
+        "12 %"
+      ],
+      "history": "Classique mentionné dès 1862 dans le premier guide de bar de Jerry Thomas.",
+      "technique": "Mirer la Flûte. Placer le morceau de sucre blanc au fond du verre, imbiber d’un trait d’aromatic bitters. Verser le cognac puis compléter délicatement de champagne frais. Garnir d’un zeste de citron exprimé.",
+      "ingredients": [
+        "1 morceau Sucre blanc",
+        "1 trait Aromatic bitters",
+        "10 ml Cognac",
+        "110 ml Champagne"
+      ]
+    },
+    {
+      "id": "dark_and_stormy",
+      "name": "Dark And Stormy",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "11 %",
+      "profile": "Épicé, puissant et rafraîchissant",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron vert",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Ginger beer",
+          "volume": 100,
+          "unit": "ml"
+        },
+        {
+          "name": "Black rum",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Quartier de citron vert",
+      "garnishOptions": [
+        "Quartier de citron vert",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "6 %",
+        "7 %",
+        "11 %"
+      ],
+      "history": "Boisson nationale des Bermudes associée au rhum Gosling’s Black Seal.",
+      "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le jus de citron vert et la ginger beer. Verser le black rum délicatement en surface pour créer l’étage float. Garnir d’un quartier de citron vert.",
+      "ingredients": [
+        "15 ml Jus de citron vert",
+        "100 ml Ginger beer",
+        "40 ml Black rum"
+      ]
+    },
+    {
+      "id": "fizz",
+      "name": "Fizz",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Shaker",
+      "tav": "13 %",
+      "profile": "Vif, acidulé et pétillant",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de sucre",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Eau-de-vie",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Eau gazeuse",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Tranche de citron",
+      "garnishOptions": [
+        "Tranche de citron",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Grande famille de cocktails du XIXe siècle dont le Gin Fizz est le chef de file.",
+      "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le sirop de sucre, le jus de citron et l’eau-de-vie dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rempli de glace. Compléter d’eau gazeuse. Mélanger délicatement. Garnir d’une tranche de citron.",
+      "ingredients": [
+        "10 ml Sirop de sucre",
+        "20 ml Jus de citron",
+        "40 ml Eau-de-vie",
+        "50 ml Eau gazeuse"
+      ]
+    },
+    {
+      "id": "french_75",
+      "name": "French 75",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Flûte",
+      "method": "Shaker",
+      "tav": "16 %",
+      "profile": "Vif, pétillant et puissant",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de sucre",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Gin",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Champagne",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Zeste de citron exprimé",
+      "garnishOptions": [
+        "Zeste de citron exprimé",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron vert exprimé"
+      ],
+      "tavOptions": [
+        "8 %",
+        "10 %",
+        "11 %",
+        "16 %"
+      ],
+      "history": "Nommé d’après le canon de 75 mm français réputé pour sa puissance lors de la Grande Guerre.",
+      "technique": "Mirer et remplir la Flûte de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser le sirop de sucre, le jus de citron et le gin dans la petite timbale. Retirer la glace de la Flûte et égoutter la grande timbale. Frapper puis passer dans la Flûte rafraîchie. Compléter de champagne. Garnir d’un zeste de citron exprimé.",
+      "ingredients": [
+        "10 ml Sirop de sucre",
+        "20 ml Jus de citron",
+        "40 ml Gin",
+        "50 ml Champagne"
+      ]
+    },
+    {
+      "id": "horses_neck",
+      "name": "Horse's Neck",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "11 %",
+      "profile": "Puissant, complexe et désaltérant",
+      "ingredientsDetailed": [
+        {
+          "name": "Aromatic bitters",
+          "volume": 3,
+          "unit": "traits"
+        },
+        {
+          "name": "Cognac",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Ginger ale",
+          "volume": 100,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Long zeste de citron exprimé en spirale",
+      "garnishOptions": [
+        "Long zeste de citron exprimé en spirale",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "6 %",
+        "7 %",
+        "11 %"
+      ],
+      "history": "Apparu à la fin du XIXe siècle comme boisson sans alcool puis enrichi d’alcool dans les années 1910.",
+      "technique": "Mirer le verre Highball. Préparer un long zeste de citron prélevé en continu sur l’agrume et l’enrouler en spirale à l’intérieur du verre sur toute sa hauteur. Remplir de glace. Verser le cognac, les traits d’aromatic bitters et compléter de ginger ale. Mélanger délicatement à la cuillère de bar.",
+      "ingredients": [
+        "3 traits Aromatic bitters",
+        "40 ml Cognac",
+        "100 ml Ginger ale"
+      ]
+    },
+    {
+      "id": "mai_tai",
+      "name": "Mai Tai",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Rocks",
+      "method": "Shaker",
+      "tav": "30 %",
+      "profile": "Puissant, acidulé et gourmand",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron vert",
+          "volume": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "Sirop d'orgeat",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Curaçao orange",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum vieux agricole",
+          "volume": 25,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum vieux jamaïcain",
+          "volume": 25,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche de citron vert et tête de menthe fraîche",
+      "garnishOptions": [
+        "Demi-tranche de citron vert et tête de menthe fraîche",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "22 %",
+        "24 %",
+        "25 %",
+        "30 %"
+      ],
+      "history": "Le chef-d’œuvre Tiki créé par Victor Bergeron (Trader Vic) à Oakland en 1944.",
+      "technique": "Mirer et remplir le verre Rocks de glace pilée. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre de glace pilée. Garnir d’une demi-tranche de citron vert et d’une tête de menthe fraîche. Ajouter une paille courte.",
+      "ingredients": [
+        "25 ml Jus de citron vert",
+        "15 ml Sirop d'orgeat",
+        "15 ml Curaçao orange",
+        "25 ml Rhum vieux agricole",
+        "25 ml Rhum vieux jamaïcain"
+      ]
+    },
+    {
+      "id": "mojito",
+      "name": "Mojito",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "13 %",
+      "profile": "Frais, mentholé et acidulé",
+      "ingredientsDetailed": [
+        {
+          "name": "Feuilles de menthe",
+          "volume": 10,
+          "unit": "feuilles"
+        },
+        {
+          "name": "Sucre en poudre",
+          "volume": 1,
+          "unit": "bar spoon"
+        },
+        {
+          "name": "Jus de citron vert",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum cubain",
+          "volume": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Eau gazeuse",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Tranche de citron vert et tête de menthe fraîche",
+      "garnishOptions": [
+        "Tranche de citron vert et tête de menthe fraîche",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Boisson emblématique de Cuba rendue célèbre par Ernest Hemingway à La Havane.",
+      "technique": "Mirer le verre Highball. Déposer les feuilles de menthe, le sucre en poudre et le jus de citron vert. Piler très délicatement pour exprimer les essences sans broyer la menthe. Remplir de glace pilée. Verser le rhum cubain et l’eau gazeuse. Mélanger à la cuillère de bar de bas en haut. Compléter de glace pilée. Garnir d’une tranche de citron vert et d’une belle tête de menthe fraîche. Ajouter une paille.",
+      "ingredients": [
+        "10 feuilles Feuilles de menthe",
+        "1 bar spoon Sucre en poudre",
+        "20 ml Jus de citron vert",
+        "50 ml Rhum cubain",
+        "50 ml Eau gazeuse"
+      ]
+    },
+    {
+      "id": "moscow_mule",
+      "name": "Moscow Mule",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Mule",
+      "method": "Direct au verre",
+      "tav": "13 %",
+      "profile": "Vif, piquant et désaltérant",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de citron vert",
+          "volume": 15,
+          "unit": "ml"
+        },
+        {
+          "name": "Vodka",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Ginger beer",
+          "volume": 100,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Tranche de citron vert",
+      "garnishOptions": [
+        "Tranche de citron vert",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Créé en 1941 aux États-Unis pour populariser la vodka Smirnoff et la ginger beer dans sa timbale en cuivre.",
+      "technique": "Mirer et remplir le mug Mule de glace. Rafraîchir le mug avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le jus de citron vert, la vodka et compléter de ginger beer. Mélanger délicatement à la cuillère de bar. Garnir d’une tranche de citron vert.",
+      "ingredients": [
+        "15 ml Jus de citron vert",
+        "40 ml Vodka",
+        "100 ml Ginger beer"
+      ]
+    },
+    {
+      "id": "paloma",
+      "name": "Paloma",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "10 %",
+      "profile": "Acidulé, pamplemousse et salin",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus de pamplemousse",
+          "volume": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Sirop d'agave",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron vert",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Tequila blanco 100 % agave",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Eau gazeuse",
+          "volume": 50,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche de pamplemousse",
+      "garnishOptions": [
+        "Demi-tranche de pamplemousse",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "6 %",
+        "7 %",
+        "10 %"
+      ],
+      "history": "Le cocktail à la tequila le plus consommé au Mexique.",
+      "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le sirop d’agave, le jus de citron vert, la tequila et le jus de pamplemousse. Compléter d’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une demi-tranche de pamplemousse.",
+      "ingredients": [
+        "50 ml Jus de pamplemousse",
+        "10 ml Sirop d'agave",
+        "10 ml Jus de citron vert",
+        "40 ml Tequila blanco 100 % agave",
+        "50 ml Eau gazeuse"
+      ]
+    },
+    {
+      "id": "pina_colada",
+      "name": "Piña Colada",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Shaker",
+      "tav": "13 %",
+      "profile": "Crémeux, exotique et gourmand",
+      "ingredientsDetailed": [
+        {
+          "name": "Crème de noix de coco",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus d'ananas",
+          "volume": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum blanc",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Quartier d’ananas et cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Quartier d’ananas et cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Créé en 1954 à l’hôtel Caribe Hilton de San Juan à Porto Rico par Ramon Marrero.",
+      "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper vigoureusement puis passer dans le verre rempli de glace. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille.",
+      "ingredients": [
+        "20 ml Crème de noix de coco",
+        "30 ml Jus d'ananas",
+        "40 ml Rhum blanc"
+      ]
+    },
+    {
+      "id": "planters_punch",
+      "name": "Planter's Punch",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "16 %",
+      "profile": "Fruité, généreux et corsé",
+      "ingredientsDetailed": [
+        {
+          "name": "Aromatic bitters",
+          "volume": 2,
+          "unit": "traits"
+        },
+        {
+          "name": "Jus d'orange",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus d'ananas",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum agricole blanc",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum agricole ambré",
+          "volume": 1,
+          "unit": "trait"
+        }
+      ],
+      "garnish": "Quartier d’ananas et cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Quartier d’ananas et cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "8 %",
+        "10 %",
+        "11 %",
+        "16 %"
+      ],
+      "history": "Boisson caribéenne historique associée aux plantations de canne à sucre de la Jamaïque.",
+      "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser les traits d’aromatic bitters, les jus d’orange et d’ananas, et le rhum agricole blanc. Mélanger à la cuillère de bar. Faire flotter float le trait de rhum agricole ambré en surface. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille.",
+      "ingredients": [
+        "2 traits Aromatic bitters",
+        "40 ml Jus d'orange",
+        "40 ml Jus d'ananas",
+        "40 ml Rhum agricole blanc",
+        "1 trait Rhum agricole ambré"
+      ]
+    },
+    {
+      "id": "rum_swizzle",
+      "name": "Rum Swizzle",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "20 %",
+      "profile": "Épicé, acidulé et complexe",
+      "ingredientsDetailed": [
+        {
+          "name": "Sirop de sucre",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Jus de citron vert",
+          "volume": 30,
+          "unit": "ml"
+        },
+        {
+          "name": "Falernum",
+          "volume": 20,
+          "unit": "ml"
+        },
+        {
+          "name": "Rhum ambré",
+          "volume": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Aromatic bitters",
+          "volume": 2,
+          "unit": "traits"
+        }
+      ],
+      "garnish": "Zeste d’orange exprimé et tête de menthe fraîche",
+      "garnishOptions": [
+        "Zeste d’orange exprimé et tête de menthe fraîche",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "12 %",
+        "14 %",
+        "15 %",
+        "20 %"
+      ],
+      "history": "Boisson emblématique des Caraïbes traditionnellement brassée à l’aide d’un bois lélé.",
+      "technique": "Mirer et remplir le verre Highball de glace pilée. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace pilée si besoin. Verser les ingrédients. Mélanger à l’aide d’un swizzle stick ou de la cuillère de bar. Garnir d’un zeste d’orange exprimé et décorer d’une tête de menthe fraîche. Ajouter une paille.",
+      "ingredients": [
+        "20 ml Sirop de sucre",
+        "30 ml Jus de citron vert",
+        "20 ml Falernum",
+        "50 ml Rhum ambré",
+        "2 traits Aromatic bitters"
+      ]
+    },
+    {
+      "id": "sex_on_the_beach",
+      "name": "Sex On The Beach",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Shaker",
+      "tav": "15 %",
+      "profile": "Fruité, sucré et gourmand",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus d'orange",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Nectar de cranberry",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Liqueur de pêche",
+          "volume": 10,
+          "unit": "ml"
+        },
+        {
+          "name": "Vodka",
+          "volume": 40,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Demi-tranche d’orange",
+      "garnishOptions": [
+        "Demi-tranche d’orange",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "7 %",
+        "9 %",
+        "10 %",
+        "15 %"
+      ],
+      "history": "Cocktail festif américain créé en Floride dans les années 1980.",
+      "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper puis passer dans le verre rempli de glace. Garnir d’une demi-tranche d’orange.",
+      "ingredients": [
+        "40 ml Jus d'orange",
+        "40 ml Nectar de cranberry",
+        "10 ml Liqueur de pêche",
+        "40 ml Vodka"
+      ]
+    },
+    {
+      "id": "spritz",
+      "name": "Spritz",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Verre à vin",
+      "method": "Direct au verre",
+      "tav": "16 %",
+      "profile": "Amer, pétillant et hespéridé",
+      "ingredientsDetailed": [
+        {
+          "name": "Bitter ou autre spiritueux",
+          "volume": 50,
+          "unit": "ml"
+        },
+        {
+          "name": "Vin blanc effervescent",
+          "volume": 60,
+          "unit": "ml"
+        },
+        {
+          "name": "Eau gazeuse",
+          "volume": 20,
+          "unit": "ml"
+        }
+      ],
+      "garnish": "Décoration adaptée à la recette",
+      "garnishOptions": [
+        "Décoration adaptée à la recette",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "8 %",
+        "10 %",
+        "11 %",
+        "16 %"
+      ],
+      "history": "Issu de la tradition vénitienne d’asperger le vin d’eau gazeuse, modernisé avec des bitters.",
+      "technique": "Mirer et remplir le verre à vin de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser le bitter, le vin blanc effervescent Prosecco et l’eau gazeuse. Mélanger délicatement à la cuillère de bar. Garnir d’une décoration adaptée à la recette.",
+      "ingredients": [
+        "50 ml Bitter ou autre spiritueux",
+        "60 ml Vin blanc effervescent",
+        "20 ml Eau gazeuse"
+      ]
+    },
+    {
+      "id": "tequila_sunrise",
+      "name": "Tequila Sunrise",
+      "category": "LONG drink",
+      "type": "ALL DAY COCKTAIL",
+      "glass": "Highball",
+      "method": "Direct au verre",
+      "tav": "13 %",
+      "profile": "Fruité, acidulé et visuel",
+      "ingredientsDetailed": [
+        {
+          "name": "Jus d'orange",
+          "volume": 80,
+          "unit": "ml"
+        },
+        {
+          "name": "Tequila",
+          "volume": 40,
+          "unit": "ml"
+        },
+        {
+          "name": "Sirop de grenadine",
+          "volume": 1,
+          "unit": "trait"
+        }
+      ],
+      "garnish": "Demi-tranche d’orange et cerise à l’eau-de-vie",
+      "garnishOptions": [
+        "Demi-tranche d’orange et cerise à l’eau-de-vie",
+        "Sans garniture",
+        "Cerise à l’eau-de-vie",
+        "Zeste de citron exprimé"
+      ],
+      "tavOptions": [
+        "5 %",
+        "7 %",
+        "8 %",
+        "13 %"
+      ],
+      "history": "Popularisé en 1972 à Sausalito en Californie et célébré par les Rolling Stones.",
+      "technique": "Mirer et remplir le verre Highball de glace. Rafraîchir le verre avec la cuillère de bar. Égoutter le verre et compléter de glace si besoin. Verser la tequila et le jus d’orange, mélanger à la cuillère de bar. Verser délicatement le trait de sirop de grenadine pour créer le dégradé au fond du verre. Garnir d’une demi-tranche d’orange et d’une cerise à l’eau-de-vie.",
+      "ingredients": [
+        "80 ml Jus d'orange",
+        "40 ml Tequila",
+        "1 trait Sirop de grenadine"
+      ]
+    }
+  ],
+  "lexique": [
+    {
+      "term": "Albédos",
+      "def": "Partie intérieure blanche de l'écorce d'un agrume, parfois appelée « ziste », généralement amère."
+    },
+    {
+      "term": "Aquafaba",
+      "def": "Jus de cuisson de pois chiche utilisé au bar comme émulsifiant végétal pour remplacer le blanc d'œuf."
+    },
+    {
+      "term": "Aromatic Bitters",
+      "def": "Amer concentré aromatisé utilisé par traits pour apporter amertume et complexité (ex: Angostura)."
+    },
+    {
+      "term": "Bar Mat",
+      "def": "Tapis de bar en caoutchouc antidérapant pour égoutter les verres et retenir les éclaboussures."
+    },
+    {
+      "term": "Bar Spoon",
+      "def": "Cuillère de bar à long manche torsadé permettant de mélanger délicatement et de mesurer."
+    },
+    {
+      "term": "Bartender",
+      "def": "Terme unisexe américain désignant à la fois le barman et la barmaid."
+    },
+    {
+      "term": "Bowl",
+      "def": "Récipient de grand volume (vasque/bol) utilisé pour le service des familles de cocktail comme le Punch ou Tiki."
+    },
+    {
+      "term": "Collins",
+      "def": "Famille de cocktails Long drink ayant la même composition qu'un Fizz, mais réalisée directement au verre."
+    },
+    {
+      "term": "Compléter (Topped)",
+      "def": "Allonger un cocktail d'un complément gazeux (soda, eau gazeuse, bière de gingembre, champagne...)."
+    },
+    {
+      "term": "Cuban Roll",
+      "def": "Technique (throwing) consistant à transvaser les liquides d'une timbale à une autre pour aérer et rafraîchir."
+    },
+    {
+      "term": "Daisy",
+      "def": "Short drink réalisé au shaker composé d'eau-de-vie, jus de citron, curaçao et eau gazeuse."
+    },
+    {
+      "term": "Dilution",
+      "def": "Apport maîtrisé d’eau provenant de la fonte des glaçons lors du mélange (shaker ou verre à mélange), indispensable pour ouvrir les arômes et équilibrer la puissance alcoolique."
+    },
+    {
+      "term": "Distillation",
+      "def": "Procédé de séparation et concentration alcoolique par chauffage des vapeurs et condensation (distillat)."
+    },
+    {
+      "term": "Double Filtration",
+      "def": "(Double strain) Filtrer le cocktail avec la passoire fine en plus de la passoire à cocktail pour ôter pulpes et éclats de glace."
+    },
+    {
+      "term": "Dry Shake",
+      "def": "Frapper une première fois sans glace avec un émulsifiant (blanc d'œuf, aquafaba) pour monter la mousse."
+    },
+    {
+      "term": "Décoction",
+      "def": "Procédé d'extraction à chaud recommandé pour les racines et écorces peu solubles."
+    },
+    {
+      "term": "Eau-de-vie",
+      "def": "Boisson alcoolique obtenue par distillation de produits fermentés (céréales, fruits, canne...)."
+    },
+    {
+      "term": "Exprimer",
+      "def": "Pincer un zeste d'agrume pour en projeter les essences d'huiles essentielles sur le cocktail."
+    },
+    {
+      "term": "Fat Washing",
+      "def": "Technique qui consiste à aromatiser un alcool à partir d'un corps gras puis à le figer au froid."
+    },
+    {
+      "term": "Fermentation alcoolique",
+      "def": "Transformation des sucres en éthanol et CO2 sous l'action biologique des levures."
+    },
+    {
+      "term": "Flip",
+      "def": "Short drink composé d'un jaune d'œuf, d'une base de vin/spiritueux et de noix de muscade râpée."
+    },
+    {
+      "term": "Float",
+      "def": "Verser délicatement un filet de liquide à la surface d'un cocktail sans le mélanger au reste."
+    },
+    {
+      "term": "Frapper",
+      "def": "Action d'agiter vigoureusement le shaker avec des glaçons."
+    },
+    {
+      "term": "Frozen",
+      "def": "Cocktail réalisé au blender avec glace pilée pour obtenir une texture granitée onctueuse."
+    },
+    {
+      "term": "Garniture (Garnish)",
+      "def": "Élément décoratif et gustatif complétant un cocktail. Selon le référentiel, elle doit rester simple, de saison, comestible (ou fruits déshydratés), et apporter une complémentarité aromatique en évoquant les ingrédients de la recette."
+    },
+    {
+      "term": "Givrer (Rim)",
+      "def": "Créer une collerette de sel, sucre ou épices sur le rebord du verre."
+    },
+    {
+      "term": "Highball",
+      "def": "Verre haut et fin ou famille de long drink composé d'eau-de-vie et allongée de soda."
+    },
+    {
+      "term": "Hot Drink",
+      "def": "Cocktail servi chaud (ex: Irish Coffee, Grog, Hot Toddy)."
+    },
+    {
+      "term": "Infusion",
+      "def": "Procédé d'extraction d'arômes dans un liquide à chaud."
+    },
+    {
+      "term": "Jigger",
+      "def": "Doseur gradué en métal ou verre servant à mesurer les volumes avec exactitude."
+    },
+    {
+      "term": "Liquoreux",
+      "def": "Caractérise une boisson ou un cocktail riche en sucres avec une texture dense, sirupeuse et suave, typique des cocktails de type After Dinner (digestifs)."
+    },
+    {
+      "term": "Macération",
+      "def": "Procédé d'extraction d'arômes dans un liquide à froid."
+    },
+    {
+      "term": "Mesure",
+      "def": "Volume standard français de 40 ml (4 cl)."
+    },
+    {
+      "term": "Mocktail",
+      "def": "Cocktail sans alcool (du verbe anglais 'mock' : imiter)."
+    },
+    {
+      "term": "Muter",
+      "def": "Stopper la fermentation alcoolique par ajout d'alcool pour conserver les sucres résiduels."
+    },
+    {
+      "term": "Mélanger (Stir)",
+      "def": "Remuer une boisson avec la cuillère de bar dans le verre à mélange."
+    },
+    {
+      "term": "No Low",
+      "def": "Contraction de 'No alcohol' et 'Low ABV' désignant les boissons sans ou à faible degré d'alcool."
+    },
+    {
+      "term": "Organoleptique",
+      "def": "Qualifie les propriétés d’une boisson ou d’un aliment perçues par les sens (goût, odorat, vue, texture en bouche). L’équilibre organoleptique est l’harmonie parfaite entre saveurs (sucré, acide, amer), arômes, température et dilution."
+    },
+    {
+      "term": "Passer (Strain)",
+      "def": "Filtrer le cocktail avec la passoire pour éliminer la glace et les résidus solides."
+    },
+    {
+      "term": "Pourer",
+      "def": "Bec verseur régulateur de débit inséré sur le goulot des bouteilles."
+    },
+    {
+      "term": "Pré-batch",
+      "def": "Préparation à l'avance d'un mélange de plusieurs ingrédients pour accélérer le service."
+    },
+    {
+      "term": "Rainbow",
+      "def": "Cocktail à étages colorés superposés selon la densité en sucre de chaque liquide."
+    },
+    {
+      "term": "Reverse Dry Shake",
+      "def": "Frapper d'abord avec glaçons, retirer la glace, puis frapper une seconde fois sans glace."
+    },
+    {
+      "term": "Shaker 3 Pièces (Cobbler)",
+      "def": "Shaker intégrant un filtre perforé et un bouchon doseur supérieur."
+    },
+    {
+      "term": "Shaker Boston",
+      "def": "Shaker à deux timbales (inox/verre ou 2 inox) s'emboîtant avec un axe décalé."
+    },
+    {
+      "term": "Shaker Continental",
+      "def": "Shaker parisien à deux pièces qui s'emboîtent parfaitement dans le même axe."
+    },
+    {
+      "term": "Shooter",
+      "def": "Boisson courte de 30 à 60 ml servie dans un verre shot à boire d'un trait."
+    },
+    {
+      "term": "Sirop de sucre",
+      "def": "Sirop simple composé à parts égales de 1 volume d'eau et 1 volume de sucre semoule."
+    },
+    {
+      "term": "Sour (Acidité)",
+      "def": "Dans la règle d’équilibre des « 3 S », composante acide servant de liant et apportant fraîcheur et vivacité (apportée par un agrume, du verjus ou une solution acide)."
+    },
+    {
+      "term": "Sparkling",
+      "def": "Cocktail long drink complété d'une boisson effervescente (Champagne, Prosecco, Crémant...)."
+    },
+    {
+      "term": "Spiritueux",
+      "def": "Boisson alcoolique à fort titre alcoométrique (généralement supérieur ou égal à 15% vol), obtenue par distillation de produits fermentés (eaux-de-vie, rhums, gins, vodkas, whiskies) ou par macération (liqueurs). Selon le lexique officiel : « boissons fortement alcoolisées »."
+    },
+    {
+      "term": "Squeeze Bottle",
+      "def": "Flacon souple permettant de doser et verser facilement purées et sirops maison."
+    },
+    {
+      "term": "Strong (Force)",
+      "def": "Dans la règle d’équilibre des « 3 S », composante apportant la puissance alcoolique, la structure et le corps du cocktail (apportée principalement par l’eau-de-vie ou le spiritueux de base)."
+    },
+    {
+      "term": "Sweet (Douceur)",
+      "def": "Dans la règle d’équilibre des « 3 S », composante sucrée apportant rondeur et douceur au cocktail (apportée par du sirop, une liqueur, une crème de fruit ou du sucre)."
+    },
+    {
+      "term": "Swizzle Stick",
+      "def": "Bâtonnet traditionnel (bois lélé) à branches pour remuer les cocktails tropicaux sur glace pilée."
+    },
+    {
+      "term": "Timbale (Tin)",
+      "def": "Partie métallique en acier inoxydable d'un shaker."
+    },
+    {
+      "term": "Trait (Dash)",
+      "def": "Mesure représentant 3 à 5 gouttes d'un liquide aromatique concentré."
+    },
+    {
+      "term": "Verjus",
+      "def": "Jus acide extrait de raisins n’ayant pas mûri, utilisé comme alternative locale et élégante au jus de citron pour apporter l’acidité (Sour)."
+    },
+    {
+      "term": "Zeste",
+      "def": "Partie extérieure de l'écorce d'un agrume contenant les huiles essentielles parfumées."
+    },
+    {
+      "term": "Émulsifiant",
+      "def": "Ingrédient utilisé au bar (blanc d’œuf, aquafaba) pour lier les éléments et emprisonner l’air lors du shaker, apportant au cocktail une texture soyeuse et une mousse dense en surface."
+    }
+  ]
+}
