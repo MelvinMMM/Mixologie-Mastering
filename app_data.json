@@ -148,15 +148,19 @@
       "id": "m1_q6",
       "moduleId": 1,
       "badge": "Éco-responsabilité",
-      "question": "Concernant l'utilisation des pailles au bar, quelle est la règle officielle formulée dans le référentiel ?",
+      "isMultiSelect": true,
+      "question": "Concernant l'utilisation des pailles au bar, quelles sont les deux règles officielles formulées dans le référentiel ?",
       "options": [
-        "Mettre obligatoirement deux pailles en plastique dans chaque Long drink",
-        "Utiliser des pailles en matière écoresponsable et uniquement à la demande du client",
-        "Ne jamais fournir de paille sous aucun prétexte",
-        "Mettre une paille systématiquement dans tous les Short drinks"
+        "Utiliser des pailles en matière écoresponsable",
+        "Uniquement à la demande du client",
+        "Mettre systématiquement deux pailles dans chaque verre",
+        "Utiliser obligatoirement des pailles en plastique jetable"
       ],
-      "correctAnswer": 1,
-      "explanation": "Le référentiel mentionne en N.B. : « Utiliser des pailles en matière écoresponsable et à la demande du client »."
+      "correctAnswer": [
+        0,
+        1
+      ],
+      "explanation": "Le référentiel mentionne en N.B. : Utiliser des pailles en matière écoresponsable et à la demande du client."
     },
     {
       "id": "m1_q7",
@@ -178,7 +182,7 @@
       "badge": "Verrerie",
       "question": "Pourquoi est-il crucial d'adapter le dosage de la recette à la taille de la verrerie utilisée ?",
       "options": [
-        "Car selon les fournisseurs, les verres possèdent une contenance différente pour un même type de verre",
+        "Les verres possèdent une contenance différente pour un même type de verre",
         "Pour que le cocktail coûte toujours le même prix peu importe le bar",
         "Pour changer obligatoirement le nom du cocktail",
         "Pour respecter la loi sur la vaisselle de bar"
@@ -192,7 +196,7 @@
       "badge": "Équilibre - Sour",
       "question": "Dans la règle d’équilibre des « 3 S », par quoi est apporté l’élément « SOUR » ?",
       "options": [
-        "Par un agrume , du verjus ou une solution acide",
+        "Par un agrume, du verjus ou une solution acide",
         "Par du sucre de canne liquide et du miel",
         "Par une crème de cacao et du lait concentré",
         "Par du gin et du tonic"
@@ -204,29 +208,33 @@
       "id": "m1_q_sweet",
       "moduleId": 1,
       "badge": "Équilibre - Sweet",
+      "isMultiSelect": true,
       "question": "Dans la règle d’équilibre des « 3 S », par quoi peut être apporté l’élément « SWEET » ?",
       "options": [
-        "Par une liqueur, une crème, un fruit, un sirop ou du sucre en poudre extra fin",
-        "Uniquement par des glaçons d’eau pure",
+        "Par une liqueur, une crème ou un fruit",
+        "Par un sirop ou du sucre en poudre extra fin",
         "Par du jus de citron jaune et du sel",
-        "Par de l’eau-de-vie pure à 50% vol"
+        "Par de l’eau-de-vie pure"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": [
+        0,
+        1
+      ],
       "explanation": "Le SWEET apporte le sucré et la douceur du cocktail. Il peut être apporté par une liqueur, une crème, un fruit, un sirop ou tout simplement du sucre en poudre extra fin."
     },
     {
       "id": "m1_q_strong",
       "moduleId": 1,
       "badge": "Équilibre - Strong",
-      "question": "Dans la règle d’équilibre des « 3 S », quel est le rôle de l’élément « STRONG » et par quoi est-il apporté ?",
+      "question": "Dans la règle d’équilibre des « 3 S », quel est le rôle de l’élément « STRONG » ?",
       "options": [
-        "Il représente la puissance et le corps du cocktail, apporté principalement par l’eau-de-vie",
+        "Il représente la puissance et le corps du cocktail",
         "Il représente la quantité de glaçons dans le verre",
-        "Il représente l’amertume extrême apportée par 10 traits de bitter",
+        "Il représente l’amertume extrême du cocktail",
         "Il représente le volume total de soda gazeux"
       ],
       "correctAnswer": 0,
-      "explanation": "Le STRONG est la puissance et le corps du cocktail. L’eau-de-vie (ou le spiritueux) est le principal ingrédient apportant cette force et cette structure aromatique."
+      "explanation": "Le STRONG représente la puissance et le corps du cocktail. Dans le référentiel officiel, il est principalement apporté par l’eau-de-vie ou le spiritueux pour donner la force et la structure aromatique."
     },
     {
       "id": "m1_q_shaker",
@@ -262,13 +270,13 @@
       "badge": "Direct au verre",
       "question": "Dans quel cas le référentiel préconise-t-il la réalisation DIRECTE AU VERRE ?",
       "options": [
-        "Lorsque les ingrédients de la recette se mélangent facilement sans nécessiter d’émulsion",
-        "Uniquement lorsqu’on n’a pas le temps de laver son shaker",
-        "Pour tous les cocktails à base d’œufs et de purées très denses",
-        "Exclusivement pour les cocktails flambés"
+        "Lorsque les ingrédients se mélangent facilement",
+        "Pour les cocktails nécessitant une forte émulsion",
+        "Uniquement pour les mélanges avec blanc d’œuf",
+        "Exclusivement pour les spiritueux flambés"
       ],
       "correctAnswer": 0,
-      "explanation": "Selon la Partie 1 du référentiel : la technique Direct au verre est préconisée « lorsque les ingrédients de la recette se mélangent facilement »."
+      "explanation": "Selon la Partie 1 du référentiel : la technique Direct au verre est préconisée lorsque les ingrédients de la recette se mélangent facilement."
     },
     {
       "id": "m2_q1",
@@ -282,7 +290,7 @@
         "Catégorie = Chaleur / Type = Texture"
       ],
       "correctAnswer": 0,
-      "explanation": "Les moyens mémotechniques officiels sont : « Catégorie = Contenance » et « Type = Temps » (moment de dégustation)."
+      "explanation": "Les moyens mémotechniques officiels sont : Catégorie = Contenance et Type = Temps pour le moment de dégustation."
     },
     {
       "id": "m2_q2",
@@ -296,7 +304,7 @@
         "Ne dépasse pas 250 ml"
       ],
       "correctAnswer": 1,
-      "explanation": "Un SHORT DRINK est plutôt puissant et ne dépasse pas 100 ml (inférieur à 10 cl)."
+      "explanation": "Un SHORT DRINK est plutôt puissant et ne dépasse pas 100 ml, c'est-à-dire inférieur à 10 cl."
     },
     {
       "id": "m2_q3",
@@ -310,7 +318,7 @@
         "À partir de 330 ml"
       ],
       "correctAnswer": 1,
-      "explanation": "Un LONG DRINK est plutôt allongé et sa contenance démarre à partir de 100 ml (à partir de 10 cl)."
+      "explanation": "Un LONG DRINK est plutôt allongé et sa contenance démarre à partir de 100 ml, soit au moins 10 cl."
     },
     {
       "id": "m2_q4",
@@ -318,13 +326,13 @@
       "badge": "Types de cocktails",
       "question": "Quels sont les 3 TYPES officiels de cocktails ?",
       "options": [
-        "Before Dinner , After Dinner , All Day Cocktail",
+        "Before Dinner, After Dinner, All Day Cocktail",
         "Matin, Midi, Soir",
         "Hiver, Printemps, Été",
         "Alcoolisé, Sans alcool, Faiblement alcoolisé"
       ],
       "correctAnswer": 0,
-      "explanation": "Les 3 types officiels sont : Before Dinner (Apéritif), After Dinner (Digestif) et All Day Cocktail (Tout moment)."
+      "explanation": "Les 3 types officiels sont : Before Dinner pour l'apéritif, After Dinner pour le digestif et All Day Cocktail à tout moment."
     },
     {
       "id": "m2_q5",
@@ -332,13 +340,13 @@
       "badge": "Before Dinner",
       "question": "Quel est le profil gustatif typique d'un cocktail de type BEFORE DINNER ?",
       "options": [
-        "Très onctueux, chaud et chocolaté",
-        "Plus ou moins amer, parfois sec, consommé avant le repas pour ouvrir l'appétit",
-        "Exclusivement très sucré et crémeux",
-        "Obligatoirement sans alcool et gazeux"
+        "Souvent amer et parfois sec",
+        "Très liquoreux et sucré",
+        "Très onctueux et chocolaté",
+        "Exclusivement crémeux et chaud"
       ],
-      "correctAnswer": 1,
-      "explanation": "Un Before Dinner est plus ou moins amer, parfois sec, consommé de préférence avant le repas."
+      "correctAnswer": 0,
+      "explanation": "Selon le référentiel officiel, un cocktail de type Before Dinner présente un profil souvent amer et parfois sec, idéal avant le repas."
     },
     {
       "id": "m2_q6",
@@ -346,13 +354,13 @@
       "badge": "After Dinner",
       "question": "Quel est le profil gustatif d'un cocktail de type AFTER DINNER ?",
       "options": [
-        "Plus ou moins liquoreux, parfois puissant, consommé de préférence après le repas",
-        "Hyper acide et effervescent",
-        "Composé uniquement d'eau et d'agrumes",
-        "Toujours servi dans un verre shooter avec du sel"
+        "Souvent liquoreux et parfois puissant",
+        "Souvent amer et très sec",
+        "Exclusivement acide et salé",
+        "Toujours sans alcool et gazeux"
       ],
       "correctAnswer": 0,
-      "explanation": "Un After Dinner est plus ou moins liquoreux, parfois puissant, consommé de préférence après le repas (ex: Espresso Martini, Alexander...)."
+      "explanation": "Selon le référentiel officiel, un cocktail de type After Dinner présente un profil souvent liquoreux et parfois puissant, consommé de préférence après le repas comme pour l'Espresso Martini."
     },
     {
       "id": "m2_q7",
@@ -360,13 +368,13 @@
       "badge": "All Day",
       "question": "Comment est décrit un cocktail de type ALL DAY COCKTAIL ?",
       "options": [
-        "Plus ou moins fruité, souvent désaltérant, consommé quel que soit le moment de la journée",
-        "Un cocktail servi uniquement entre minuit et 6h du matin",
-        "Un cocktail contenant au minimum 50% de caféine",
-        "Un cocktail exclusivement servi au pichet"
+        "Consommé quel que soit le moment de la journée",
+        "Consommé uniquement avant le repas",
+        "Consommé exclusivement après le repas",
+        "Consommé uniquement entre minuit et 6h du matin"
       ],
       "correctAnswer": 0,
-      "explanation": "Un All Day Cocktail est plus ou moins fruité, souvent désaltérant, consommé quel que soit le moment de la journée (ex: Mojito, Piña Colada, Caipirinha...)."
+      "explanation": "Un All Day Cocktail est plus ou moins fruité et souvent désaltérant, et peut être consommé quel que soit le moment de la journée."
     },
     {
       "id": "m2_q8",
@@ -380,7 +388,7 @@
         "Short drink / After dinner"
       ],
       "correctAnswer": 0,
-      "explanation": "Le Negroni fait 90 ml au total (Short drink) et présente une amertume apéritive marquée (Before dinner)."
+      "explanation": "Le Negroni fait 90 ml au total donc Short drink et présente une amertume apéritive marquée donc Before dinner."
     },
     {
       "id": "m3_colada_cat",
@@ -416,13 +424,13 @@
       "badge": "Famille Colada",
       "question": "De quoi se compose principalement la recette type d’un Colada selon le référentiel ?",
       "options": [
-        "Eau-de-vie, crème de coco et jus de fruit",
+        "Eau-de-vie, crème de noix de coco et jus de fruit",
         "Eau-de-vie, vermouth rouge et bitter",
-        "Spiritueux, sucre, citron et eau gazeuse",
+        "Eau-de-vie, sucre, citron et eau gazeuse",
         "Eau-de-vie vieillie, sucre et menthe fraîche"
       ],
       "correctAnswer": 0,
-      "explanation": "Le Colada se compose traditionnellement d’eau-de-vie, de crème de coco et de jus de fruit (ex: jus d’ananas)."
+      "explanation": "Le Colada se compose traditionnellement d’eau-de-vie, de crème de coco et de jus de fruit ex: jus d’ananas."
     },
     {
       "id": "m3_colada_cocktail",
@@ -436,7 +444,7 @@
         "L’Apple Colada"
       ],
       "correctAnswer": 0,
-      "explanation": "Le cocktail le plus connu de cette famille est la Piña Colada (le Chi-Chi, le Blue Hawaiian et l’Apple Colada étant des variantes officielles)."
+      "explanation": "Le cocktail le plus connu de cette famille est la Piña Colada le Chi-Chi, le Blue Hawaiian et l’Apple Colada étant des variantes officielles."
     },
     {
       "id": "m3_fizz_cat",
@@ -473,9 +481,9 @@
       "question": "De quoi se compose la recette type d’un Fizz ?",
       "options": [
         "Eau-de-vie, sucre, citron et eau gazeuse",
-        "Eau-de-vie, crème de coco et jus d’ananas",
-        "Whisky, vermouth rouge et bitters",
-        "Liqueur de café, vodka et crème"
+        "Eau-de-vie, crème de noix de coco et jus d’ananas",
+        "Eau-de-vie, vermouth rouge et aromatic bitters",
+        "Eau-de-vie, liqueur de café et crème"
       ],
       "correctAnswer": 0,
       "explanation": "Un Fizz se compose d’eau-de-vie, de sucre, de citron et d’eau gazeuse."
@@ -529,9 +537,9 @@
       "question": "Quels sont les composants de base d’un cocktail de la famille des Juleps ?",
       "options": [
         "Eau-de-vie vieillie, sucre et menthe fraîche",
-        "Vodka, jus de tomate et épices",
-        "Rhum blanc, curaçao et jus d’orange",
-        "Gin, vermouth sec et olive"
+        "Eau-de-vie, jus de tomate et épices",
+        "Eau-de-vie, curaçao et jus d’orange",
+        "Eau-de-vie, vermouth dry et olive"
       ],
       "correctAnswer": 0,
       "explanation": "Le Julep se compose d’eau-de-vie vieillie, de sucre et de menthe fraîche."
@@ -585,9 +593,9 @@
       "question": "De quoi se compose la recette d’un Old-Fashioned ?",
       "options": [
         "Eau-de-vie vieillie, sucre et aromatic bitters",
-        "Gin, vermouth dry et zeste de citron",
-        "Tequila, triple sec et citron vert",
-        "Rhum blanc, menthe et eau gazeuse"
+        "Eau-de-vie, vermouth dry et zeste de citron",
+        "Eau-de-vie, triple sec et citron vert",
+        "Eau-de-vie, menthe fraîche et eau gazeuse"
       ],
       "correctAnswer": 0,
       "explanation": "La famille Old-Fashioned se compose d’eau-de-vie vieillie, de sucre et d’aromatic bitters."
@@ -604,7 +612,7 @@
         "Le Godfather"
       ],
       "correctAnswer": 0,
-      "explanation": "Le plus célèbre est le Rye Whiskey Old-Fashioned (ou Bourbon Old-Fashioned)."
+      "explanation": "Le plus célèbre est le Rye Whiskey Old-Fashioned ou Bourbon Old-Fashioned."
     },
     {
       "id": "m3_smash_cat",
@@ -640,13 +648,13 @@
       "badge": "Famille Smash",
       "question": "Quelle est la composition d’un Smash selon le référentiel ?",
       "options": [
-        "Eau-de-vie, herbe aromatique, sucre et citron ou autre agrume",
-        "Vodka, liqueur de café et crème fraîche",
-        "Cognac, crème de menthe blanche et glace",
-        "Rhum blanc, eau de coco et jus d’ananas"
+        "Eau-de-vie, herbe aromatique, sucre et citron",
+        "Eau-de-vie, liqueur de café et crème fraîche",
+        "Eau-de-vie, crème de menthe et glace pilée",
+        "Eau-de-vie, eau de coco et jus d’ananas"
       ],
       "correctAnswer": 0,
-      "explanation": "Un Smash se compose d’une eau-de-vie, d’une herbe aromatique (basilic, menthe...), de sucre et de citron ou autre agrume."
+      "explanation": "Un Smash se compose d’une eau-de-vie, d’une herbe aromatique comme le basilic ou la menthe, de sucre et de citron."
     },
     {
       "id": "m3_smash_cocktail",
@@ -660,7 +668,7 @@
         "Le Southside"
       ],
       "correctAnswer": 0,
-      "explanation": "Le cocktail le plus connu de cette famille est le Gin Basil Smash (créé en 2008)."
+      "explanation": "Le cocktail le plus connu de cette famille est le Gin Basil Smash créé en 2008."
     },
     {
       "id": "m3_tiki_cat",
@@ -696,13 +704,13 @@
       "badge": "Famille Tiki",
       "question": "De quoi se compose typiquement la structure d’un cocktail Tiki ?",
       "options": [
-        "Eau-de-vie notamment rhums, sucre ou sirop d’épices, agrume et plusieurs jus de fruits",
-        "Gin, vermouth dry et olive",
-        "Bourbon, vermouth rouge et cerise",
-        "Vodka, curaçao bleu et limonade"
+        "Eau-de-vie, sirop d’épices, agrume et jus de fruit",
+        "Eau-de-vie, vermouth dry et olive",
+        "Eau-de-vie, vermouth rouge et cerise",
+        "Eau-de-vie, curaçao bleu et limonade"
       ],
       "correctAnswer": 0,
-      "explanation": "Un cocktail Tiki rassemble une eau-de-vie (généralement un ou plusieurs rhums), du sucre ou sirop d’épices, du citron vert ou autre agrume, et plusieurs jus de fruits."
+      "explanation": "La structure d’un cocktail Tiki associe une eau-de-vie, du sirop d’épices, de l’agrume et du jus de fruit."
     },
     {
       "id": "m3_tiki_cocktail",
@@ -716,7 +724,7 @@
         "Le Painkiller"
       ],
       "correctAnswer": 0,
-      "explanation": "Le cocktail le plus connu de la famille Tiki est le Mai Tai (créé par Trader Vic en 1944)."
+      "explanation": "Le cocktail le plus connu de la famille Tiki est le Mai Tai créé par Trader Vic en 1944."
     },
     {
       "id": "m3_sour_cat",
@@ -744,7 +752,7 @@
         "Au blender"
       ],
       "correctAnswer": 0,
-      "explanation": "Le Sour est réalisé au shaker (souvent avec dry shake pour monter le blanc d’œuf ou l’aquafaba)."
+      "explanation": "Le Sour est réalisé au shaker souvent avec dry shake pour monter le blanc d’œuf ou l’aquafaba."
     },
     {
       "id": "m3_sour_comp",
@@ -752,13 +760,13 @@
       "badge": "Famille Sour",
       "question": "Quelle est la composition officielle d’un Sour selon le référentiel ?",
       "options": [
-        "Un spiritueux, du sucre, du citron ou autre agrume, et souvent un émulsifiant",
-        "Une liqueur de menthe, du cognac et du lait",
-        "Du rhum, de la crème de coco et du jus d’ananas",
-        "Du vin blanc et de la crème de cassis"
+        "Un spiritueux, du sucre, du citron et souvent un autre émulsifiant",
+        "Un spiritueux, de la liqueur de menthe et de la crème",
+        "Un spiritueux, de la crème de noix de coco et du jus d’ananas",
+        "Un spiritueux, du vin blanc et de la crème de cassis"
       ],
       "correctAnswer": 0,
-      "explanation": "Un Sour se compose d’un spiritueux, de sucre, de citron ou d’un autre agrume, et souvent de blanc d’œuf ou d’un autre émulsifiant."
+      "explanation": "Un Sour se compose d’un spiritueux, de sucre, de citron et souvent de blanc d’œuf ou d’un autre émulsifiant."
     },
     {
       "id": "m3_sour_cocktail",
@@ -772,7 +780,7 @@
         "Le New York Sour"
       ],
       "correctAnswer": 0,
-      "explanation": "Le plus célèbre de cette famille est le Whiskey Sour (et sa variante le Pisco Sour)."
+      "explanation": "Le plus célèbre de cette famille est le Whiskey Sour et sa variante le Pisco Sour."
     },
     {
       "id": "m3_sour_emulsifiant",
@@ -786,7 +794,7 @@
         "Du beurre clarifié fondu"
       ],
       "correctAnswer": 0,
-      "explanation": "Selon la Partie 3 du référentiel : le Sour « est souvent réalisé avec du blanc d’œuf ou un autre émulsifiant » (comme l’aquafaba)."
+      "explanation": "Selon la Partie 3 du référentiel : le Sour « est souvent réalisé avec du blanc d’œuf ou un autre émulsifiant » comme l’aquafaba."
     },
     {
       "id": "m4_reorder_shaker",
@@ -1236,12 +1244,11 @@
       "toolName": "Doseur",
       "acceptedNames": [
         "doseur",
-        "jigger",
         "le doseur",
         "un doseur",
+        "jigger",
         "verre doseur",
-        "doseur jigger",
-        "jigger doseur"
+        "doseur jigger"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1264,13 +1271,11 @@
         "passoire fine",
         "la passoire fine",
         "une passoire fine",
-        "tamis",
+        "fine strainer",
         "passoire a tamis",
-        "passoire à tamis",
         "passoire tamis",
-        "chinois",
         "chinois fin",
-        "fine strainer"
+        "tamis"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1291,13 +1296,13 @@
       "toolName": "Passoire à cocktail",
       "acceptedNames": [
         "passoire a cocktail",
-        "passoire à cocktail",
-        "passoire cocktail",
         "la passoire a cocktail",
-        "passoire hawthorne",
+        "une passoire a cocktail",
+        "passoire cocktail",
         "hawthorne",
-        "passoire a ressort",
-        "une passoire a cocktail"
+        "hawthorne strainer",
+        "passoire hawthorne",
+        "passoire a ressort"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1318,12 +1323,10 @@
       "toolName": "Verre à mélange",
       "acceptedNames": [
         "verre a melange",
-        "verre à mélange",
         "le verre a melange",
-        "le verre à mélange",
         "un verre a melange",
-        "mixing glass",
-        "verre melangeur"
+        "verre melangeur",
+        "mixing glass"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1344,12 +1347,13 @@
       "toolName": "Shaker Boston",
       "acceptedNames": [
         "shaker boston",
-        "boston shaker",
         "le shaker boston",
         "un shaker boston",
-        "shaker deux pieces",
+        "boston shaker",
+        "boston",
         "shaker 2 pieces",
-        "boston"
+        "shaker deux pieces",
+        "double tin"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1393,24 +1397,23 @@
       "toolName": "Cuillère de bar",
       "acceptedNames": [
         "cuillere de bar",
-        "cuillère de bar",
         "la cuillere de bar",
-        "la cuillère de bar",
         "une cuillere de bar",
-        "cuillere a cocktail",
-        "cuillere torsee",
+        "bar spoon",
         "barspoon",
-        "bar spoon"
+        "cuillere a cocktail",
+        "cuillere a melange",
+        "cuillere torsee"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
-        "Faciliter la rotation fluide le long des parois du verre à mélange grâce à sa tige torsadée et guider les liquides gazeux",
-        "Mesurer une dose standard de cinquante millilitres d’alcool",
-        "Bloquer les glaçons au fond du shaker pendant la frappe",
-        "Percer les opercules des bouteilles et canettes de soda"
+        "Faciliter la rotation fluide dans le verre à mélange",
+        "Mesurer une dose standard de cinquante millilitres",
+        "Bloquer les glaçons au fond du shaker",
+        "Percer les opercules des bouteilles et canettes"
       ],
       "correctAnswer": 0,
-      "explanation": "Nom officiel : Cuillère de bar. Son long manche torsadé pivote entre les doigts pour un mouvement fluide et silencieux, et sert aussi à faire couler des liquides délicatement."
+      "explanation": "Nom officiel : Cuillère de bar ou Bar spoon. Grâce à sa tige torsadée, elle pivote entre les doigts pour faciliter une rotation fluide et silencieuse le long des parois du verre à mélange, et permet également de guider les liquides gazeux."
     },
     {
       "id": "m6_tool_presse_agrumes",
@@ -1421,16 +1424,15 @@
       "toolName": "Presse-agrumes",
       "acceptedNames": [
         "presse agrumes",
-        "presse agrume",
-        "presse-agrumes",
-        "presse-agrume",
         "le presse agrumes",
-        "le presse-agrumes",
         "un presse agrumes",
+        "presse agrume",
+        "le presse agrume",
+        "un presse agrume",
         "presse citron",
-        "presse-citron",
-        "mexican elbow",
-        "juicer"
+        "juicer",
+        "squeezer",
+        "mexican elbow"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1451,10 +1453,9 @@
       "toolName": "Passoire à julep",
       "acceptedNames": [
         "passoire a julep",
-        "passoire à julep",
-        "passoire julep",
         "la passoire a julep",
         "une passoire a julep",
+        "passoire julep",
         "julep strainer"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
@@ -1476,17 +1477,13 @@
       "toolName": "Éplucheur",
       "acceptedNames": [
         "eplucheur",
-        "éplucheur",
         "l eplucheur",
-        "l'eplucheur",
-        "l'éplucheur",
         "un eplucheur",
-        "un éplucheur",
         "econome",
-        "économe",
-        "zesteur",
+        "un econome",
+        "l econome",
         "peeler",
-        "eplucheur a zeste"
+        "zesteur"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1509,9 +1506,9 @@
         "bec verseur",
         "le bec verseur",
         "un bec verseur",
-        "bouchon verseur",
+        "pourer",
         "speed pourer",
-        "pourer"
+        "bouchon verseur"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -1532,11 +1529,11 @@
       "toolName": "Shaker continental",
       "acceptedNames": [
         "shaker continental",
-        "shaker parisien",
         "le shaker continental",
         "un shaker continental",
+        "shaker parisien",
+        "parisian shaker",
         "french shaker",
-        "shaker french",
         "continental"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
@@ -1558,15 +1555,13 @@
       "toolName": "Shaker trois pièces",
       "acceptedNames": [
         "shaker trois pieces",
-        "shaker trois pièces",
         "shaker 3 pieces",
-        "shaker 3 pièces",
         "le shaker trois pieces",
         "le shaker 3 pieces",
         "un shaker trois pieces",
         "shaker cobbler",
         "cobbler shaker",
-        "shaker standard"
+        "cobbler"
       ],
       "question": "Identifiez ce matériel et choisissez son rôle officiel :",
       "options": [
@@ -2052,83 +2047,115 @@
         "Total Alcoolique du Verre"
       ],
       "correctAnswer": 0,
-      "explanation": "TAV signifie Titre Alcoométrique Volumique, exprimé en pourcentage du volume d'alcool pur rapporté au volume total du cocktail."
+      "explanation": "TAV signifie Titre Alcoométrique Volumique. Il représente le pourcentage d'alcool pur contenu dans un volume de boisson."
     },
     {
       "id": "m8_q2",
       "moduleId": 8,
-      "badge": "Formule de calcul",
-      "question": "Quelle est la formule générale pour calculer le TAV global d'un cocktail composé de plusieurs ingrédients ?",
+      "badge": "Formule officielle",
+      "question": "Quelle est la formule générale officielle pour calculer le TAV d'un cocktail ?",
       "options": [
-        "Somme des (Volume en ml × Degré d'alcool) ÷ Volume total du cocktail en ml",
+        "Somme des volumes en ml multipliés par leur degré d'alcool divisée par le volume total en ml",
         "Somme des degrés d'alcool divisée par le nombre de bouteilles",
         "Volume total du cocktail multiplié par le prix de vente",
-        "Degré de l'ingrédient le plus fort divisé par 2"
+        "Degré de l'ingrédient le plus fort divisé par deux"
       ],
       "correctAnswer": 0,
-      "explanation": "Pour calculer le TAV : on calcule pour chaque ingrédient Volume × Degré, on additionne tous les résultats, puis on divise par le volume total du cocktail."
+      "explanation": "Formule officielle : TAV = Somme des volumes en ml x degrés / Volume total du cocktail en ml."
     },
     {
-      "id": "m8_q3",
+      "id": "m8_q_role",
       "moduleId": 8,
-      "badge": "Exemple officiel Americano",
-      "question": "Dans l'exemple officiel du cocktail Americano (20 ml Vermouth rouge à 14,5% + 50 ml Bitter à 25% + 50 ml Eau gazeuse à 0%), quel est le calcul exact du TAV ?",
-      "options": [
-        "(290 + 1250 + 0) = 1540  puis  1540 ÷ 120 ml = 12,83 % (arrondi à 13 %)",
-        "(20 + 50 + 50) ÷ 3 = 40 %",
-        "(14,5 + 25) ÷ 2 = 19,75 %",
-        "120 × 25 % = 30 %"
-      ],
-      "correctAnswer": 0,
-      "explanation": "20 × 14,5 = 290 | 50 × 25 = 1250 | 50 × 0 = 0. Total = 1540. Contenance totale = 120 ml. 1540 ÷ 120 = 12,83% soit un TAV d'environ 13%."
-    },
-    {
-      "id": "m8_q4",
-      "moduleId": 8,
-      "badge": "Calcul Pratique",
-      "question": "Si vous servez 50 ml de Vodka titrant à 40% vol avec 150 ml de jus d'orange (0% vol), quel est le TAV du cocktail (volume total 200 ml) ?",
-      "options": [
-        "10 %",
-        "20 %",
-        "40 %",
-        "5 %"
-      ],
-      "correctAnswer": 0,
-      "explanation": "(50 ml × 40) + (150 ml × 0) = 2000. Volume total = 200 ml. 2000 ÷ 200 = 10 %."
-    },
-    {
-      "id": "m8_q5",
-      "moduleId": 8,
-      "badge": "Alcool Pur",
-      "question": "Combien de millilitres d'alcool pur contient une dose de 40 ml de Gin à 40% vol ?",
-      "options": [
-        "16 ml d'alcool pur",
-        "40 ml d'alcool pur",
-        "10 ml d'alcool pur",
-        "4 ml d'alcool pur"
-      ],
-      "correctAnswer": 0,
-      "explanation": "40 ml × (40 / 100) = 16 ml d'alcool pur."
-    },
-    {
-      "id": "m8_q6",
-      "moduleId": 8,
-      "badge": "Responsabilité",
+      "badge": "Rôle du TAV",
+      "isMultiSelect": true,
       "question": "Pourquoi la maîtrise du calcul du TAV est-elle exigée dans le référentiel de formation ?",
       "options": [
-        "Pour adapter l'offre à une consommation responsable et informer précisément les clients sur la puissance alcoolique",
+        "Pour adapter l'offre à une consommation responsable",
+        "Informer précisément les clients sur la puissance alcoolique",
         "Pour payer des taxes supplémentaires sur chaque verre servi",
-        "Pour déterminer obligatoirement la couleur du cocktail",
         "Pour accélérer la fonte des glaçons"
       ],
+      "correctAnswer": [
+        0,
+        1
+      ],
+      "explanation": "La maîtrise du calcul du TAV permet au professionnel du bar d'adapter son offre à une consommation responsable et d'informer précisément les clients sur la puissance alcoolique."
+    },
+    {
+      "id": "m8_calc_1_americano",
+      "moduleId": 8,
+      "badge": "Calcul Pratique 1",
+      "question": "Calculez le TAV de l'Americano composé de 20 ml de Vermouth rouge à 14,5% vol, 50 ml de Bitter à 25% vol et 50 ml d'Eau gazeuse à 0% vol pour un volume total de 120 ml :",
+      "options": [
+        "13 %",
+        "18 %",
+        "22 %",
+        "8 %"
+      ],
       "correctAnswer": 0,
-      "explanation": "La connaissance du TAV permet de veiller à la santé publique, au respect de la législation et à la promotion d'une consommation responsable."
+      "explanation": "Calcul officiel : 20 x 14,5 = 290 et 50 x 25 = 1250 et 50 x 0 = 0. Total = 1540. Puis 1540 divisé par 120 ml = 12,83 % soit arrondi à 13 %."
+    },
+    {
+      "id": "m8_calc_2_dry_martini",
+      "moduleId": 8,
+      "badge": "Calcul Pratique 2",
+      "question": "Calculez le TAV du Dry Martini composé de 55 ml de Gin à 40% vol et 15 ml de Vermouth dry à 18% vol pour un volume total de 70 ml :",
+      "options": [
+        "35 %",
+        "28 %",
+        "40 %",
+        "22 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Calcul : 55 x 40 = 2200 et 15 x 18 = 270. Total = 2470. Puis 2470 divisé par 70 ml = 35,28 % soit arrondi à 35 %."
+    },
+    {
+      "id": "m8_calc_3_negroni",
+      "moduleId": 8,
+      "badge": "Calcul Pratique 3",
+      "question": "Calculez le TAV du Negroni composé de 30 ml de Gin à 40% vol, 30 ml de Vermouth rouge à 15% vol et 30 ml de Bitter à 25% vol pour un volume total de 90 ml :",
+      "options": [
+        "26 %",
+        "32 %",
+        "20 %",
+        "15 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Calcul : 30 x 40 = 1200 et 30 x 15 = 450 et 30 x 25 = 750. Total = 2400. Puis 2400 divisé par 90 ml = 26,67 % soit 26 % selon la fiche officielle."
+    },
+    {
+      "id": "m8_calc_4_cosmo",
+      "moduleId": 8,
+      "badge": "Calcul Pratique 4",
+      "question": "Calculez le TAV du Cosmopolitan composé de 30 ml de Vodka à 40% vol, 15 ml de Triple sec à 40% vol, 20 ml de Nectar de cranberry à 0% vol et 5 ml de Jus de citron vert à 0% vol pour un volume total de 70 ml :",
+      "options": [
+        "27 %",
+        "34 %",
+        "18 %",
+        "12 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Calcul : 30 x 40 = 1200 et 15 x 40 = 600 et jus = 0. Total = 1800. Puis 1800 divisé par 70 ml = 25,71 % soit 27 % selon la fiche officielle."
+    },
+    {
+      "id": "m8_calc_5_colada",
+      "moduleId": 8,
+      "badge": "Calcul Pratique 5",
+      "question": "Calculez le TAV de la Piña Colada composée de 40 ml de Rhum blanc à 40% vol, 60 ml de Jus d'ananas à 0% vol et 20 ml de Crème de noix de coco à 0% vol pour un volume total de 120 ml :",
+      "options": [
+        "13 %",
+        "20 %",
+        "25 %",
+        "8 %"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Calcul : 40 x 40 = 1600 et jus/crème = 0. Total = 1600. Puis 1600 divisé par 120 ml = 13,33 % soit arrondi à 13 %."
     },
     {
       "id": "m9_q1",
       "moduleId": 9,
       "badge": "Albédos",
-      "question": "Qu'est-ce que l'« ALBÉDOS » (parfois appelé 'ziste') selon le lexique ?",
+      "question": "Qu'est-ce que l'« ALBÉDOS » parfois appelé 'ziste' selon le lexique ?",
       "options": [
         "La partie intérieure blanche et amère de l'écorce d'un agrume",
         "Un cocktail sans alcool à base de concombre",
@@ -2136,7 +2163,7 @@
         "La mousse blanche produite par le blanc d'œuf"
       ],
       "correctAnswer": 0,
-      "explanation": "L'ALBÉDOS est la partie intérieure blanche de l'écorce d'un agrume (souvent très amère, qu'il convient de retirer lors des zestes)."
+      "explanation": "L'ALBÉDOS est la partie intérieure blanche de l'écorce d'un agrume souvent très amère, qu'il convient de retirer lors des zestes."
     },
     {
       "id": "m9_q2",
@@ -2150,13 +2177,13 @@
         "Un sel aromatisé aux herbes pour givrer les verres"
       ],
       "correctAnswer": 0,
-      "explanation": "L'AQUAFABA désigne le jus de pois chiche utilisé au bar comme émulsifiant (alternative vegan au blanc d'œuf) pour créer une mousse onctueuse."
+      "explanation": "L'AQUAFABA désigne le jus de pois chiche utilisé au bar comme émulsifiant alternative vegan au blanc d'œuf pour créer une mousse onctueuse."
     },
     {
       "id": "m9_q3",
       "moduleId": 9,
       "badge": "Cuban Roll",
-      "question": "En quoi consiste la technique du « CUBAN ROLL » (autrefois appelée 'throwing') ?",
+      "question": "En quoi consiste la technique du « CUBAN ROLL » autrefois appelée 'throwing' ?",
       "options": [
         "Transvaser les liquides d'une timbale à une autre avec un grand jet afin de les oxygéner et de les rafraîchir en limitant la dilution",
         "Faire tourner le shaker sur le plancher du bar",
@@ -2164,7 +2191,7 @@
         "Rouler un cigare cubain autour du pied du verre"
       ],
       "correctAnswer": 0,
-      "explanation": "Le Cuban Roll (throwing) consiste à transvaser les liquides avec une passoire d'une timbale à une autre tenue à distance pour aérer et rafraîchir le cocktail."
+      "explanation": "Le Cuban Roll throwing consiste à transvaser les liquides avec une passoire d'une timbale à une autre tenue à distance pour aérer et rafraîchir le cocktail."
     },
     {
       "id": "m9_q4",
@@ -2172,7 +2199,7 @@
       "badge": "Dry Shake",
       "question": "Qu'est-ce qu'un « DRY SHAKE » ?",
       "options": [
-        "Frapper une première fois au shaker SANS GLACE avec un émulsifiant (blanc d'œuf, aquafaba) pour créer l'émulsion",
+        "Frapper une première fois au shaker SANS GLACE avec un émulsifiant blanc d'œuf, aquafaba pour créer l'émulsion",
         "Shaker sans aucun liquide dans la timbale",
         "Servir un cocktail sans verre",
         "Utiliser uniquement du vermouth dry dans le shaker"
@@ -2206,7 +2233,7 @@
         "Faire passer le cocktail à travers une passoire fine"
       ],
       "correctAnswer": 0,
-      "explanation": "EXPRIMER : libérer les essences aromatiques contenues dans les alvéoles de l'écorce (zeste) d'un agrume à la surface du cocktail."
+      "explanation": "EXPRIMER : libérer les essences aromatiques contenues dans les alvéoles de l'écorce zeste d'un agrume à la surface du cocktail."
     },
     {
       "id": "m9_q7",
@@ -2220,7 +2247,7 @@
         "Nettoyer le bar à grande eau"
       ],
       "correctAnswer": 0,
-      "explanation": "FLOAT : action de verser un liquide moins dense (ou à la cuillère) au-dessus d'un cocktail pour qu'il reste en nappe à la surface sans se mélanger."
+      "explanation": "FLOAT : action de verser un liquide moins dense ou à la cuillère au-dessus d'un cocktail pour qu'il reste en nappe à la surface sans se mélanger."
     },
     {
       "id": "m9_q8",
@@ -2234,7 +2261,7 @@
         "Remplacer le gin par de la vodka"
       ],
       "correctAnswer": 0,
-      "explanation": "MUTER : stopper la fermentation alcoolique des levures en ajoutant de l'alcool pur ou une eau-de-vie (ex: pour fabriquer les vins doux naturels, Pineau, Porto...)."
+      "explanation": "MUTER : stopper la fermentation alcoolique des levures en ajoutant de l'alcool pur ou une eau-de-vie ex: pour fabriquer les vins doux naturels, Pineau, Porto...."
     },
     {
       "id": "m9_q9",
@@ -2242,7 +2269,7 @@
       "badge": "Fat Washing",
       "question": "En quoi consiste la technique du « FAT WASHING » ?",
       "options": [
-        "Aromatiser un alcool à partir d'un corps gras (beurre noisette, huile de sésame, graisse de canard...) puis le figer au froid et le filtrer",
+        "Aromatiser un alcool à partir d'un corps gras beurre noisette, huile de sésame, graisse de canard... puis le figer au froid et le filtrer",
         "Nettoyer les timbales de shaker avec du savon dégraissant",
         "Ajouter du fromage râpé dans le shaker",
         "Laver les verres à l'eau très chaude"
@@ -2268,15 +2295,15 @@
       "id": "m9_q11",
       "moduleId": 9,
       "badge": "Trait (Dash)",
-      "question": "Combien de gouttes environ représente la mesure officielle d'un « TRAIT » (dash) ?",
+      "question": "Combien de gouttes environ représente la mesure officielle d'un « TRAIT » dash ?",
       "options": [
         "Environ 3 à 5 gouttes",
         "Environ 50 gouttes",
-        "Une cuillère à soupe (15 ml)",
+        "Une cuillère à soupe 15 ml",
         "Une seule gouttelette microscopique"
       ],
       "correctAnswer": 0,
-      "explanation": "TRAIT (dash) : terme de mesure représentant environ 3 à 5 gouttes (soit environ 0,5 à 1 ml)."
+      "explanation": "TRAIT dash : terme de mesure représentant environ 3 à 5 gouttes soit environ 0,5 à 1 ml."
     },
     {
       "id": "m9_q12",
@@ -2284,13 +2311,27 @@
       "badge": "Mesure standard",
       "question": "Dans le standard français de bar, quel volume en millilitres représente le terme « UNE MESURE » ?",
       "options": [
-        "40 ml (4 cl)",
-        "20 ml (2 cl)",
-        "60 ml (6 cl)",
-        "100 ml (10 cl)"
+        "40 ml 4 cl",
+        "20 ml 2 cl",
+        "60 ml 6 cl",
+        "100 ml 10 cl"
       ],
       "correctAnswer": 0,
-      "explanation": "MESURE : terme officiel désignant un volume standard français de 40 ml (4 cl)."
+      "explanation": "MESURE : terme officiel désignant un volume standard français de 40 ml 4 cl."
+    },
+    {
+      "id": "m9_q_emulsionner",
+      "moduleId": 9,
+      "badge": "Technique - Lexique",
+      "question": "Que signifie l’action d’« ÉMULSIONNER » au bar selon le lexique professionnel ?",
+      "options": [
+        "Mélanger intimement deux liquides non miscibles et incorporer de l’air avec un émulsifiant pour créer une texture onctueuse",
+        "Filtrer les résidus de pulpe et de pépins à travers une passoire fine",
+        "Faire brûler un spiritueux à haut degré d’alcool",
+        "Refroidir un verre de service avec des glaçons"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Émulsionner consiste à mélanger intimement des substances non miscibles et à emprisonner de l’air grâce à un émulsifiant comme le blanc d’œuf ou l’aquafaba pour apporter volume, onctuosité et mousse."
     }
   ],
   "cocktails": [
@@ -4134,7 +4175,7 @@
     },
     {
       "term": "Aromatic Bitters",
-      "def": "Amer concentré aromatisé utilisé par traits pour apporter amertume et complexité (ex: Angostura)."
+      "def": "Amer concentré aromatisé utilisé par traits pour apporter amertume et complexité ex: Angostura."
     },
     {
       "term": "Bar Mat",
@@ -4150,19 +4191,19 @@
     },
     {
       "term": "Bowl",
-      "def": "Récipient de grand volume (vasque/bol) utilisé pour le service des familles de cocktail comme le Punch ou Tiki."
+      "def": "Récipient de grand volume vasque/bol utilisé pour le service des familles de cocktail comme le Punch ou Tiki."
     },
     {
       "term": "Collins",
       "def": "Famille de cocktails Long drink ayant la même composition qu'un Fizz, mais réalisée directement au verre."
     },
     {
-      "term": "Compléter (Topped)",
-      "def": "Allonger un cocktail d'un complément gazeux (soda, eau gazeuse, bière de gingembre, champagne...)."
+      "term": "Compléter Topped",
+      "def": "Allonger un cocktail d'un complément gazeux soda, eau gazeuse, bière de gingembre, champagne...."
     },
     {
       "term": "Cuban Roll",
-      "def": "Technique (throwing) consistant à transvaser les liquides d'une timbale à une autre pour aérer et rafraîchir."
+      "def": "Technique throwing consistant à transvaser les liquides d'une timbale à une autre pour aérer et rafraîchir."
     },
     {
       "term": "Daisy",
@@ -4170,19 +4211,19 @@
     },
     {
       "term": "Dilution",
-      "def": "Apport maîtrisé d’eau provenant de la fonte des glaçons lors du mélange (shaker ou verre à mélange), indispensable pour ouvrir les arômes et équilibrer la puissance alcoolique."
+      "def": "Apport maîtrisé d’eau provenant de la fonte des glaçons lors du mélange shaker ou verre à mélange, indispensable pour ouvrir les arômes et équilibrer la puissance alcoolique."
     },
     {
       "term": "Distillation",
-      "def": "Procédé de séparation et concentration alcoolique par chauffage des vapeurs et condensation (distillat)."
+      "def": "Procédé de séparation et concentration alcoolique par chauffage des vapeurs et condensation distillat."
     },
     {
       "term": "Double Filtration",
-      "def": "(Double strain) Filtrer le cocktail avec la passoire fine en plus de la passoire à cocktail pour ôter pulpes et éclats de glace."
+      "def": "Double strain Filtrer le cocktail avec la passoire fine en plus de la passoire à cocktail pour ôter pulpes et éclats de glace."
     },
     {
       "term": "Dry Shake",
-      "def": "Frapper une première fois sans glace avec un émulsifiant (blanc d'œuf, aquafaba) pour monter la mousse."
+      "def": "Frapper une première fois sans glace avec un émulsifiant blanc d'œuf, aquafaba pour monter la mousse."
     },
     {
       "term": "Décoction",
@@ -4190,7 +4231,7 @@
     },
     {
       "term": "Eau-de-vie",
-      "def": "Boisson alcoolique obtenue par distillation de produits fermentés (céréales, fruits, canne...)."
+      "def": "Boisson alcoolique obtenue par distillation de produits fermentés céréales, fruits, canne...."
     },
     {
       "term": "Exprimer",
@@ -4221,11 +4262,11 @@
       "def": "Cocktail réalisé au blender avec glace pilée pour obtenir une texture granitée onctueuse."
     },
     {
-      "term": "Garniture (Garnish)",
-      "def": "Élément décoratif et gustatif complétant un cocktail. Selon le référentiel, elle doit rester simple, de saison, comestible (ou fruits déshydratés), et apporter une complémentarité aromatique en évoquant les ingrédients de la recette."
+      "term": "Garniture Garnish",
+      "def": "Élément décoratif et gustatif complétant un cocktail. Selon le référentiel, elle doit rester simple, de saison, comestible ou fruits déshydratés, et apporter une complémentarité aromatique en évoquant les ingrédients de la recette."
     },
     {
-      "term": "Givrer (Rim)",
+      "term": "Givrer Rim",
       "def": "Créer une collerette de sel, sucre ou épices sur le rebord du verre."
     },
     {
@@ -4234,7 +4275,7 @@
     },
     {
       "term": "Hot Drink",
-      "def": "Cocktail servi chaud (ex: Irish Coffee, Grog, Hot Toddy)."
+      "def": "Cocktail servi chaud ex: Irish Coffee, Grog, Hot Toddy."
     },
     {
       "term": "Infusion",
@@ -4246,7 +4287,7 @@
     },
     {
       "term": "Liquoreux",
-      "def": "Caractérise une boisson ou un cocktail riche en sucres avec une texture dense, sirupeuse et suave, typique des cocktails de type After Dinner (digestifs)."
+      "def": "Caractérise une boisson ou un cocktail riche en sucres avec une texture dense, sirupeuse et suave, typique des cocktails de type After Dinner digestifs."
     },
     {
       "term": "Macération",
@@ -4254,18 +4295,18 @@
     },
     {
       "term": "Mesure",
-      "def": "Volume standard français de 40 ml (4 cl)."
+      "def": "Volume standard français de 40 ml 4 cl."
     },
     {
       "term": "Mocktail",
-      "def": "Cocktail sans alcool (du verbe anglais 'mock' : imiter)."
+      "def": "Cocktail sans alcool du verbe anglais 'mock' : imiter."
     },
     {
       "term": "Muter",
       "def": "Stopper la fermentation alcoolique par ajout d'alcool pour conserver les sucres résiduels."
     },
     {
-      "term": "Mélanger (Stir)",
+      "term": "Mélanger Stir",
       "def": "Remuer une boisson avec la cuillère de bar dans le verre à mélange."
     },
     {
@@ -4274,10 +4315,10 @@
     },
     {
       "term": "Organoleptique",
-      "def": "Qualifie les propriétés d’une boisson ou d’un aliment perçues par les sens (goût, odorat, vue, texture en bouche). L’équilibre organoleptique est l’harmonie parfaite entre saveurs (sucré, acide, amer), arômes, température et dilution."
+      "def": "Qualifie les propriétés d’une boisson ou d’un aliment perçues par les sens goût, odorat, vue, texture en bouche. L’équilibre organoleptique est l’harmonie parfaite entre saveurs sucré, acide, amer, arômes, température et dilution."
     },
     {
-      "term": "Passer (Strain)",
+      "term": "Passer Strain",
       "def": "Filtrer le cocktail avec la passoire pour éliminer la glace et les résidus solides."
     },
     {
@@ -4297,12 +4338,12 @@
       "def": "Frapper d'abord avec glaçons, retirer la glace, puis frapper une seconde fois sans glace."
     },
     {
-      "term": "Shaker 3 Pièces (Cobbler)",
+      "term": "Shaker 3 Pièces Cobbler",
       "def": "Shaker intégrant un filtre perforé et un bouchon doseur supérieur."
     },
     {
       "term": "Shaker Boston",
-      "def": "Shaker à deux timbales (inox/verre ou 2 inox) s'emboîtant avec un axe décalé."
+      "def": "Shaker à deux timbales inox/verre ou 2 inox s'emboîtant avec un axe décalé."
     },
     {
       "term": "Shaker Continental",
@@ -4317,44 +4358,44 @@
       "def": "Sirop simple composé à parts égales de 1 volume d'eau et 1 volume de sucre semoule."
     },
     {
-      "term": "Sour (Acidité)",
-      "def": "Dans la règle d’équilibre des « 3 S », composante acide servant de liant et apportant fraîcheur et vivacité (apportée par un agrume, du verjus ou une solution acide)."
+      "term": "Sour Acidité",
+      "def": "Dans la règle d’équilibre des « 3 S », composante acide servant de liant et apportant fraîcheur et vivacité apportée par un agrume, du verjus ou une solution acide."
     },
     {
       "term": "Sparkling",
-      "def": "Cocktail long drink complété d'une boisson effervescente (Champagne, Prosecco, Crémant...)."
+      "def": "Cocktail long drink complété d'une boisson effervescente Champagne, Prosecco, Crémant...."
     },
     {
       "term": "Spiritueux",
-      "def": "Boisson alcoolique à fort titre alcoométrique (généralement supérieur ou égal à 15% vol), obtenue par distillation de produits fermentés (eaux-de-vie, rhums, gins, vodkas, whiskies) ou par macération (liqueurs). Selon le lexique officiel : « boissons fortement alcoolisées »."
+      "def": "Boisson alcoolique à fort titre alcoométrique généralement supérieur ou égal à 15% vol, obtenue par distillation de produits fermentés eaux-de-vie, rhums, gins, vodkas, whiskies ou par macération liqueurs. Selon le lexique officiel : « boissons fortement alcoolisées »."
     },
     {
       "term": "Squeeze Bottle",
       "def": "Flacon souple permettant de doser et verser facilement purées et sirops maison."
     },
     {
-      "term": "Strong (Force)",
-      "def": "Dans la règle d’équilibre des « 3 S », composante apportant la puissance alcoolique, la structure et le corps du cocktail (apportée principalement par l’eau-de-vie ou le spiritueux de base)."
+      "term": "Strong Force",
+      "def": "Dans la règle d’équilibre des « 3 S », composante apportant la puissance alcoolique, la structure et le corps du cocktail apportée principalement par l’eau-de-vie ou le spiritueux de base."
     },
     {
-      "term": "Sweet (Douceur)",
-      "def": "Dans la règle d’équilibre des « 3 S », composante sucrée apportant rondeur et douceur au cocktail (apportée par du sirop, une liqueur, une crème de fruit ou du sucre)."
+      "term": "Sweet Douceur",
+      "def": "Dans la règle d’équilibre des « 3 S », composante sucrée apportant rondeur et douceur au cocktail apportée par du sirop, une liqueur, une crème de fruit ou du sucre."
     },
     {
       "term": "Swizzle Stick",
-      "def": "Bâtonnet traditionnel (bois lélé) à branches pour remuer les cocktails tropicaux sur glace pilée."
+      "def": "Bâtonnet traditionnel bois lélé à branches pour remuer les cocktails tropicaux sur glace pilée."
     },
     {
-      "term": "Timbale (Tin)",
+      "term": "Timbale Tin",
       "def": "Partie métallique en acier inoxydable d'un shaker."
     },
     {
-      "term": "Trait (Dash)",
+      "term": "Trait Dash",
       "def": "Mesure représentant 3 à 5 gouttes d'un liquide aromatique concentré."
     },
     {
       "term": "Verjus",
-      "def": "Jus acide extrait de raisins n’ayant pas mûri, utilisé comme alternative locale et élégante au jus de citron pour apporter l’acidité (Sour)."
+      "def": "Jus acide extrait de raisins n’ayant pas mûri, utilisé comme alternative locale et élégante au jus de citron pour apporter l’acidité Sour."
     },
     {
       "term": "Zeste",
@@ -4362,7 +4403,11 @@
     },
     {
       "term": "Émulsifiant",
-      "def": "Ingrédient utilisé au bar (blanc d’œuf, aquafaba) pour lier les éléments et emprisonner l’air lors du shaker, apportant au cocktail une texture soyeuse et une mousse dense en surface."
+      "def": "Ingrédient utilisé au bar blanc d’œuf, aquafaba pour lier les éléments et emprisonner l’air lors du shaker, apportant au cocktail une texture soyeuse et une mousse dense en surface."
+    },
+    {
+      "term": "Émulsionner",
+      "def": "Action de mélanger intimement deux substances non miscibles et d’incorporer de l’air à l’aide d’un émulsifiant comme le blanc d’œuf ou l’aquafaba pour créer une texture onctueuse et une mousse persistante."
     }
   ]
 }

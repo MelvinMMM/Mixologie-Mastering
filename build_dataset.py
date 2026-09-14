@@ -117,7 +117,7 @@ QUESTIONS = [
         "badge": "Règle des 3 S",
         "question": "Que signifient les « 3 S » de la règle d'équilibre d'un cocktail selon le référentiel ?",
         "options": [
-            "Sweet (Sucre), Sour (Acidité), Strong (Puissance / Force)",
+            "Sweet, Sour, Strong",
             "Shaker, Stir, Strain",
             "Saison, Service, Saveur",
             "Smooth, Spicy, Salty"

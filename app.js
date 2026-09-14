@@ -132,6 +132,37 @@ function saveCocktailMasteryToStorage() {
   }
 }
 
+// Reset all user progress and scores
+function resetAllProgress() {
+  playSound('click');
+  const confirmed = window.confirm("Voulez-vous vraiment réinitialiser l'ensemble de votre progression ?");
+  if (!confirmed) return;
+
+  state.scores = {};
+  state.errorQuestionsPool = [];
+  state.cocktailMastery = {};
+
+  try {
+    localStorage.removeItem(STORAGE_SCORES_KEY);
+    localStorage.removeItem(STORAGE_ERRORS_KEY);
+    localStorage.removeItem(STORAGE_MASTERY_KEY);
+  } catch (e) {
+    console.warn('LocalStorage reset error:', e);
+  }
+
+  updateGlobalStatsDisplay();
+  updateErrorsCountDisplay();
+  renderModulesGrid();
+  if (typeof renderModule7Hub === 'function') {
+    renderModule7Hub();
+  }
+  if (typeof renderCocktailsGrid === 'function') {
+    renderCocktailsGrid();
+  }
+
+  playSound('correct');
+}
+
 // ==========================================
 // NAVIGATION & VIEW SWITCHING
 // ==========================================
@@ -269,6 +300,49 @@ function updateErrorsCountDisplay() {
 // QUIZ ENGINE
 // ==========================================
 
+function prepareQuizQuestions(rawQuestions) {
+  // 1. Cloner et mélanger l'ordre des questions (Fisher-Yates)
+  const shuffledQuestions = [...rawQuestions];
+  for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffledQuestions[i], shuffledQuestions[j]] = [shuffledQuestions[j], shuffledQuestions[i]];
+  }
+
+  // 2. Cloner et mélanger les options de réponses pour les QCM
+  return shuffledQuestions.map(q => {
+    if (q.options) {
+      if (Array.isArray(q.correctAnswer)) {
+        const correctTexts = q.correctAnswer.map(idx => q.options[idx]);
+        const shuffledOptions = [...q.options];
+        for (let i = shuffledOptions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
+        }
+        const newCorrectAnswers = correctTexts.map(txt => shuffledOptions.indexOf(txt));
+        return {
+          ...q,
+          isMultiSelect: true,
+          options: shuffledOptions,
+          correctAnswer: newCorrectAnswers
+        };
+      } else if (typeof q.correctAnswer === 'number') {
+        const correctOptionText = q.options[q.correctAnswer];
+        const shuffledOptions = [...q.options];
+        for (let i = shuffledOptions.length - 1; i > 0; i--) {
+          const j = Math.floor(Math.random() * (i + 1));
+          [shuffledOptions[i], shuffledOptions[j]] = [shuffledOptions[j], shuffledOptions[i]];
+        }
+        return {
+          ...q,
+          options: shuffledOptions,
+          correctAnswer: shuffledOptions.indexOf(correctOptionText)
+        };
+      }
+    }
+    return { ...q };
+  });
+}
+
 function startModuleQuiz(moduleId) {
   const mod = APP_DATA.modules.find(m => m.id === moduleId);
   if (!mod) return;
@@ -282,14 +356,7 @@ function startModuleQuiz(moduleId) {
   const questions = APP_DATA.questions.filter(q => q.moduleId === moduleId);
   if (questions.length === 0) return;
 
-  let quizQuestions = [...questions];
-  // Randomiser l'ordre des questions (en particulier pour la Partie 5 : Verrerie et Partie 6 : Matériel)
-  if (moduleId === 5 || moduleId === 6) {
-    for (let i = quizQuestions.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [quizQuestions[i], quizQuestions[j]] = [quizQuestions[j], quizQuestions[i]];
-    }
-  }
+  const quizQuestions = prepareQuizQuestions(questions);
 
   state.activeQuiz = {
     title: `Partie ${mod.id} : ${mod.title}`,
@@ -306,9 +373,8 @@ function startModuleQuiz(moduleId) {
 }
 
 function startRandomMixQuiz() {
-  // Pick 15 random questions from the entire database
-  const shuffled = [...APP_DATA.questions].sort(() => 0.5 - Math.random());
-  const selected = shuffled.slice(0, 15);
+  const allShuffled = prepareQuizQuestions(APP_DATA.questions);
+  const selected = allShuffled.slice(0, 15);
 
   state.activeQuiz = {
     title: '⚡ Grand Mix Aléatoire (15 Q.)',
@@ -336,7 +402,7 @@ function startErrorsQuiz() {
   state.activeQuiz = {
     title: '🔄 Révision des Erreurs',
     moduleId: 'errors',
-    questions: [...errorQuestions],
+    questions: prepareQuizQuestions(errorQuestions),
     currentIndex: 0,
     score: 0,
     answered: false,
@@ -399,6 +465,26 @@ function renderCurrentQuestion() {
       quiz.currentReorderItems = shuffled;
     }
     renderReorderList();
+  } else if (currentQ.isMultiSelect || Array.isArray(currentQ.correctAnswer)) {
+    // Multi-Select Question
+    quiz.selectedMultiAnswers = [];
+    answersContainer.innerHTML = `
+      <div style="font-size: 0.85rem; color: #fbbf24; margin-bottom: 10px; font-weight: 700; display: flex; align-items: center; gap: 6px;">
+        <span>☑️</span>
+        <span>Plusieurs réponses attendues : cochez toutes les bonnes options puis validez.</span>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 10px;">
+        ${currentQ.options.map((opt, idx) => `
+          <button class="answer-option-btn" onclick="toggleMultiSelectAnswer(${idx})" id="opt-btn-${idx}">
+            <span class="answer-letter" id="opt-letter-${idx}">☐</span>
+            <span>${opt}</span>
+          </button>
+        `).join('')}
+      </div>
+      <button class="btn btn-primary" style="width: 100%; margin-top: 14px;" id="btn-validate-multi" onclick="validateMultiSelectAnswers()">
+        ✅ Valider mes réponses
+      </button>
+    `;
   } else {
     // Standard Multiple Choice
     const letters = ['A', 'B', 'C', 'D'];
@@ -690,11 +776,10 @@ function validateEquipmentIdentify() {
   quiz.answered = true;
   const currentQ = quiz.questions[quiz.currentIndex];
 
-  // Resilient text matching for tool name
+  // Strict exact text matching for tool name (no partial sub-words accepted)
   const normalizedUserText = normalizeGlassString(userText);
   const isNameCorrect = currentQ.acceptedNames.some(acc => {
-    const normAcc = normalizeGlassString(acc);
-    return normalizedUserText === normAcc || normalizedUserText.includes(normAcc) || normAcc.includes(normalizedUserText);
+    return normalizeGlassString(acc) === normalizedUserText;
   });
 
   const isRoleCorrect = selectedOpt === currentQ.correctAnswer;
@@ -705,7 +790,7 @@ function validateEquipmentIdentify() {
     inputEl.disabled = true;
     if (isNameCorrect) {
       inputEl.classList.add('correct-input');
-      inputEl.value = `✓ ${currentQ.toolName} (Nom exact !)`;
+      inputEl.value = `✓ ${currentQ.toolName} — Nom exact !`;
     } else {
       inputEl.classList.add('wrong-input');
       inputEl.value = `✗ Vous avez écrit : « ${userText} » — Réponse : ${currentQ.toolName}`;
@@ -876,11 +961,10 @@ function validateGlassIdentify() {
   quiz.answered = true;
   const currentQ = quiz.questions[quiz.currentIndex];
 
-  // Resilient text matching
+  // Strict exact text matching (no partial sub-words accepted)
   const normalizedUserText = normalizeGlassString(userText);
   const isNameCorrect = currentQ.acceptedNames.some(acc => {
-    const normAcc = normalizeGlassString(acc);
-    return normalizedUserText === normAcc || normalizedUserText.includes(normAcc) || normAcc.includes(normalizedUserText);
+    return normalizeGlassString(acc) === normalizedUserText;
   });
 
   const isCatCorrect = selectedCat === currentQ.category;
@@ -891,7 +975,7 @@ function validateGlassIdentify() {
     inputEl.disabled = true;
     if (isNameCorrect) {
       inputEl.classList.add('correct-input');
-      inputEl.value = `✓ ${currentQ.glassName} (Bien trouvé !)`;
+      inputEl.value = `✓ ${currentQ.glassName} — Nom exact !`;
     } else {
       inputEl.classList.add('wrong-input');
       inputEl.value = `✗ Vous avez écrit : « ${userText} » — Réponse : ${currentQ.glassName}`;
@@ -991,6 +1075,97 @@ function handleSelectAnswer(selectedIndex) {
   const expContainer = document.getElementById('explanation-container');
   const expText = document.getElementById('explanation-text-content');
   expText.textContent = currentQ.explanation;
+  expContainer.classList.remove('hidden');
+
+  // Show Next button
+  const nextBtn = document.getElementById('btn-next-question');
+  const isLastQuestion = quiz.currentIndex === quiz.questions.length - 1;
+  nextBtn.textContent = isLastQuestion ? 'Terminer le Quiz ➔' : 'Question Suivante ➔';
+  nextBtn.classList.remove('hidden');
+}
+
+function toggleMultiSelectAnswer(idx) {
+  const quiz = state.activeQuiz;
+  if (!quiz || quiz.answered) return;
+  playSound('click');
+
+  if (!quiz.selectedMultiAnswers) quiz.selectedMultiAnswers = [];
+
+  const pos = quiz.selectedMultiAnswers.indexOf(idx);
+  const btn = document.getElementById(`opt-btn-${idx}`);
+  const icon = document.getElementById(`opt-letter-${idx}`);
+
+  if (pos > -1) {
+    quiz.selectedMultiAnswers.splice(pos, 1);
+    btn?.classList.remove('selected');
+    if (icon) icon.textContent = '☐';
+  } else {
+    quiz.selectedMultiAnswers.push(idx);
+    btn?.classList.add('selected');
+    if (icon) icon.textContent = '☑';
+  }
+}
+
+function validateMultiSelectAnswers() {
+  const quiz = state.activeQuiz;
+  if (!quiz || quiz.answered) return;
+
+  if (!quiz.selectedMultiAnswers || quiz.selectedMultiAnswers.length === 0) {
+    alert('Veuillez cocher au moins une réponse avant de valider.');
+    return;
+  }
+
+  quiz.answered = true;
+  const currentQ = quiz.questions[quiz.currentIndex];
+  const userSelections = quiz.selectedMultiAnswers;
+  const correctIndices = currentQ.correctAnswer;
+
+  const isFullMatch = userSelections.length === correctIndices.length &&
+    userSelections.every(val => correctIndices.includes(val));
+
+  // Disable all buttons and show colors
+  currentQ.options.forEach((_, idx) => {
+    const btn = document.getElementById(`opt-btn-${idx}`);
+    const icon = document.getElementById(`opt-letter-${idx}`);
+    if (!btn) return;
+    btn.disabled = true;
+
+    if (correctIndices.includes(idx)) {
+      btn.classList.add('correct');
+      if (icon) icon.textContent = '✓';
+    } else if (userSelections.includes(idx)) {
+      btn.classList.add('wrong');
+      if (icon) icon.textContent = '✗';
+    }
+  });
+
+  // Hide validate button
+  const valBtn = document.getElementById('btn-validate-multi');
+  if (valBtn) valBtn.classList.add('hidden');
+
+  // Scoring
+  if (isFullMatch) {
+    quiz.score++;
+    playSound('correct');
+    state.errorQuestionsPool = state.errorQuestionsPool.filter(id => id !== currentQ.id);
+  } else {
+    playSound('wrong');
+    quiz.wrongQuestions.push(currentQ);
+    if (!state.errorQuestionsPool.includes(currentQ.id)) {
+      state.errorQuestionsPool.push(currentQ.id);
+    }
+  }
+
+  saveScoresToStorage();
+  updateErrorsCountDisplay();
+
+  // Show official explanation
+  const expContainer = document.getElementById('explanation-container');
+  const expText = document.getElementById('explanation-text-content');
+  expText.innerHTML = `
+    <strong>${isFullMatch ? '🎉 Parfait ! Toutes les bonnes règles ont été sélectionnées.' : '⚠️ Réponse officielle du référentiel :'}</strong><br><br>
+    ${currentQ.explanation}
+  `;
   expContainer.classList.remove('hidden');
 
   // Show Next button
