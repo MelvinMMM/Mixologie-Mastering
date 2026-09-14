@@ -2380,7 +2380,13 @@
         "28 %"
       ],
       "history": "Cocktail publié dans le livre « Recipes for mixed drinks » de Hugo Ensslin à New York en 1916.",
-      "technique": "Mirer et remplir le verre Nick & Nora de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre à la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie."
+      "technique": "Mirer et remplir le verre Nick & Nora de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre à la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi. Garnir d’une cerise à l’eau-de-vie.",
+      "ingredients": [
+        "40 ml Gin",
+        "15 ml Maraschino",
+        "10 ml Jus de citron",
+        "5 ml Crème de violette"
+      ]
     },
     {
       "id": "bamboo",
@@ -2425,7 +2431,12 @@
         "15 %"
       ],
       "history": "Créé à la fin du XIXe siècle par Louis Eppinger à l’hôtel Grand de Yokohama au Japon.",
-      "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’un zeste de citron exprimé."
+      "technique": "Mirer et remplir le verre Nick & Nora et le verre à mélange de glace. Rafraîchir le verre et le verre à mélange avec la cuillère de bar. Retirer la glace du verre et égoutter le verre à mélange. Verser les ingrédients dans le verre à mélange. Mélanger puis passer dans le verre rafraîchi. Garnir d’un zeste de citron exprimé.",
+      "ingredients": [
+        "35 ml Vermouth Dry",
+        "35 ml Sherry Fino",
+        "2 traits Bitters orange"
+      ]
     },
     {
       "id": "bramble",

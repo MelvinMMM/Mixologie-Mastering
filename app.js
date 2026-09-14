@@ -1270,6 +1270,24 @@ function confirmExitQuiz() {
 }
 
 // ==========================================
+// STRING NORMALIZATION HELPER FOR SEARCH
+// ==========================================
+
+function normalizeSearchText(str) {
+  if (!str) return '';
+  return String(str)
+    .replace(/&/g, ' and ')
+    .replace(/['’]/g, '')
+    .replace(/-/g, ' ')
+    .toLowerCase()
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+// ==========================================
 // COCKTAILS EXPLORER & MEMO CARDS (36 RECETTES)
 // ==========================================
 
@@ -1277,25 +1295,50 @@ function renderCocktailsGrid() {
   const container = document.getElementById('cocktails-grid-container');
   if (!container || !APP_DATA.cocktails) return;
 
-  const searchQuery = (document.getElementById('cocktail-search-input')?.value || '').toLowerCase();
-  const filter = state.cocktailFilter;
+  const rawQuery = document.getElementById('cocktail-search-input')?.value || '';
+  const normQuery = normalizeSearchText(rawQuery);
+  const filter = state.cocktailFilter || 'all';
 
   const filtered = APP_DATA.cocktails.filter(c => {
-    // Filter matching
-    if (filter === 'short' && !c.category.toLowerCase().includes('short')) return false;
-    if (filter === 'long' && !c.category.toLowerCase().includes('long')) return false;
-    if (['gin', 'rhum', 'vodka', 'whisky', 'tequila'].includes(filter)) {
-      const hasSpirit = c.ingredients.some(i => i.toLowerCase().includes(filter));
-      if (!hasSpirit) return false;
+    // 1. If filter pill is active and no search query was typed, apply strict pill filter
+    if (!normQuery && filter !== 'all') {
+      if (filter === 'short' && !normalizeSearchText(c.category).includes('short')) return false;
+      if (filter === 'long' && !normalizeSearchText(c.category).includes('long')) return false;
+      
+      const ingredientsCombined = (c.ingredients || (c.ingredientsDetailed ? c.ingredientsDetailed.map(i => i.name) : [])).join(' ');
+      const normIngr = normalizeSearchText(ingredientsCombined);
+
+      if (filter === 'gin' && !normIngr.includes('gin')) return false;
+      if (filter === 'vodka' && !normIngr.includes('vodka')) return false;
+      if (filter === 'rhum' && !(normIngr.includes('rhum') || normIngr.includes('rum') || normIngr.includes('cachaca'))) return false;
+      if (filter === 'whisky' && !(normIngr.includes('whisky') || normIngr.includes('whiskey') || normIngr.includes('bourbon') || normIngr.includes('scotch') || normIngr.includes('eau de vie brune'))) return false;
+      if (filter === 'tequila' && !(normIngr.includes('tequila') || normIngr.includes('mezcal') || normIngr.includes('agave'))) return false;
     }
 
-    // Search query matching
-    if (searchQuery) {
-      const matchName = c.name.toLowerCase().includes(searchQuery);
-      const matchGlass = c.glass.toLowerCase().includes(searchQuery);
-      const matchProfile = c.profile.toLowerCase().includes(searchQuery);
-      const matchIngredients = c.ingredients.some(i => i.toLowerCase().includes(searchQuery));
-      return matchName || matchGlass || matchProfile || matchIngredients;
+    // 2. If a search query is typed, match across name, ingredients, glass, profile, method, category, type, and history
+    if (normQuery) {
+      const normName = normalizeSearchText(c.name);
+      const normGlass = normalizeSearchText(c.glass);
+      const normProfile = normalizeSearchText(c.profile);
+      const normMethod = Array.isArray(c.method) 
+        ? c.method.map(m => normalizeSearchText(m)).join(' ')
+        : normalizeSearchText(c.method);
+      const normCategory = normalizeSearchText(c.category);
+      const normType = normalizeSearchText(c.type);
+      const ingList = c.ingredients || (c.ingredientsDetailed ? c.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`) : []);
+      const normIngredients = ingList.map(i => normalizeSearchText(i)).join(' ');
+      const normHistory = normalizeSearchText(c.history || '');
+
+      const match = normName.includes(normQuery) ||
+                    normGlass.includes(normQuery) ||
+                    normProfile.includes(normQuery) ||
+                    normMethod.includes(normQuery) ||
+                    normCategory.includes(normQuery) ||
+                    normType.includes(normQuery) ||
+                    normIngredients.includes(normQuery) ||
+                    normHistory.includes(normQuery);
+
+      return match;
     }
 
     return true;
@@ -1304,37 +1347,41 @@ function renderCocktailsGrid() {
   if (filtered.length === 0) {
     container.innerHTML = `
       <div style="text-align: center; color: var(--text-muted); padding: 40px 20px; grid-column: 1 / -1;">
-        Aucun cocktail ne correspond à votre recherche.
+        Aucun cocktail ne correspond à votre recherche « ${rawQuery} ».
       </div>
     `;
     return;
   }
 
-  container.innerHTML = filtered.map(c => `
-    <div class="cocktail-card" onclick="openCocktailModal('${c.id}')">
-      <div>
-        <div class="cocktail-card-top">
-          <h3 class="cocktail-name">${c.name}</h3>
-          <span class="cocktail-tav-badge">TAV ${c.tav}</span>
+  container.innerHTML = filtered.map(c => {
+    const ingPreview = c.ingredients || (c.ingredientsDetailed ? c.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`) : []);
+    const methodStr = Array.isArray(c.method) ? c.method.join(' ou ') : c.method;
+    return `
+      <div class="cocktail-card" onclick="openCocktailModal('${c.id}')">
+        <div>
+          <div class="cocktail-card-top">
+            <h3 class="cocktail-name">${c.name}</h3>
+            <span class="cocktail-tav-badge">TAV ${c.tav}</span>
+          </div>
+
+          <div class="cocktail-meta-row">
+            <span class="meta-tag">🍸 ${c.category}</span>
+            <span class="meta-tag">🥂 ${c.glass}</span>
+            <span class="meta-tag">⚙️ ${methodStr}</span>
+          </div>
+
+          <div class="cocktail-ingredients-preview">
+            ${ingPreview.slice(0, 3).join(' • ')}${ingPreview.length > 3 ? '...' : ''}
+          </div>
         </div>
 
-        <div class="cocktail-meta-row">
-          <span class="meta-tag">🍸 ${c.category}</span>
-          <span class="meta-tag">🥂 ${c.glass}</span>
-          <span class="meta-tag">⚙️ ${c.method}</span>
-        </div>
-
-        <div class="cocktail-ingredients-preview">
-          ${c.ingredients.slice(0, 3).join(' • ')}${c.ingredients.length > 3 ? '...' : ''}
+        <div style="font-size: 0.78rem; color: #fbbf24; font-weight: 700; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 8px;">
+          <span>${c.profile}</span>
+          <span>Voir la fiche ➔</span>
         </div>
       </div>
-
-      <div style="font-size: 0.78rem; color: #fbbf24; font-weight: 700; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 8px;">
-        <span>${c.profile}</span>
-        <span>Voir la fiche ➔</span>
-      </div>
-    </div>
-  `).join('');
+    `;
+  }).join('');
 }
 
 function setCocktailFilter(filterName) {
@@ -1416,17 +1463,18 @@ function renderLexiqueList() {
   const container = document.getElementById('lexique-list-container');
   if (!container || !APP_DATA.lexique) return;
 
-  const searchQuery = (document.getElementById('lexique-search-input')?.value || '').toLowerCase();
+  const rawQuery = document.getElementById('lexique-search-input')?.value || '';
+  const normQuery = normalizeSearchText(rawQuery);
 
   const filtered = APP_DATA.lexique.filter(item => {
-    if (!searchQuery) return true;
-    return item.term.toLowerCase().includes(searchQuery) || item.def.toLowerCase().includes(searchQuery);
+    if (!normQuery) return true;
+    return normalizeSearchText(item.term).includes(normQuery) || normalizeSearchText(item.def).includes(normQuery);
   });
 
   if (filtered.length === 0) {
     container.innerHTML = `
       <div style="text-align: center; color: var(--text-muted); padding: 30px 20px;">
-        Aucun terme trouvé pour « ${searchQuery} ».
+        Aucun terme trouvé pour « ${rawQuery} ».
       </div>
     `;
     return;
@@ -1477,49 +1525,72 @@ function renderModule7Hub() {
   const longContainer = document.getElementById('m7-long-drinks-list');
   if (!shortContainer || !longContainer || !APP_DATA.cocktails) return;
 
-  const shortDrinks = APP_DATA.cocktails.filter(c => c.category === 'SHORT drink');
-  const longDrinks = APP_DATA.cocktails.filter(c => c.category === 'LONG drink');
+  const rawQuery = document.getElementById('m7-search-input')?.value || '';
+  const normQuery = normalizeSearchText(rawQuery);
+
+  const filterCocktail = (c) => {
+    if (!normQuery) return true;
+    const normName = normalizeSearchText(c.name);
+    const normGlass = normalizeSearchText(c.glass);
+    const normMethod = Array.isArray(c.method) ? c.method.map(m => normalizeSearchText(m)).join(' ') : normalizeSearchText(c.method);
+    const ingList = c.ingredients || (c.ingredientsDetailed ? c.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`) : []);
+    const normIngredients = ingList.map(i => normalizeSearchText(i)).join(' ');
+    return normName.includes(normQuery) || normGlass.includes(normQuery) || normMethod.includes(normQuery) || normIngredients.includes(normQuery);
+  };
+
+  const shortDrinks = APP_DATA.cocktails.filter(c => c.category === 'SHORT drink' && filterCocktail(c));
+  const longDrinks = APP_DATA.cocktails.filter(c => c.category === 'LONG drink' && filterCocktail(c));
 
   const mastery = state.cocktailMastery || {};
-  let masteredTotal = 0;
+  let masteredTotal = Object.keys(mastery).filter(k => mastery[k]?.completed).length;
 
-  shortContainer.innerHTML = shortDrinks.map((c, idx) => {
-    const isDone = mastery[c.id]?.completed;
-    if (isDone) masteredTotal++;
-    return `
-      <div class="m7-cocktail-item-card ${isDone ? 'mastered' : ''}" onclick="openCocktailPractice('${c.id}')">
-        <div class="m7-card-left">
-          <span class="m7-card-number">${idx + 1}.</span>
-          <div>
-            <div class="m7-card-name">${c.name}</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">${c.glass} • ${c.method}</div>
+  if (shortDrinks.length === 0) {
+    shortContainer.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 20px;">Aucun Short Drink correspondant.</div>`;
+  } else {
+    shortContainer.innerHTML = shortDrinks.map((c) => {
+      const origIdx = APP_DATA.cocktails.findIndex(item => item.id === c.id);
+      const isDone = mastery[c.id]?.completed;
+      const methodStr = Array.isArray(c.method) ? c.method.join(' ou ') : c.method;
+      return `
+        <div class="m7-cocktail-item-card ${isDone ? 'mastered' : ''}" onclick="openCocktailPractice('${c.id}')">
+          <div class="m7-card-left">
+            <span class="m7-card-number">${origIdx + 1}.</span>
+            <div>
+              <div class="m7-card-name">${c.name}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">${c.glass} • ${methodStr}</div>
+            </div>
           </div>
+          <span class="m7-card-badge-status ${isDone ? 'done' : ''}">
+            ${isDone ? '✓ 100% Maîtrisé' : 'À compléter ➔'}
+          </span>
         </div>
-        <span class="m7-card-badge-status ${isDone ? 'done' : ''}">
-          ${isDone ? '✓ 100% Maîtrisé' : 'À compléter ➔'}
-        </span>
-      </div>
-    `;
-  }).join('');
+      `;
+    }).join('');
+  }
 
-  longContainer.innerHTML = longDrinks.map((c, idx) => {
-    const isDone = mastery[c.id]?.completed;
-    if (isDone) masteredTotal++;
-    return `
-      <div class="m7-cocktail-item-card ${isDone ? 'mastered' : ''}" onclick="openCocktailPractice('${c.id}')">
-        <div class="m7-card-left">
-          <span class="m7-card-number">${idx + 19}.</span>
-          <div>
-            <div class="m7-card-name">${c.name}</div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">${c.glass} • ${c.method}</div>
+  if (longDrinks.length === 0) {
+    longContainer.innerHTML = `<div style="text-align: center; color: var(--text-muted); padding: 20px;">Aucun Long Drink correspondant.</div>`;
+  } else {
+    longContainer.innerHTML = longDrinks.map((c) => {
+      const origIdx = APP_DATA.cocktails.findIndex(item => item.id === c.id);
+      const isDone = mastery[c.id]?.completed;
+      const methodStr = Array.isArray(c.method) ? c.method.join(' ou ') : c.method;
+      return `
+        <div class="m7-cocktail-item-card ${isDone ? 'mastered' : ''}" onclick="openCocktailPractice('${c.id}')">
+          <div class="m7-card-left">
+            <span class="m7-card-number">${origIdx + 1}.</span>
+            <div>
+              <div class="m7-card-name">${c.name}</div>
+              <div style="font-size: 0.75rem; color: var(--text-muted);">${c.glass} • ${methodStr}</div>
+            </div>
           </div>
+          <span class="m7-card-badge-status ${isDone ? 'done' : ''}">
+            ${isDone ? '✓ 100% Maîtrisé' : 'À compléter ➔'}
+          </span>
         </div>
-        <span class="m7-card-badge-status ${isDone ? 'done' : ''}">
-          ${isDone ? '✓ 100% Maîtrisé' : 'À compléter ➔'}
-        </span>
-      </div>
-    `;
-  }).join('');
+      `;
+    }).join('');
+  }
 
   const countEl = document.getElementById('m7-mastery-count');
   const barEl = document.getElementById('m7-mastery-bar');
