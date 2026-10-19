@@ -195,6 +195,13 @@ function navigateTo(viewId) {
     activeNavBtn.classList.add('active');
   }
 
+  // Update desktop floating dock active state
+  document.querySelectorAll('.dock-btn').forEach(btn => btn.classList.remove('active'));
+  const activeDockBtn = document.getElementById(`dock-${viewId}`);
+  if (activeDockBtn) {
+    activeDockBtn.classList.add('active');
+  }
+
   // Trigger view-specific renderers
   if (viewId === 'cocktails' && typeof renderCocktailsGrid === 'function') {
     renderCocktailsGrid();
@@ -265,17 +272,26 @@ function updateGlobalStatsDisplay() {
   const globalProgressBar = document.getElementById('global-progress-bar');
   const modulesCompletedDisplay = document.getElementById('modules-completed-display');
   const modulesProgressBar = document.getElementById('modules-progress-bar');
+  const metricGlobalScore = document.getElementById('metric-global-score');
+  const modulesCompletedGaugeNum = document.getElementById('modules-completed-gauge-num');
+  const cocktailsMasteredGaugeNum = document.getElementById('cocktails-mastered-gauge-num');
+  const metricCocktailsMastered = document.getElementById('metric-cocktails-mastered');
+  const cocktailsProgressBar = document.getElementById('cocktails-progress-bar');
+  const gaugeMastery = document.getElementById('gauge-circle-mastery');
+  const gaugeModules = document.getElementById('gauge-circle-modules');
+  const gaugeCocktails = document.getElementById('gauge-circle-cocktails');
 
   let completedModulesCount = 0;
   let totalScoreAcquired = 0;
   let totalQuestionsAnswered = 0;
 
+  const masteredCocktailsCount = Object.keys(state.cocktailMastery || {}).filter(k => state.cocktailMastery[k]?.completed).length;
+
   APP_DATA.modules.forEach(mod => {
     if (mod.id === 7) {
-      const mastered = Object.keys(state.cocktailMastery || {}).filter(k => state.cocktailMastery[k]?.completed).length;
-      if (mastered > 0) {
+      if (masteredCocktailsCount > 0) {
         completedModulesCount++;
-        totalScoreAcquired += mastered;
+        totalScoreAcquired += masteredCocktailsCount;
         totalQuestionsAnswered += 36;
       }
     } else {
@@ -292,13 +308,38 @@ function updateGlobalStatsDisplay() {
     ? Math.round((totalScoreAcquired / totalQuestionsAnswered) * 100) 
     : 0;
 
-  if (globalScoreDisplay) globalScoreDisplay.innerHTML = `${percentage} <span>%</span>`;
+  // Text values
+  if (globalScoreDisplay) globalScoreDisplay.textContent = percentage;
+  if (metricGlobalScore) metricGlobalScore.textContent = `${percentage}%`;
   if (globalProgressBar) globalProgressBar.style.width = `${percentage}%`;
   
+  if (modulesCompletedGaugeNum) modulesCompletedGaugeNum.textContent = completedModulesCount;
   if (modulesCompletedDisplay) modulesCompletedDisplay.innerHTML = `${completedModulesCount} <span>/ 9</span>`;
   if (modulesProgressBar) {
     const modPercentage = Math.round((completedModulesCount / 9) * 100);
     modulesProgressBar.style.width = `${modPercentage}%`;
+  }
+
+  if (cocktailsMasteredGaugeNum) cocktailsMasteredGaugeNum.textContent = masteredCocktailsCount;
+  if (metricCocktailsMastered) metricCocktailsMastered.innerHTML = `${masteredCocktailsCount} <span>/ 36</span>`;
+  if (cocktailsProgressBar) {
+    const cockPercentage = Math.round((masteredCocktailsCount / 36) * 100);
+    cocktailsProgressBar.style.width = `${cockPercentage}%`;
+  }
+
+  // SVG circular gauge animation (circumference = 2 * PI * 36 = ~226.19)
+  const circumference = 226.2;
+  if (gaugeMastery) {
+    const offset = circumference * (1 - (percentage / 100));
+    gaugeMastery.style.strokeDashoffset = offset;
+  }
+  if (gaugeModules) {
+    const offset = circumference * (1 - (completedModulesCount / 9));
+    gaugeModules.style.strokeDashoffset = offset;
+  }
+  if (gaugeCocktails) {
+    const offset = circumference * (1 - (masteredCocktailsCount / 36));
+    gaugeCocktails.style.strokeDashoffset = offset;
   }
 }
 
@@ -1307,6 +1348,24 @@ function normalizeSearchText(str) {
 // COCKTAILS EXPLORER & MEMO CARDS (36 RECETTES)
 // ==========================================
 
+function getGlassImagePath(glassName) {
+  if (!glassName) return 'assets/verres/rocks.png';
+  const g = glassName.toLowerCase();
+  if (g.includes('rocks') || g.includes('old fashioned')) return 'assets/verres/rocks.png';
+  if (g.includes('highball') || g.includes('tumbler')) return 'assets/verres/highball.png';
+  if (g.includes('coupe')) return 'assets/verres/coupe.png';
+  if (g.includes('nick')) return 'assets/verres/nick_nora.png';
+  if (g.includes('martini')) return 'assets/verres/martini.png';
+  if (g.includes('flûte') || g.includes('flute')) return 'assets/verres/flute.png';
+  if (g.includes('vin')) return 'assets/verres/vin.png';
+  if (g.includes('julep')) return 'assets/verres/julep.png';
+  if (g.includes('mule')) return 'assets/verres/mule.png';
+  if (g.includes('hurricane')) return 'assets/verres/hurricane.png';
+  if (g.includes('shot')) return 'assets/verres/shot.png';
+  if (g.includes('tiki')) return 'assets/verres/tiki.png';
+  return 'assets/verres/rocks.png';
+}
+
 function renderCocktailsGrid() {
   const container = document.getElementById('cocktails-grid-container');
   if (!container || !APP_DATA.cocktails) return;
@@ -1372,12 +1431,18 @@ function renderCocktailsGrid() {
   container.innerHTML = filtered.map(c => {
     const ingPreview = c.ingredients || (c.ingredientsDetailed ? c.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`) : []);
     const methodStr = Array.isArray(c.method) ? c.method.join(' ou ') : c.method;
+    const glassImg = getGlassImagePath(c.glass);
+
     return `
       <div class="cocktail-card" onclick="openCocktailModal('${c.id}')">
         <div>
           <div class="cocktail-card-top">
             <h3 class="cocktail-name">${c.name}</h3>
-            <span class="cocktail-tav-badge">TAV ${c.tav}</span>
+            <span class="cocktail-tav-badge">${c.tav} ABV</span>
+          </div>
+
+          <div class="cocktail-glass-showcase">
+            <img src="${glassImg}" alt="${c.glass}" class="cocktail-glass-img" loading="lazy">
           </div>
 
           <div class="cocktail-meta-row">
@@ -1391,9 +1456,9 @@ function renderCocktailsGrid() {
           </div>
         </div>
 
-        <div style="font-size: 0.78rem; color: #fbbf24; font-weight: 700; display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 8px;">
-          <span>${c.profile}</span>
-          <span>Voir la fiche ➔</span>
+        <div class="cocktail-card-footer">
+          <span class="cocktail-profile-tag">${c.profile}</span>
+          <span class="cocktail-cta-btn">Voir la fiche ➔</span>
         </div>
       </div>
     `;

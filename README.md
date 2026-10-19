@@ -1,6 +1,7 @@
 # 🍸 Mixology Master — Référentiel Officiel 2025/2026
 
-![Version](https://img.shields.io/badge/Version-1.3.0-blue.svg)
+![Version](https://img.shields.io/badge/Version-2.0.0--alpha%20(Branche%20Refont--site)-gold.svg)
+![DA](https://img.shields.io/badge/DA-Velvet%20Obsidian%20%26%20Champagne%20Gold-d4af37.svg)
 ![Référentiel](https://img.shields.io/badge/Référentiel-Édition%202025%2F2026-gold.svg)
 ![Licence](https://img.shields.io/badge/Licence-Pédagogique-green.svg)
 ![Netlify](https://img.shields.io/badge/Déploiement-Netlify-00C7B7.svg)
@@ -8,6 +9,15 @@
 **Mixology Master** est une application web interactive d'apprentissage, d'entraînement et de révision exhaustive, conçue à 100 % sur la base du document pédagogique national officiel : **« Référentiel Officiel des Cocktails Classiques de Référence — Édition 2025/2026 »**.
 
 L'application s'adresse aux élèves et apprentis en formation barman (Mention Complémentaire Employé Barman, Brevet Professionnel Barman, CAP/Bac Pro Restauration), aux professionnels du bar et de l'hôtellerie, ainsi qu'aux passionnés de mixologie préparant des examens ou des concours officiels.
+
+---
+
+## 🎨 Direction Artistique V2 : « Velvet Obsidian & Champagne Gold » (Branche `Refont-site`)
+- **Ambiance Visuelle** : Speakeasy contemporain de grand palace, fond obsidienne feutré (`#07090e`), verre dépoli glassmorphism haute précision (`backdrop-filter: blur(18px)`), reflets dorés chauds (`#d4af37` / `#e6c280`) et cyan givré (`#38bdf8`).
+- **Typographie Officielle** : `Outfit` (titres percutants et métriques d'apprentissage) + `Plus Jakarta Sans` (interface & confort de lecture).
+- **Tableau de Bord & Analytics** : 3 jauges circulaires SVG animées pour le suivi en temps réel de la maîtrise globale, des 9 modules et des 36 cocktails cultes.
+- **Cartes Cocktails & Verrerie** : Vitrines immersives avec prévisualisation des verres officiels (`assets/verres/`), badges TAV rétro-éclairés et boutons d'action glassmorphism.
+- **Dock de Navigation Hybride** : Navigation latérale flottante sur grand écran (desktop) et barre d'onglets tactile sur mobile.
 
 ---
 
