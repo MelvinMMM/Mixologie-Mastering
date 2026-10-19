@@ -1,6 +1,6 @@
 # 🍸 Mixology Master — Référentiel Officiel 2025/2026
 
-![Version](https://img.shields.io/badge/Version-1.2.0-blue.svg)
+![Version](https://img.shields.io/badge/Version-1.3.0-blue.svg)
 ![Référentiel](https://img.shields.io/badge/Référentiel-Édition%202025%2F2026-gold.svg)
 ![Licence](https://img.shields.io/badge/Licence-Pédagogique-green.svg)
 ![Netlify](https://img.shields.io/badge/Déploiement-Netlify-00C7B7.svg)
@@ -73,14 +73,27 @@ Rendez-vous ensuite sur `http://localhost:3000`.
 
 ```text
 QCMCOMPLETMIXOLOGIE/
-├── index.html            # Structure HTML5 & vues de l'application
-├── styles.css            # Styles CSS3 modernes (Flexbox, Grid, Thème Sombre)
-├── app.js                # Logique applicative, moteur de QCM, recherche & persistance
-├── data.js               # Données structurées pour le navigateur (Modules, 141 Questions, 36 Cocktails, Lexique)
-├── app_data.json         # Base de données source au format JSON
-├── build_dataset.py      # Script de compilation et validation du jeu de données
-├── README.md             # Documentation officielle du projet (v1.2.0)
-└── images/               # Banques d'images officielles (matériels, verres, cocktails)
+├── index.html            # Point d'entrée & vues de l'application
+├── README.md             # Documentation officielle du projet
+├── css/                  # Feuilles de style
+│   └── styles.css        # Styles CSS3 modernes (Dark theme, responsive, animations)
+├── js/                   # Scripts JavaScript applicatifs
+│   ├── app.js            # Moteur QCM, navigation, modales, recherche & persistance
+│   └── data.js           # Données complètes (141 questions, 36 cocktails, 33 verres & outils, lexique)
+├── json/                 # Datasets et fichiers de données bruts
+│   ├── app_data.json     # Base miroir complète au format JSON
+│   ├── extracted_pdf_text.json # Extraction intégrale du référentiel officiel
+│   └── *.json            # Datasets intermédiaires de référence
+├── assets/               # Ressources graphiques officielles
+│   ├── verres/           # Visuels HD des 20 verres officiels
+│   └── materiel/         # Visuels HD des 13 outils du barman
+├── scripts/              # Scripts utilitaires Python
+│   ├── build_dataset.py  # Script de compilation et validation
+│   ├── crop_glasses.py   # Script de traitement d'images
+│   └── update_m1.py      # Script de calibrage du module 1
+└── docs/                 # Documents sources de référence
+    ├── socle-des-cocktails-de-re-ference-version-finale-12-2026.pdf
+    └── scratch_all_36_pages_utf8.txt
 ```
 
 ---

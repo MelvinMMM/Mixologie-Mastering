@@ -17,6 +17,7 @@ const state = {
   },
   activePractice: null, // For Module 7 Interactive Cocktail Practice
   cocktailFilter: 'all',
+  verrerieFilter: 'all',
   scores: {}, // { moduleId: { bestScore: X, total: Y, timestamp: Z } }
   errorQuestionsPool: [], // Array of question IDs that were answered incorrectly
   cocktailMastery: {} // { cocktailId: { completed: true, score: 100, timestamp: Z } }
@@ -89,6 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   renderModulesGrid();
   renderCocktailsGrid();
+  if (typeof renderVerrerieGrid === 'function') {
+    renderVerrerieGrid();
+  }
   renderLexiqueList();
   updateGlobalStatsDisplay();
   updateErrorsCountDisplay();
@@ -159,6 +163,9 @@ function resetAllProgress() {
   if (typeof renderCocktailsGrid === 'function') {
     renderCocktailsGrid();
   }
+  if (typeof renderVerrerieGrid === 'function') {
+    renderVerrerieGrid();
+  }
 
   playSound('correct');
 }
@@ -186,6 +193,15 @@ function navigateTo(viewId) {
   const activeNavBtn = document.getElementById(`nav-${viewId}`);
   if (activeNavBtn) {
     activeNavBtn.classList.add('active');
+  }
+
+  // Trigger view-specific renderers
+  if (viewId === 'cocktails' && typeof renderCocktailsGrid === 'function') {
+    renderCocktailsGrid();
+  } else if (viewId === 'verrerie' && typeof renderVerrerieGrid === 'function') {
+    renderVerrerieGrid();
+  } else if (viewId === 'lexique' && typeof renderLexiqueList === 'function') {
+    renderLexiqueList();
   }
 
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -1948,7 +1964,7 @@ function validateCocktailPractice(cocktailId) {
         </div>
 
         <div style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.6; display: flex; flex-direction: column; gap: 8px;">
-          <div>• <strong>Recette officielle :</strong> ${cocktail.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`).join(', ')}</div>
+          <div>• <strong>Recette officielle :</strong> ${cocktail.ingredients ? cocktail.ingredients.join(', ') : cocktail.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`).join(', ')}</div>
           <div>• <strong>Méthode d’élaboration :</strong> ${Array.isArray(cocktail.method) ? cocktail.method.join(' ou ') : cocktail.method}</div>
           <div>• <strong>Catégorie & Type :</strong> ${cocktail.category} — ${cocktail.type}</div>
           <div>• <strong>Titre Alcoométrique Volumique :</strong> ${cocktail.tav}</div>
@@ -1974,3 +1990,208 @@ function validateCocktailPractice(cocktailId) {
   const valBtn = document.getElementById('btn-validate-practice');
   if (valBtn) valBtn.classList.add('hidden');
 }
+
+// ==========================================
+// VERRERIE & MATÉRIEL DU BARMAN (PARTIES 5 & 6)
+// ==========================================
+
+function getAllVerrerieAndMateriel() {
+  const verres = (APP_DATA.verrerie || []).map(item => ({ ...item, isGlass: true }));
+  const mat = (APP_DATA.materiel || []).map(item => ({ ...item, isGlass: false }));
+  return [...verres, ...mat];
+}
+
+function setVerrerieFilter(filter) {
+  playSound('click');
+  state.verrerieFilter = filter;
+
+  // Update pills
+  const pills = document.querySelectorAll('#verrerie-filter-pills .filter-pill');
+  pills.forEach(pill => pill.classList.remove('active'));
+  const activePill = Array.from(pills).find(p => p.getAttribute('onclick')?.includes(`'${filter}'`));
+  if (activePill) activePill.classList.add('active');
+
+  renderVerrerieGrid();
+}
+
+function filterVerrerie() {
+  renderVerrerieGrid();
+}
+
+function renderVerrerieGrid() {
+  const container = document.getElementById('verrerie-grid-container');
+  if (!container) return;
+
+  const rawQuery = document.getElementById('verrerie-search-input')?.value || '';
+  const normQuery = normalizeSearchText(rawQuery);
+  const filter = state.verrerieFilter || 'all';
+
+  const allItems = getAllVerrerieAndMateriel();
+
+  const filtered = allItems.filter(item => {
+    // 1. Category filter
+    if (filter !== 'all') {
+      if (filter === 'incontournable' && item.category !== 'incontournable') return false;
+      if (filter === 'complementaire' && item.category !== 'complementaire') return false;
+      if (filter === 'materiel' && item.category !== 'materiel') return false;
+    }
+
+    // 2. Search query filter
+    if (normQuery) {
+      const normName = normalizeSearchText(item.name);
+      const normDesc = normalizeSearchText(item.description || '');
+      const normCapacity = normalizeSearchText(item.capacity || '');
+      const normUsage = normalizeSearchText(item.usage || '');
+      const normCocktails = (item.cocktails || []).map(c => normalizeSearchText(c)).join(' ');
+
+      const match = normName.includes(normQuery) ||
+                    normDesc.includes(normQuery) ||
+                    normCapacity.includes(normQuery) ||
+                    normUsage.includes(normQuery) ||
+                    normCocktails.includes(normQuery);
+      return match;
+    }
+
+    return true;
+  });
+
+  if (filtered.length === 0) {
+    container.innerHTML = `
+      <div style="text-align: center; color: var(--text-muted); padding: 40px 20px; grid-column: 1 / -1;">
+        Aucun verre ni matériel ne correspond à votre recherche « ${rawQuery} ».
+      </div>
+    `;
+    return;
+  }
+
+  container.innerHTML = filtered.map(item => {
+    const badgeClass = item.category === 'incontournable' 
+      ? 'incontournable' 
+      : item.category === 'complementaire' 
+        ? 'complementaire' 
+        : 'materiel';
+    
+    const chipsHtml = (item.cocktails || []).slice(0, 3).map(c => 
+      `<span class="verrerie-chip">${c}</span>`
+    ).join('') + ((item.cocktails || []).length > 3 ? `<span class="verrerie-chip">+${item.cocktails.length - 3}</span>` : '');
+
+    return `
+      <div class="verrerie-card" onclick="openVerrerieModal('${item.id}')">
+        <div>
+          <div class="verrerie-card-img-wrap">
+            <img src="${item.image}" alt="${item.name}" loading="lazy" onerror="this.style.display='none'">
+          </div>
+
+          <span class="verrerie-badge-tag ${badgeClass}">
+            ${item.partie === 5 ? 'Partie 5 • ' : 'Partie 6 • '}${item.categoryLabel}
+          </span>
+
+          <h3 class="verrerie-card-title">${item.name}</h3>
+          
+          <div class="verrerie-capacity-badge">
+            <span>${item.partie === 5 ? '📏 Contenance :' : '⚙️ Spécification :'}</span>
+            <span>${item.capacity}</span>
+          </div>
+
+          <p class="verrerie-desc-preview">${item.description}</p>
+        </div>
+
+        <div>
+          <div class="verrerie-cocktails-chips" style="margin-top: 10px;">
+            ${chipsHtml}
+          </div>
+          <div style="display: flex; justify-content: flex-end; margin-top: 14px;">
+            <span style="font-size: 0.78rem; font-weight: 700; color: #38bdf8;">Voir la fiche ➔</span>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function openVerrerieModal(itemId) {
+  playSound('click');
+  const allItems = getAllVerrerieAndMateriel();
+  const item = allItems.find(i => i.id === itemId);
+  if (!item) return;
+
+  const content = document.getElementById('verrerie-detail-content');
+  const modal = document.getElementById('modal-verrerie');
+  if (!content || !modal) return;
+
+  const badgeClass = item.category === 'incontournable' 
+    ? 'incontournable' 
+    : item.category === 'complementaire' 
+      ? 'complementaire' 
+      : 'materiel';
+
+  const cocktailsListHtml = (item.cocktails || []).map(c => 
+    `<li style="margin-bottom: 4px;">• <strong>${c}</strong></li>`
+  ).join('');
+
+  content.innerHTML = `
+    <button class="modal-close-btn" onclick="closeVerrerieModal()">✕</button>
+
+    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+      <span class="verrerie-badge-tag ${badgeClass}">
+        Partie ${item.partie} du Socle • ${item.categoryLabel}
+      </span>
+    </div>
+
+    <h2 style="font-size: 1.4rem; font-weight: 800; color: #ffffff; margin-bottom: 4px;">
+      ${item.name}
+    </h2>
+
+    <div style="font-size: 0.88rem; color: var(--text-accent); font-weight: 700; margin-bottom: 14px;">
+      ${item.partie === 5 ? 'Contenance officielle :' : 'Spécification officielle :'} ${item.capacity}
+    </div>
+
+    <div class="verrerie-card-img-wrap" style="height: 190px; margin-bottom: 16px;">
+      <img src="${item.image}" alt="${item.name}" class="verrerie-modal-img" onerror="this.style.display='none'">
+    </div>
+
+    <div style="background: rgba(255, 255, 255, 0.04); border-left: 3px solid #38bdf8; padding: 14px; border-radius: var(--radius-md); margin-bottom: 16px;">
+      <div style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; color: #38bdf8; letter-spacing: 0.05em; margin-bottom: 6px;">
+        📖 Description & Rôle Technique
+      </div>
+      <p style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.55;">
+        ${item.description}
+      </p>
+    </div>
+
+    ${item.usage ? `
+      <div style="background: rgba(245, 158, 11, 0.08); border-left: 3px solid #f59e0b; padding: 12px 14px; border-radius: var(--radius-md); margin-bottom: 16px;">
+        <div style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; color: #fbbf24; letter-spacing: 0.05em; margin-bottom: 4px;">
+          🎯 Usage en Service
+        </div>
+        <p style="font-size: 0.86rem; color: #e2e8f0;">
+          ${item.usage}
+        </p>
+      </div>
+    ` : ''}
+
+    ${(item.cocktails && item.cocktails.length > 0) ? `
+      <div style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981; padding: 12px 14px; border-radius: var(--radius-md); margin-bottom: 20px;">
+        <div style="font-size: 0.82rem; font-weight: 800; text-transform: uppercase; color: #34d399; letter-spacing: 0.05em; margin-bottom: 6px;">
+          🍹 Exemples de Cocktails & Applications
+        </div>
+        <ul style="list-style: none; padding: 0; margin: 0; font-size: 0.86rem; color: #cbd5e1;">
+          ${cocktailsListHtml}
+        </ul>
+      </div>
+    ` : ''}
+
+    <button class="btn btn-secondary" style="width: 100%;" onclick="closeVerrerieModal()">
+      Fermer la fiche
+    </button>
+  `;
+
+  modal.classList.add('active');
+}
+
+function closeVerrerieModal() {
+  playSound('click');
+  const modal = document.getElementById('modal-verrerie');
+  if (modal) modal.classList.remove('active');
+}
+

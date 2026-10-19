@@ -8,7 +8,7 @@
   <title>Mixology Master — QCM & Révision Officielle</title>
   
   <!-- Favicon & Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -124,6 +124,29 @@
       </div>
 
       <div class="extra-grid">
+        <!-- Card 0: Verrerie & Matériel (Consultation Officielle) -->
+        <div class="module-card extra-card" style="border-left: 3px solid #38bdf8; cursor: pointer;" onclick="navigateTo('verrerie')">
+          <div>
+            <div class="module-card-header">
+              <span class="module-number-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+                Parties 5 & 6
+              </span>
+              <span class="module-icon">🥂</span>
+            </div>
+            <h3 class="module-title">Verrerie & Matériel du Barman</h3>
+            <p class="module-subtitle">
+              Consultez les 20 verres officiels (Incontournables et Complémentaires) et les 13 outils du barman avec leurs fiches visuelles complètes.
+            </p>
+          </div>
+
+          <div class="module-footer">
+            <span class="module-score-status" style="color: #38bdf8;">33 fiches illustrées</span>
+            <span class="module-start-btn" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+              Consulter ➔
+            </span>
+          </div>
+        </div>
+
         <!-- Card 1: Le Défi de l'Écriture -->
         <div class="module-card extra-card" style="border-left: 3px solid #f59e0b;">
           <div>
@@ -363,6 +386,38 @@
     </section>
 
     <!-- ==========================================
+         VIEW 6 : VERRERIE & MATÉRIEL DU BARMAN (PARTIES 5 & 6)
+         ========================================== -->
+    <section id="view-verrerie" class="view-section hidden">
+      <div class="section-header">
+        <h2 class="section-title"><span>🥂</span> Verrerie & Matériel</h2>
+        <span class="section-badge" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8; border: 1px solid rgba(6, 182, 212, 0.3);">
+          Parties 5 & 6 du Socle
+        </span>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="verrerie-search-input" class="search-input" placeholder="Rechercher un verre, un ustensile, une contenance, un cocktail..." oninput="filterVerrerie()">
+        </div>
+
+        <div class="filter-pills-row" id="verrerie-filter-pills">
+          <button class="filter-pill active" onclick="setVerrerieFilter('all')">Tous (33)</button>
+          <button class="filter-pill" onclick="setVerrerieFilter('incontournable')">⭐ Incontournables (10)</button>
+          <button class="filter-pill" onclick="setVerrerieFilter('complementaire')">✨ Complémentaires (10)</button>
+          <button class="filter-pill" onclick="setVerrerieFilter('materiel')">🛠️ Matériel (13)</button>
+        </div>
+      </div>
+
+      <!-- Verrerie & Material Grid -->
+      <div class="verrerie-grid" id="verrerie-grid-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- ==========================================
          VIEW 5 : LEXIQUE DU BARMAN (PARTIE 9)
          ========================================== -->
     <section id="view-lexique" class="view-section hidden">
@@ -438,6 +493,15 @@
   </div>
 
   <!-- ==========================================
+       MODAL : VERRERIE & MATÉRIEL DETAIL
+       ========================================== -->
+  <div class="modal-overlay" id="modal-verrerie" onclick="closeModalOnOverlay(event, 'modal-verrerie')">
+    <div class="modal-card" id="verrerie-detail-content">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- ==========================================
        BOTTOM MOBILE NAVIGATION BAR
        ========================================== -->
   <nav class="bottom-nav">
@@ -449,6 +513,10 @@
       <span class="nav-item-icon">🍹</span>
       <span>36 Cocktails</span>
     </button>
+    <button class="nav-item" id="nav-verrerie" onclick="navigateTo('verrerie')">
+      <span class="nav-item-icon">🥂</span>
+      <span>Verrerie</span>
+    </button>
     <button class="nav-item" id="nav-lexique" onclick="navigateTo('lexique')">
       <span class="nav-item-icon">📖</span>
       <span>Lexique</span>
@@ -456,7 +524,7 @@
   </nav>
 
   <!-- Application Logic & Data -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>

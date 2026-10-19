@@ -1709,3 +1709,142 @@ body {
   color: #fbbf24 !important;
 }
 
+/* ==========================================
+   MODULE DE CONSULTATION : VERRERIE & MATÉRIEL
+   ========================================== */
+.verrerie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.verrerie-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 18px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(12px);
+  position: relative;
+  overflow: hidden;
+}
+
+.verrerie-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(56, 189, 248, 0.45);
+  box-shadow: 0 14px 32px -8px rgba(0, 0, 0, 0.65), 0 0 24px rgba(56, 189, 248, 0.15);
+  background: var(--bg-card-hover);
+}
+
+.verrerie-card-img-wrap {
+  width: 100%;
+  height: 145px;
+  background: radial-gradient(circle at center, rgba(56, 189, 248, 0.08) 0%, rgba(15, 23, 42, 0.6) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 12px;
+}
+
+.verrerie-card-img-wrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.6));
+  transition: transform 0.25s ease;
+}
+
+.verrerie-card:hover .verrerie-card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.verrerie-badge-tag {
+  display: inline-block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 8px;
+  border-radius: var(--radius-full);
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
+
+.verrerie-badge-tag.incontournable {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border: 1px solid rgba(56, 189, 248, 0.35);
+}
+
+.verrerie-badge-tag.complementaire {
+  background: rgba(168, 85, 247, 0.15);
+  color: #c084fc;
+  border: 1px solid rgba(168, 85, 247, 0.35);
+}
+
+.verrerie-badge-tag.materiel {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.35);
+}
+
+.verrerie-card-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+
+.verrerie-capacity-badge {
+  font-size: 0.78rem;
+  color: var(--text-accent);
+  font-weight: 700;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.verrerie-desc-preview {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin-bottom: 12px;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.verrerie-cocktails-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.verrerie-chip {
+  font-size: 0.68rem;
+  padding: 2px 7px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-full);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.verrerie-modal-img {
+  width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+  margin: 12px 0 16px 0;
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.6));
+}
+
+
