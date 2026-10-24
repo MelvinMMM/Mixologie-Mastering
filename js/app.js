@@ -30,7 +30,7 @@ const STORAGE_SCORES_KEY = 'mixology_master_scores_v1';
 const STORAGE_ERRORS_KEY = 'mixology_master_errors_v1';
 const STORAGE_MASTERY_KEY = 'mixology_cocktail_mastery_v1';
 const STORAGE_WRITING_KEY = 'mixology_writing_challenge_v1';
-const CURRENT_APP_VERSION = '1.2.0';
+const CURRENT_APP_VERSION = '2.0.0';
 const STORAGE_SEEN_VERSION_KEY = 'mixology_release_notes_seen_version';
 
 // Web Audio Context for tactile sounds
