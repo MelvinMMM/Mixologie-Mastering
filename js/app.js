@@ -20,13 +20,16 @@ const state = {
   verrerieFilter: 'all',
   scores: {}, // { moduleId: { bestScore: X, total: Y, timestamp: Z } }
   errorQuestionsPool: [], // Array of question IDs that were answered incorrectly
-  cocktailMastery: {} // { cocktailId: { completed: true, score: 100, timestamp: Z } }
+  cocktailMastery: {}, // { cocktailId: { completed: true, score: 100, timestamp: Z } }
+  activeWriting: null,
+  writingStats: { bestSprint: 0, bestAll36: 0, totalPlayed: 0 }
 };
 
 // Storage keys
 const STORAGE_SCORES_KEY = 'mixology_master_scores_v1';
 const STORAGE_ERRORS_KEY = 'mixology_master_errors_v1';
 const STORAGE_MASTERY_KEY = 'mixology_cocktail_mastery_v1';
+const STORAGE_WRITING_KEY = 'mixology_writing_challenge_v1';
 
 // Web Audio Context for tactile sounds
 let audioCtx = null;
@@ -93,9 +96,15 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof renderVerrerieGrid === 'function') {
     renderVerrerieGrid();
   }
+  if (typeof updateWritingCardStatus === 'function') {
+    updateWritingCardStatus();
+  }
   renderLexiqueList();
   updateGlobalStatsDisplay();
   updateErrorsCountDisplay();
+  if (typeof updateWritingCardStatus === 'function') {
+    updateWritingCardStatus();
+  }
 });
 
 // Load saved data from localStorage
@@ -112,6 +121,10 @@ function loadStoredData() {
     const savedMastery = localStorage.getItem(STORAGE_MASTERY_KEY);
     if (savedMastery) {
       state.cocktailMastery = JSON.parse(savedMastery);
+    }
+    const savedWriting = localStorage.getItem(STORAGE_WRITING_KEY);
+    if (savedWriting) {
+      state.writingStats = JSON.parse(savedWriting);
     }
   } catch (e) {
     console.warn('LocalStorage error:', e);
@@ -145,11 +158,13 @@ function resetAllProgress() {
   state.scores = {};
   state.errorQuestionsPool = [];
   state.cocktailMastery = {};
+  state.writingStats = { bestSprint: 0, bestAll36: 0, totalPlayed: 0 };
 
   try {
     localStorage.removeItem(STORAGE_SCORES_KEY);
     localStorage.removeItem(STORAGE_ERRORS_KEY);
     localStorage.removeItem(STORAGE_MASTERY_KEY);
+    localStorage.removeItem(STORAGE_WRITING_KEY);
   } catch (e) {
     console.warn('LocalStorage reset error:', e);
   }
@@ -2260,3 +2275,670 @@ function closeVerrerieModal() {
   if (modal) modal.classList.remove('active');
 }
 
+
+
+// ==========================================
+// DÉFI DE L'ÉCRITURE — SPEAKEASY RECITATION CHALLENGE
+// ==========================================
+
+function saveWritingStatsToStorage() {
+  try {
+    localStorage.setItem(STORAGE_WRITING_KEY, JSON.stringify(state.writingStats));
+  } catch (e) {
+    console.warn('LocalStorage writing save error:', e);
+  }
+}
+
+function updateWritingCardStatus() {
+  const el = document.getElementById('writing-challenge-card-status');
+  if (!el) return;
+  const stats = state.writingStats || {};
+  if (stats.bestSprint > 0 || stats.bestAll36 > 0) {
+    if (stats.bestAll36 > 0) {
+      el.textContent = `Record Grand Chelem : ${stats.bestAll36} sur 36`;
+    } else {
+      el.textContent = `Record Sprint : ${stats.bestSprint} sur 10`;
+    }
+  } else {
+    el.textContent = '36 classiques du socle';
+  }
+}
+
+function openWritingChallengeHub() {
+  playSound('click');
+  navigateTo('writing-challenge');
+  renderWritingChallengeHub();
+}
+
+function renderWritingChallengeHub() {
+  const container = document.getElementById('writing-challenge-content');
+  if (!container) return;
+
+  const stats = state.writingStats || { bestSprint: 0, bestAll36: 0, totalPlayed: 0 };
+
+  container.innerHTML = `
+    <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 4px;">
+      <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.82rem;" onclick="navigateTo('home')">
+        ← Retour aux modules
+      </button>
+      <span class="module-number-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
+        Mode Écriture
+      </span>
+    </div>
+
+    <div class="writing-hub-hero">
+      <div style="font-size: 2.8rem; filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.4));">✍️</div>
+      <h2 style="font-family: var(--font-display); font-size: 1.8rem; font-weight: 800; color: #ffffff; margin: 0;">
+        Le Défi de l'Écriture
+      </h2>
+      <p style="font-size: 0.95rem; color: #cbd5e1; max-width: 560px; margin: 0 auto; line-height: 1.55;">
+        Testez votre mémoire de barman : à partir des dosages, du verre, de la méthode et de la garniture, écrivez sans faute le nom officiel exact du cocktail classique.
+      </p>
+
+      ${stats.totalPlayed > 0 ? `
+        <div style="display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 4px;">
+          <span class="writing-stat-badge gold">⭐ Record Sprint : ${stats.bestSprint} sur 10</span>
+          ${stats.bestAll36 > 0 ? `<span class="writing-stat-badge gold">🏆 Record Grand Chelem : ${stats.bestAll36} sur 36</span>` : ''}
+          <span class="writing-stat-badge">🎮 Sessions jouées : ${stats.totalPlayed}</span>
+        </div>
+      ` : ''}
+
+      <div class="writing-modes-grid">
+        <!-- Mode 1 : Sprint 10 -->
+        <div class="writing-mode-card" onclick="startWritingChallenge('sprint10')">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span style="font-size: 1.8rem;">⚡</span>
+              <span class="module-number-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+                Rapide
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">
+              Sprint 10 Cocktails
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+              Une sélection aléatoire de 10 recettes cultes du socle officiel pour un entraînement rapide et dynamique.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 6px;">
+            <span style="font-size: 0.78rem; color: #fbbf24; font-weight: 700;">10 questions</span>
+            <span class="module-start-btn">Démarrer ➔</span>
+          </div>
+        </div>
+
+        <!-- Mode 2 : Grand Chelem 36 -->
+        <div class="writing-mode-card" style="border-color: rgba(212, 175, 55, 0.45); background: linear-gradient(180deg, rgba(212, 175, 55, 0.08) 0%, rgba(14, 18, 27, 0.75) 100%);" onclick="startWritingChallenge('all36')">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span style="font-size: 1.8rem;">🏆</span>
+              <span class="module-number-badge" style="background: rgba(245, 158, 11, 0.2); color: #fbbf24; border-color: rgba(245, 158, 11, 0.4);">
+                Élite
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #fbbf24; margin-bottom: 6px;">
+              Le Grand Chelem
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+              L'intégralité des 36 cocktails du référentiel officiel 2025 / 2026. L'épreuve suprême de récitation.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 6px;">
+            <span style="font-size: 0.78rem; color: #fbbf24; font-weight: 700;">36 fiches complètes</span>
+            <span class="module-start-btn">Relever l'épreuve ➔</span>
+          </div>
+        </div>
+
+        <!-- Mode 3 : Short Drinks -->
+        <div class="writing-mode-card" onclick="startWritingChallenge('short')">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span style="font-size: 1.8rem;">🍸</span>
+              <span class="module-number-badge" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
+                Short Drinks
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">
+              Les 18 Short Drinks
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+              Entraînez-vous exclusivement sur les cocktails courts servis avec moins de 100 ml au verre.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 6px;">
+            <span style="font-size: 0.78rem; color: #34d399; font-weight: 700;">18 cocktails</span>
+            <span class="module-start-btn">Démarrer ➔</span>
+          </div>
+        </div>
+
+        <!-- Mode 4 : Long Drinks -->
+        <div class="writing-mode-card" onclick="startWritingChallenge('long')">
+          <div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
+              <span style="font-size: 1.8rem;">🍹</span>
+              <span class="module-number-badge" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border-color: rgba(244, 63, 94, 0.3);">
+                Long Drinks
+              </span>
+            </div>
+            <h3 style="font-size: 1.15rem; font-weight: 800; color: #ffffff; margin-bottom: 6px;">
+              Les 18 Long Drinks
+            </h3>
+            <p style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.45;">
+              Entraînez-vous sur les cocktails allongés servis avec 100 ml ou plus au verre.
+            </p>
+          </div>
+          <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--border-color); padding-top: 10px; margin-top: 6px;">
+            <span style="font-size: 0.78rem; color: #fb7185; font-weight: 700;">18 cocktails</span>
+            <span class="module-start-btn">Démarrer ➔</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function startWritingChallenge(mode = 'sprint10') {
+  playSound('click');
+  let pool = [...APP_DATA.cocktails];
+
+  if (mode === 'short') {
+    pool = pool.filter(c => c.category === 'SHORT drink');
+  } else if (mode === 'long') {
+    pool = pool.filter(c => c.category === 'LONG drink');
+  }
+
+  // Shuffle pool with Fisher-Yates
+  for (let i = pool.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [pool[i], pool[j]] = [pool[j], pool[i]];
+  }
+
+  if (mode === 'sprint10') {
+    pool = pool.slice(0, 10);
+  }
+
+  state.activeWriting = {
+    cocktails: pool,
+    currentIndex: 0,
+    score: 0,
+    streak: 0,
+    answered: false,
+    userAnswer: '',
+    revealedHint: false,
+    mode: mode,
+    history: []
+  };
+
+  navigateTo('writing-challenge');
+  renderWritingChallengeStep();
+}
+
+function checkCocktailSpelling(userInput, cocktail) {
+  const normInput = normalizeSearchText(userInput);
+  if (!normInput) return false;
+
+  const normOfficial = normalizeSearchText(cocktail.name);
+  if (normInput === normOfficial) return true;
+
+  const aliasesMap = {
+    'aviation': ['aviation'],
+    'bamboo': ['bamboo'],
+    'bramble': ['bramble'],
+    'caipirinha': ['caipirinha', 'caipirinia'],
+    'cosmopolitan': ['cosmopolitan', 'cosmo'],
+    'daiquiri': ['daiquiri', 'daquiri'],
+    'dry martini': ['dry martini', 'martini dry', 'classic martini'],
+    'espresso martini': ['espresso martini', 'expresso martini'],
+    'gin basil smash': ['gin basil smash', 'basil smash'],
+    'manhattan': ['manhattan'],
+    'margarita': ['margarita'],
+    'mint julep': ['mint julep', 'julep'],
+    'negroni': ['negroni'],
+    'old-fashioned': ['old fashioned', 'oldfashioned', 'old fashion'],
+    'penicillin': ['penicillin', 'penicilline'],
+    'pornstar martini': ['pornstar martini', 'porn star martini', 'pornstar'],
+    'sidecar': ['sidecar', 'side car'],
+    'sour': ['sour', 'whiskey sour', 'whisky sour'],
+    'americano': ['americano'],
+    'bellini': ['bellini'],
+    'bloody mary': ['bloody mary'],
+    'champagne cocktail': ['champagne cocktail'],
+    'dark and stormy': ['dark and stormy', 'dark & stormy', 'dark n stormy', 'dark stormy'],
+    'fizz': ['fizz', 'gin fizz'],
+    'french 75': ['french 75', 'french75', 'soixante quinze'],
+    'horses neck': ['horses neck', 'horse neck'],
+    'mai tai': ['mai tai', 'maitai'],
+    'mojito': ['mojito'],
+    'moscow mule': ['moscow mule'],
+    'paloma': ['paloma'],
+    'pina colada': ['pina colada', 'pinacolada'],
+    'planters punch': ['planters punch', 'planter punch'],
+    'rum swizzle': ['rum swizzle', 'rhum swizzle'],
+    'sex on the beach': ['sex on the beach'],
+    'spritz': ['spritz', 'venetian spritz', 'aperol spritz'],
+    'tequila sunrise': ['tequila sunrise']
+  };
+
+  const list = aliasesMap[normOfficial] || [normOfficial];
+  return list.some(alias => normalizeSearchText(alias) === normInput);
+}
+
+function generateCocktailMask(name) {
+  return name.split(' ').map(word => {
+    if (word.length <= 1) return word;
+    return word[0] + ' ' + '_ '.repeat(word.length - 1).trim();
+  }).join('   ');
+}
+
+function renderWritingChallengeStep() {
+  const container = document.getElementById('writing-challenge-content');
+  const active = state.activeWriting;
+  if (!container || !active) return;
+
+  const cocktail = active.cocktails[active.currentIndex];
+  if (!cocktail) {
+    renderWritingChallengeResults();
+    return;
+  }
+
+  const progressPct = Math.round(((active.currentIndex) / active.cocktails.length) * 100);
+  const methodStr = Array.isArray(cocktail.method) ? cocktail.method.join(' ou ') : cocktail.method;
+  const ingredientsList = cocktail.ingredients || (cocktail.ingredientsDetailed ? cocktail.ingredientsDetailed.map(i => `${i.volume} ${i.unit} ${i.name}`) : []);
+
+  container.innerHTML = `
+    <!-- Top Bar Navigation -->
+    <div class="writing-top-bar">
+      <button class="btn btn-secondary" style="padding: 6px 14px; font-size: 0.82rem;" onclick="confirmExitWritingChallenge()">
+        ✕ Quitter le défi
+      </button>
+
+      <div class="writing-stats-row">
+        <span class="writing-stat-badge gold">
+          ⭐ Score : ${active.score} sur ${active.cocktails.length}
+        </span>
+        ${active.streak > 1 ? `
+          <span class="writing-stat-badge fire">
+            🔥 Série : ${active.streak}
+          </span>
+        ` : ''}
+      </div>
+
+      <div class="quiz-counter" style="font-size: 0.85rem; font-weight: 800; color: var(--text-accent);">
+        Cocktail ${active.currentIndex + 1} sur ${active.cocktails.length}
+      </div>
+    </div>
+
+    <!-- Progress Bar -->
+    <div class="quiz-progress-track">
+      <div class="quiz-progress-fill" style="width: ${progressPct}%; background: var(--gold-gradient);"></div>
+    </div>
+
+    <!-- Main Clue Card -->
+    <div class="writing-card-box" id="writing-card-box">
+      <div class="writing-card-header">
+        <div>
+          <div class="writing-mystery-title">
+            <span>🍸</span> Cocktail Mystère N° ${active.currentIndex + 1}
+          </div>
+          <div class="writing-mystery-subtitle">
+            Déchiffrez les éléments ci-dessous et saisissez le nom exact de ce classique.
+          </div>
+        </div>
+        <div style="display: flex; gap: 8px; flex-wrap: wrap;">
+          <span class="module-number-badge" style="background: rgba(244, 63, 94, 0.15); color: #fb7185; border-color: rgba(244, 63, 94, 0.3);">
+            ${cocktail.category}
+          </span>
+          <span class="cocktail-tav-badge" style="font-size: 0.8rem; padding: 4px 10px;">
+            TAV ${cocktail.tav}
+          </span>
+        </div>
+      </div>
+
+      <!-- Bento Clues Grid -->
+      <div class="writing-clues-grid">
+        <!-- Box 1 : Ingrédients & Dosages -->
+        <div class="writing-clue-box">
+          <div class="writing-clue-box-title">
+            <span>📝</span> Ingrédients & Dosages Officiels
+          </div>
+          <ul class="writing-ingredients-list">
+            ${ingredientsList.map(ing => `
+              <li class="writing-ingredient-item">
+                <span style="color: #fbbf24; font-weight: 800;">•</span>
+                <span>${ing}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <!-- Box 2 : Caractéristiques de Service -->
+        <div class="writing-clue-box">
+          <div class="writing-clue-box-title">
+            <span>⚙️</span> Fiche Technique de Service
+          </div>
+          <div class="writing-specs-list">
+            <div class="writing-spec-row">
+              <span class="writing-spec-label">⏰ Moment de dégustation</span>
+              <span class="writing-spec-value">${cocktail.type}</span>
+            </div>
+            <div class="writing-spec-row">
+              <span class="writing-spec-label">🥄 Méthode d'élaboration</span>
+              <span class="writing-spec-value">${methodStr}</span>
+            </div>
+            <div class="writing-spec-row">
+              <span class="writing-spec-label">🥂 Verrerie officielle</span>
+              <span class="writing-spec-value">${cocktail.glass}</span>
+            </div>
+            <div class="writing-spec-row">
+              <span class="writing-spec-label">🍒 Garniture & Décoration</span>
+              <span class="writing-spec-value">${cocktail.garnish}</span>
+            </div>
+            <div class="writing-spec-row">
+              <span class="writing-spec-label">🧊 Glaçons</span>
+              <span class="writing-spec-value">${cocktail.ice || 'Sans glace'}</span>
+            </div>
+            ${cocktail.profile ? `
+              <div class="writing-spec-row">
+                <span class="writing-spec-label">👅 Profil gustatif</span>
+                <span class="writing-spec-value" style="color: #e6c280;">${cocktail.profile}</span>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="writing-input-section" id="writing-input-section">
+        <label for="writing-answer-input" class="writing-input-label">
+          <span>✍️</span> Quel est le nom exact de ce cocktail classique ?
+        </label>
+        
+        <div class="writing-input-row">
+          <input 
+            type="text" 
+            id="writing-answer-input" 
+            class="writing-input-field" 
+            placeholder="Écrivez le nom officiel du cocktail..." 
+            autocomplete="off" 
+            autocorrect="off" 
+            spellcheck="false"
+          >
+          <button class="btn btn-primary" id="btn-validate-writing" onclick="validateWritingAnswer()" style="padding: 14px 24px; font-weight: 800; white-space: nowrap;">
+            Valider ➔
+          </button>
+        </div>
+
+        <div class="writing-actions-row">
+          <div id="writing-hint-container">
+            <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 12px;" onclick="revealWritingHint()">
+              💡 Demander un indice
+            </button>
+          </div>
+          <span style="font-size: 0.76rem; color: var(--text-muted);">
+            Astuce : appuyez sur la touche Entrée pour valider directement
+          </span>
+        </div>
+      </div>
+
+      <!-- Feedback Area (injected on validation) -->
+      <div id="writing-feedback-area" class="hidden"></div>
+    </div>
+  `;
+
+  const inputEl = document.getElementById('writing-answer-input');
+  if (inputEl) {
+    inputEl.focus();
+    inputEl.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        if (!state.activeWriting.answered) {
+          validateWritingAnswer();
+        } else {
+          handleWritingNextStep();
+        }
+      }
+    });
+  }
+}
+
+function revealWritingHint() {
+  playSound('click');
+  const active = state.activeWriting;
+  if (!active || active.answered) return;
+  const cocktail = active.cocktails[active.currentIndex];
+  if (!cocktail) return;
+
+  active.revealedHint = true;
+  const hintContainer = document.getElementById('writing-hint-container');
+  if (hintContainer) {
+    const mask = generateCocktailMask(cocktail.name);
+    hintContainer.innerHTML = `
+      <div class="writing-hint-display">
+        <span>💡 Indice :</span>
+        <strong style="color: #fbbf24;">${mask}</strong>
+      </div>
+    `;
+  }
+}
+
+function validateWritingAnswer() {
+  const active = state.activeWriting;
+  if (!active || active.answered) return;
+
+  const inputEl = document.getElementById('writing-answer-input');
+  if (!inputEl) return;
+
+  const rawVal = inputEl.value.trim();
+  if (!rawVal) {
+    inputEl.focus();
+    inputEl.style.borderColor = '#f59e0b';
+    setTimeout(() => {
+      inputEl.style.borderColor = '';
+    }, 800);
+    return;
+  }
+
+  active.answered = true;
+  active.userAnswer = rawVal;
+  const cocktail = active.cocktails[active.currentIndex];
+  const isMatch = checkCocktailSpelling(rawVal, cocktail);
+
+  const cardBox = document.getElementById('writing-card-box');
+  const feedbackArea = document.getElementById('writing-feedback-area');
+  const valBtn = document.getElementById('btn-validate-writing');
+
+  inputEl.disabled = true;
+  if (valBtn) valBtn.classList.add('hidden');
+
+  if (isMatch) {
+    playSound('correct');
+    active.score++;
+    active.streak++;
+    inputEl.classList.add('input-correct');
+    if (cardBox) cardBox.classList.add('state-correct');
+
+    active.history.push({
+      cocktailId: cocktail.id,
+      cocktailName: cocktail.name,
+      userAnswer: rawVal,
+      isCorrect: true
+    });
+
+    if (feedbackArea) {
+      feedbackArea.classList.remove('hidden');
+      feedbackArea.innerHTML = `
+        <div class="writing-feedback-banner correct">
+          <div class="writing-feedback-title correct">
+            <span>🎉</span> Excellente réponse ! C'est exactement le ${cocktail.name.toUpperCase()} !
+          </div>
+          <div style="font-size: 0.88rem; color: #e2e8f0; line-height: 1.55;">
+            Orthographe et recette maîtrisées avec précision. Bravo pour cette récitation sans faute.
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="flex: 1;" onclick="handleWritingNextStep()">
+              ${active.currentIndex + 1 < active.cocktails.length ? 'Cocktail Suivant ➔' : 'Découvrir mon Bilan Final ➔'}
+            </button>
+            <button class="btn btn-secondary" onclick="openCocktailModal('${cocktail.id}')">
+              📖 Voir la fiche technique
+            </button>
+          </div>
+        </div>
+      `;
+    }
+  } else {
+    playSound('wrong');
+    active.streak = 0;
+    inputEl.classList.add('input-wrong');
+    if (cardBox) cardBox.classList.add('state-wrong');
+
+    active.history.push({
+      cocktailId: cocktail.id,
+      cocktailName: cocktail.name,
+      userAnswer: rawVal,
+      isCorrect: false
+    });
+
+    if (feedbackArea) {
+      feedbackArea.classList.remove('hidden');
+      feedbackArea.innerHTML = `
+        <div class="writing-feedback-banner wrong">
+          <div class="writing-feedback-title wrong">
+            <span>❌</span> Ce n'est pas tout à fait la bonne réponse !
+          </div>
+          <div style="font-size: 0.92rem; color: #ffffff; line-height: 1.55;">
+            • La bonne réponse était : <strong style="color: #fbbf24; font-size: 1.05rem;">${cocktail.name}</strong><br>
+            • Vous aviez saisi : <span style="color: #fb7185; font-style: italic;">« ${rawVal} »</span>
+          </div>
+          <div style="display: flex; gap: 10px; margin-top: 10px; flex-wrap: wrap;">
+            <button class="btn btn-primary" style="flex: 1;" onclick="handleWritingNextStep()">
+              ${active.currentIndex + 1 < active.cocktails.length ? 'Cocktail Suivant ➔' : 'Découvrir mon Bilan Final ➔'}
+            </button>
+            <button class="btn btn-secondary" onclick="openCocktailModal('${cocktail.id}')">
+              📖 Consulter la fiche officielle
+            </button>
+          </div>
+        </div>
+      `;
+    }
+  }
+
+  feedbackArea?.scrollIntoView({ behavior: 'smooth' });
+}
+
+function handleWritingNextStep() {
+  playSound('click');
+  const active = state.activeWriting;
+  if (!active) return;
+
+  active.currentIndex++;
+  active.answered = false;
+  active.userAnswer = '';
+  active.revealedHint = false;
+
+  if (active.currentIndex < active.cocktails.length) {
+    renderWritingChallengeStep();
+  } else {
+    renderWritingChallengeResults();
+  }
+}
+
+function confirmExitWritingChallenge() {
+  playSound('click');
+  if (confirm('Voulez-vous vraiment quitter ce défi en cours ?')) {
+    openWritingChallengeHub();
+  }
+}
+
+function renderWritingChallengeResults() {
+  const container = document.getElementById('writing-challenge-content');
+  const active = state.activeWriting;
+  if (!container || !active) return;
+
+  const total = active.cocktails.length;
+  const score = active.score;
+  const percentage = Math.round((score / total) * 100);
+
+  // Update stats
+  if (!state.writingStats) state.writingStats = { bestSprint: 0, bestAll36: 0, totalPlayed: 0 };
+  state.writingStats.totalPlayed++;
+
+  if (active.mode === 'sprint10') {
+    state.writingStats.bestSprint = Math.max(state.writingStats.bestSprint, score);
+  } else if (active.mode === 'all36') {
+    state.writingStats.bestAll36 = Math.max(state.writingStats.bestAll36, score);
+  }
+
+  saveWritingStatsToStorage();
+  updateWritingCardStatus();
+
+  let rankTitle = 'Apprenti en Formation';
+  let rankIcon = '📚';
+  let rankDesc = 'Continuez à réviser régulièrement les 36 fiches techniques pour mémoriser parfaitement chaque recette.';
+
+  if (percentage === 100) {
+    rankTitle = 'Maître Mixologue Immortel';
+    rankIcon = '🏆';
+    rankDesc = 'Score parfait ! Votre mémoire et votre connaissance des cocktails classiques du référentiel sont irréprochables.';
+    playSound('correct');
+  } else if (percentage >= 80) {
+    rankTitle = 'Chef Barman d’Élite';
+    rankIcon = '⭐';
+    rankDesc = 'Excellente performance ! Vous maîtrisez les recettes du socle avec une grande régularité.';
+    playSound('correct');
+  } else if (percentage >= 60) {
+    rankTitle = 'Barman Confirmé';
+    rankIcon = '🍸';
+    rankDesc = 'Un solide niveau de connaissances. Encore quelques détails de recettes à peaufiner pour viser la perfection.';
+  }
+
+  container.innerHTML = `
+    <div class="results-card" style="max-width: 680px; margin: 0 auto; animation: fadeIn 0.35s ease;">
+      <div class="results-trophy">${rankIcon}</div>
+      <h2 class="results-title">${rankTitle}</h2>
+      <p class="results-subtitle">${rankDesc}</p>
+
+      <div class="score-display-circle" style="margin: 20px auto;">
+        <div class="score-number">${score} / ${total}</div>
+        <div class="score-total">${percentage} % de Réussite</div>
+      </div>
+
+      <!-- Recap List of Cocktails -->
+      <div style="text-align: left; margin: 24px 0 20px 0;">
+        <h4 style="font-size: 0.95rem; font-weight: 800; color: #fbbf24; margin-bottom: 12px; display: flex; align-items: center; gap: 8px;">
+          <span>📋</span> Bilan détaillé de votre session :
+        </h4>
+        <div style="display: flex; flex-direction: column; gap: 8px; max-height: 280px; overflow-y: auto; padding-right: 6px;">
+          ${active.history.map(item => `
+            <div style="display: flex; align-items: center; justify-content: space-between; padding: 10px 14px; background: rgba(255, 255, 255, 0.03); border: 1px solid ${item.isCorrect ? 'rgba(16, 185, 129, 0.3)' : 'rgba(244, 63, 94, 0.3)'}; border-radius: var(--radius-sm);">
+              <div style="display: flex; align-items: center; gap: 10px;">
+                <span style="font-size: 1.1rem;">${item.isCorrect ? '✅' : '❌'}</span>
+                <div>
+                  <div style="font-weight: 700; color: #ffffff; font-size: 0.92rem;">
+                    ${item.cocktailName}
+                  </div>
+                  <div style="font-size: 0.78rem; color: ${item.isCorrect ? '#34d399' : '#fb7185'};">
+                    Votre réponse : « ${item.userAnswer} »
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-secondary" style="font-size: 0.72rem; padding: 4px 8px;" onclick="openCocktailModal('${item.cocktailId}')">
+                Fiche ➔
+              </button>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+
+      <!-- Action Buttons -->
+      <div class="results-actions-grid">
+        <button class="btn btn-primary" onclick="startWritingChallenge('${active.mode}')">
+          ▶ Rejouer ce mode
+        </button>
+        <button class="btn btn-secondary" onclick="openWritingChallengeHub()">
+          ✍️ Choisir un autre mode
+        </button>
+        <button class="btn btn-secondary" style="grid-column: 1 / -1;" onclick="navigateTo('home')">
+          🏠 Retour à l'accueil
+        </button>
+      </div>
+    </div>
+  `;
+}

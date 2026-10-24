@@ -258,25 +258,23 @@
         </div>
 
         <!-- Card 1: Le Défi de l'Écriture -->
-        <div class="module-card extra-card" style="border-left: 3px solid #f59e0b;">
+        <div class="module-card extra-card" style="border-left: 3px solid #f59e0b; cursor: pointer;" onclick="openWritingChallengeHub()">
           <div>
             <div class="module-card-header">
-              <span class="module-number-badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
+              <span class="module-number-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
                 Mode Écriture
               </span>
               <span class="module-icon">✍️</span>
             </div>
             <h3 class="module-title">Le Défi de l'Écriture</h3>
             <p class="module-subtitle">
-              À partir de la liste des ingrédients, écrivez sans aucune faute d'orthographe le nom exact du cocktail classique.
+              À partir des ingrédients, de la garniture et du type de verre, écrivez sans aucune faute le nom exact du cocktail classique.
             </p>
           </div>
 
           <div class="module-footer">
-            <span class="module-score-status">Épellation & Récitation</span>
-            <span class="module-number-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border-color: var(--border-color);">
-              🔒 Bientôt disponible
-            </span>
+            <span class="module-score-status" id="writing-challenge-card-status">36 classiques du socle</span>
+            <span class="module-start-btn">Relever le défi ➔</span>
           </div>
         </div>
 
@@ -457,6 +455,15 @@
          ========================================== -->
     <section id="view-cocktail-practice" class="view-section hidden">
       <div class="cocktail-practice-container" id="cocktail-practice-content">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW : DÉFI DE L'ÉCRITURE (SPEAKEASY RECITATION)
+         ========================================== -->
+    <section id="view-writing-challenge" class="view-section hidden">
+      <div class="writing-challenge-container" id="writing-challenge-content">
         <!-- Injected dynamically via JS -->
       </div>
     </section>
