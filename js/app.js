@@ -30,6 +30,8 @@ const STORAGE_SCORES_KEY = 'mixology_master_scores_v1';
 const STORAGE_ERRORS_KEY = 'mixology_master_errors_v1';
 const STORAGE_MASTERY_KEY = 'mixology_cocktail_mastery_v1';
 const STORAGE_WRITING_KEY = 'mixology_writing_challenge_v1';
+const CURRENT_APP_VERSION = '1.2.0';
+const STORAGE_SEEN_VERSION_KEY = 'mixology_release_notes_seen_version';
 
 // Web Audio Context for tactile sounds
 let audioCtx = null;
@@ -105,6 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
   if (typeof updateWritingCardStatus === 'function') {
     updateWritingCardStatus();
   }
+  checkReleaseNotesOnStartup();
 });
 
 // Load saved data from localStorage
@@ -1603,7 +1606,11 @@ function closeOfficialModal() {
 
 function closeModalOnOverlay(e, modalId) {
   if (e.target.id === modalId) {
-    document.getElementById(modalId).classList.remove('active');
+    if (modalId === 'modal-release-notes') {
+      closeReleaseNotesModal();
+    } else {
+      document.getElementById(modalId).classList.remove('active');
+    }
   }
 }
 
@@ -2941,4 +2948,39 @@ function renderWritingChallengeResults() {
       </div>
     </div>
   `;
+}
+
+
+// ==========================================
+// POPUP NOUVEAUTÉS & RELEASE NOTES V1.2.0
+// ==========================================
+
+function checkReleaseNotesOnStartup() {
+  try {
+    const seenVersion = localStorage.getItem(STORAGE_SEEN_VERSION_KEY);
+    if (seenVersion !== CURRENT_APP_VERSION) {
+      setTimeout(() => {
+        openReleaseNotesModal();
+      }, 550);
+    }
+  } catch (e) {
+    console.warn('LocalStorage version check error:', e);
+  }
+}
+
+function openReleaseNotesModal() {
+  playSound('click');
+  const modal = document.getElementById('modal-release-notes');
+  if (modal) modal.classList.add('active');
+}
+
+function closeReleaseNotesModal() {
+  playSound('click');
+  const modal = document.getElementById('modal-release-notes');
+  if (modal) modal.classList.remove('active');
+  try {
+    localStorage.setItem(STORAGE_SEEN_VERSION_KEY, CURRENT_APP_VERSION);
+  } catch (e) {
+    console.warn('LocalStorage save version error:', e);
+  }
 }

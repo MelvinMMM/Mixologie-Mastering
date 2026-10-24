@@ -52,7 +52,10 @@
         </div>
       </div>
       
-      <div class="header-actions" style="display: flex; align-items: center; gap: 10px;">
+      <div class="header-actions" style="display: flex; align-items: center; gap: 8px;">
+        <button class="btn btn-secondary btn-header-pill" onclick="openReleaseNotesModal()" title="Nouveautés de la mise à jour">
+          ✨ Nouveautés
+        </button>
         <button class="btn btn-secondary btn-header-pill" onclick="openOfficialModal()">
           📜 Le Socle
         </button>
@@ -635,6 +638,90 @@
   <div class="modal-overlay" id="modal-verrerie" onclick="closeModalOnOverlay(event, 'modal-verrerie')">
     <div class="modal-card" id="verrerie-detail-content">
       <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL : NOUVEAUTÉS & MISE À JOUR (RELEASE NOTES)
+       ========================================== -->
+  <div class="modal-overlay" id="modal-release-notes" onclick="closeModalOnOverlay(event, 'modal-release-notes')">
+    <div class="modal-card" style="max-width: 620px;">
+      <button class="modal-close-btn" onclick="closeReleaseNotesModal()">✕</button>
+      
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+        <span style="font-size: 2.2rem;">🍸</span>
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: #fbbf24; margin: 0;">
+              Mise à jour disponible
+            </h3>
+            <span class="hero-version-pill" style="font-size: 0.72rem; padding: 2px 8px;">v1.2.0 Speakeasy</span>
+          </div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin: 2px 0 0 0;">
+            Découvrez les nouvelles fonctionnalités du référentiel officiel
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; margin: 18px 0;">
+        <!-- Feature 1: Défi de l'Écriture -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">✍️</span>
+          <div>
+            <div style="font-weight: 800; color: #fcebc5; font-size: 0.95rem; margin-bottom: 2px;">
+              Le Défi de l'Écriture
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Nouveau mode interactif : retrouvez de mémoire le nom exact des 36 cocktails à partir de leurs dosages, garnitures et verres de service.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2: PDF Officiel -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">📄</span>
+          <div>
+            <div style="font-weight: 800; color: #7dd3fc; font-size: 0.95rem; margin-bottom: 2px;">
+              Document Officiel Téléchargeable
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Accès direct et téléchargement du PDF officiel complet du socle national des cocktails de référence 2025 / 2026.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Recherche Intelligente -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">🔍</span>
+          <div>
+            <div style="font-weight: 800; color: #34d399; font-size: 0.95rem; margin-bottom: 2px;">
+              Recherche Instantanée & Tolérante
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Moteur de recherche unifié sur les 36 fiches cocktails, la verrerie et le lexique, insensible aux accents, tirets et apostrophes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4: Reset & Speakeasy V2 -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">🔄</span>
+          <div>
+            <div style="font-weight: 800; color: #ffffff; font-size: 0.95rem; margin-bottom: 2px;">
+              Bouton Reset & Nouvelle Interface V2
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Remise à zéro des scores en un clic, analytics bento et design Speakeasy Velvet Obsidian.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;">
+        <button class="btn btn-primary" style="flex: 1;" onclick="closeReleaseNotesModal()">
+          C'est parti, explorer les nouveautés ➔
+        </button>
+      </div>
     </div>
   </div>
 
