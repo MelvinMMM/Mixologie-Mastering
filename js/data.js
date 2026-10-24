@@ -1678,13 +1678,13 @@ const APP_DATA = {
       "badge": "Daiquiri",
       "question": "Quelle est la recette officielle du DAIQUIRI classique ?",
       "options": [
-        "50 ml Rhum blanc cubain, 20 ml Jus de citron vert, 15 ml Sirop de sucre",
+        "40 ml Ron cubain 3 anos, 20 ml Jus de citron vert, 1 bar spoon Sucre en poudre",
         "40 ml Rhum ambré, 40 ml Jus d'ananas, 20 ml Lait de coco",
         "50 ml Cachaça, 1 citron vert entier, 2 cuillères de sucre",
         "40 ml Tequila, 20 ml Sirop d'agave, 20 ml Citron vert"
       ],
       "correctAnswer": 0,
-      "explanation": "Le Daiquiri : 50 ml Rhum blanc cubain, 20 ml Jus de citron vert, 15 ml Sirop de sucre. Frappé au shaker et servi en Nick & Nora."
+      "explanation": "Le Daiquiri : 40 ml Ron cubain 3 anos, 20 ml Jus de citron vert, 1 bar spoon Sucre en poudre. Frappé au shaker et servi en Coupe."
     },
     {
       "id": "m7_q9",
@@ -2613,7 +2613,7 @@ const APP_DATA = {
           "unit": "ml"
         },
         {
-          "name": "Rhum cubain",
+          "name": "Ron cubain 3 anos",
           "volume": 40,
           "unit": "ml"
         }
@@ -2636,7 +2636,7 @@ const APP_DATA = {
       "ingredients": [
         "1 bar spoon Sucre en poudre",
         "20 ml Jus de citron vert",
-        "40 ml Rhum cubain"
+        "40 ml Ron cubain 3 anos"
       ]
     },
     {
@@ -2760,7 +2760,7 @@ const APP_DATA = {
         },
         {
           "name": "Feuilles de basilic",
-          "volume": 10,
+          "volume": 9,
           "unit": "feuilles"
         }
       ],
@@ -2783,7 +2783,7 @@ const APP_DATA = {
         "15 ml Sirop de sucre",
         "20 ml Jus de citron",
         "50 ml Gin",
-        "10 feuilles Feuilles de basilic"
+        "9 feuilles de basilic"
       ]
     },
     {
@@ -3140,7 +3140,7 @@ const APP_DATA = {
       "type": "ALL DAY COCKTAIL",
       "glass": "Coupe",
       "method": "Shaker",
-      "tav": "38 %",
+      "tav": "36 %",
       "profile": "Riche, hespéridé et puissant",
       "ingredientsDetailed": [
         {
@@ -3170,7 +3170,7 @@ const APP_DATA = {
         "30 %",
         "32 %",
         "33 %",
-        "38 %"
+        "36 %"
       ],
       "history": "Classique des années 1920 popularisé à Paris et Londres durant l’entre-deux-guerres.",
       "technique": "Mirer et remplir le verre Coupe de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Retirer la glace du verre et égoutter la grande timbale du shaker. Frapper puis passer dans le verre rafraîchi.",
@@ -3325,7 +3325,7 @@ const APP_DATA = {
       "id": "bloody_mary",
       "name": "Bloody Mary",
       "category": "LONG drink",
-      "type": "ALL DAY COCKTAIL",
+      "type": "BEFORE DINNER",
       "glass": "Highball",
       "method": "Direct au verre",
       "tav": "13 %",
@@ -3724,7 +3724,7 @@ const APP_DATA = {
           "unit": "ml"
         },
         {
-          "name": "Rhum cubain",
+          "name": "Ron cubain",
           "volume": 50,
           "unit": "ml"
         },
@@ -3748,12 +3748,12 @@ const APP_DATA = {
         "13 %"
       ],
       "history": "Boisson emblématique de Cuba rendue célèbre par Ernest Hemingway à La Havane.",
-      "technique": "Mirer le verre Highball. Déposer les feuilles de menthe, le sucre en poudre et le jus de citron vert. Piler très délicatement pour exprimer les essences sans broyer la menthe. Remplir de glace pilée. Verser le rhum cubain et l’eau gazeuse. Mélanger à la cuillère de bar de bas en haut. Compléter de glace pilée. Garnir d’une tranche de citron vert et d’une belle tête de menthe fraîche. Ajouter une paille.",
+      "technique": "Mirer le verre Highball. Déposer les feuilles de menthe, le sucre en poudre et le jus de citron vert. Piler très délicatement pour exprimer les essences sans broyer la menthe. Remplir de glace pilée. Verser le ron cubain et l’eau gazeuse. Mélanger à la cuillère de bar de bas en haut. Compléter de glace pilée. Garnir d’une tranche de citron vert et d’une belle tête de menthe fraîche. Ajouter une paille.",
       "ingredients": [
-        "10 feuilles Feuilles de menthe",
+        "10 feuilles de menthe",
         "1 bar spoon Sucre en poudre",
         "20 ml Jus de citron vert",
-        "50 ml Rhum cubain",
+        "50 ml Ron cubain",
         "50 ml Eau gazeuse"
       ]
     },
@@ -3880,7 +3880,7 @@ const APP_DATA = {
         },
         {
           "name": "Jus d'ananas",
-          "volume": 30,
+          "volume": 60,
           "unit": "ml"
         },
         {
@@ -3906,7 +3906,7 @@ const APP_DATA = {
       "technique": "Mirer et remplir le verre Highball de glace. Remplir la grande timbale du shaker de glace. Rafraîchir le verre avec la cuillère de bar. Verser les ingrédients dans la petite timbale du shaker. Égoutter le verre et la grande timbale. Frapper vigoureusement puis passer dans le verre rempli de glace. Garnir d’un quartier d’ananas et d’une cerise à l’eau-de-vie. Ajouter une paille.",
       "ingredients": [
         "20 ml Crème de noix de coco",
-        "30 ml Jus d'ananas",
+        "60 ml Jus d'ananas",
         "40 ml Rhum blanc"
       ]
     },
@@ -3990,7 +3990,7 @@ const APP_DATA = {
           "unit": "ml"
         },
         {
-          "name": "Falernum",
+          "name": "Velvet Falernum",
           "volume": 20,
           "unit": "ml"
         },
@@ -4023,7 +4023,7 @@ const APP_DATA = {
       "ingredients": [
         "20 ml Sirop de sucre",
         "30 ml Jus de citron vert",
-        "20 ml Falernum",
+        "20 ml Velvet Falernum",
         "50 ml Rhum ambré",
         "2 traits Aromatic bitters"
       ]
@@ -4422,4 +4422,564 @@ const APP_DATA = {
       "def": "Action de mélanger intimement deux substances non miscibles et d’incorporer de l’air à l’aide d’un émulsifiant comme le blanc d’œuf ou l’aquafaba pour créer une texture onctueuse et une mousse persistante."
     }
   ]
+,
+  "verrerie": [
+  {
+    "id": "shot",
+    "name": "Shot (Shooter)",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/shot.png",
+    "capacity": "30 à 60 ml",
+    "usage": "Spiritueux purs, shooters frappés",
+    "description": "Petit verre cylindrique à fond épais et résistant sans pied. Conçu pour le service et la consommation rapide d'un trait (one shot) de spiritueux purs, de liqueurs ou de cocktails courts frappés.",
+    "cocktails": [
+      "Shooters",
+      "Dégustation pure",
+      "B-52"
+    ]
+  },
+  {
+    "id": "highball",
+    "name": "Highball (Tumbler)",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/highball.png",
+    "capacity": "240 à 350 ml",
+    "usage": "Long drinks rafraîchissants et allongés",
+    "description": "Grand verre haut et cylindrique. C'est le verre de référence pour les Long drinks servis sur abondance de glaçons et allongés avec un soda, de l'eau gazeuse, du tonic ou des jus.",
+    "cocktails": [
+      "Mojito",
+      "Piña Colada",
+      "Bloody Mary",
+      "Dark and Stormy",
+      "Horse's Neck",
+      "Paloma",
+      "Planter's Punch",
+      "Rum Swizzle",
+      "Sex On The Beach",
+      "Tequila Sunrise"
+    ]
+  },
+  {
+    "id": "rocks",
+    "name": "Rocks (Old-Fashioned)",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/rocks.png",
+    "capacity": "180 à 300 ml",
+    "usage": "Short drinks sur glace (on the rocks)",
+    "description": "Verre bas, large et cylindrique doté d'un fond de verre très épais. Conçu pour accueillir de gros blocs ou sphères de glace, et résister à la pression du pilon lors de la dissolution du sucre.",
+    "cocktails": [
+      "Old-Fashioned",
+      "Negroni",
+      "Caipirinha",
+      "Penicillin",
+      "Mint Julep",
+      "Americano",
+      "Bramble"
+    ]
+  },
+  {
+    "id": "mule",
+    "name": "Timbale Mule (Copper Mug)",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/mule.png",
+    "capacity": "350 à 450 ml",
+    "usage": "Mules et cocktails à la bière de gingembre",
+    "description": "Timbale métallique traditionnelle en cuivre martelé munie d'une anse. Sa conductivité thermique exceptionnelle provoque un givrage instantané des parois extérieures et maintient la boisson glaciale.",
+    "cocktails": [
+      "Moscow Mule",
+      "London Mule",
+      "Mexican Mule"
+    ]
+  },
+  {
+    "id": "degustation",
+    "name": "Verre Dégustation",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/degustation.png",
+    "capacity": "120 à 200 ml",
+    "usage": "Spiritueux fins et eaux-de-vie de prestige",
+    "description": "Verre sur pied en forme de tulipe resserrée vers le buvant. Sa chambre d'aération concentre les composés aromatiques volatils sans saturer les narines d'alcool pur.",
+    "cocktails": [
+      "Cognac",
+      "Armagnac",
+      "Calvados",
+      "Single Malt Whisky",
+      "Rhum vieux"
+    ]
+  },
+  {
+    "id": "nick_nora",
+    "name": "Nick & Nora",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/nick_nora.png",
+    "capacity": "140 à 180 ml",
+    "usage": "Short drinks raffinés servis sans glace (up)",
+    "description": "Verre rétro sur pied à calice demi-sphérique incurvé aux bords droits. Devenu le verre favori des mixologues modernes, il prévient les déversements accidentels tout en isolant le liquide de la chaleur de la main.",
+    "cocktails": [
+      "Aviation",
+      "Cosmopolitan",
+      "Daiquiri",
+      "Dry Martini",
+      "Manhattan",
+      "Margarita",
+      "Sidecar"
+    ]
+  },
+  {
+    "id": "coupe",
+    "name": "Coupe (Coupe à cocktail)",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/coupe.png",
+    "capacity": "150 à 220 ml",
+    "usage": "Cocktails émulsionnés, crémeux ou pétillants",
+    "description": "Verre sur pied à calice évasé et arrondi. Très polyvalent, il offre une large surface pour contempler la mousse soyeuse des émulsions au shaker (blanc d'œuf, aquafaba) et accueillir les garnitures flottantes.",
+    "cocktails": [
+      "Pornstar Martini",
+      "Espresso Martini",
+      "Bamboo",
+      "Gin Basil Smash",
+      "Whiskey Sour"
+    ]
+  },
+  {
+    "id": "martini",
+    "name": "Verre Martini (Cocktail Glass)",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/martini.png",
+    "capacity": "150 à 200 ml",
+    "usage": "Cocktails classiques d'apéritif servis sans glace",
+    "description": "Verre emblématique en forme de cône évasé en 'V' sur une haute jambe élégante. La forme en entonnoir met en valeur les arômes et maintient le cocktail frais en éloignant la main du calice.",
+    "cocktails": [
+      "Dry Martini",
+      "Espresso Martini",
+      "Cosmopolitan",
+      "Manhattan"
+    ]
+  },
+  {
+    "id": "vin",
+    "name": "Verre à Vin",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/vin.png",
+    "capacity": "350 à 500 ml",
+    "usage": "Spritz et cocktails apéritifs pétillants",
+    "description": "Grand verre ballon sur pied élancé. Dans le bar moderne, sa contenance généreuse permet d'empiler une grande quantité de glace cube, de vin pétillant et de tranches d'agrumes fraîches.",
+    "cocktails": [
+      "Spritz",
+      "Hugo Spritz",
+      "Cocktails apéritifs au vin pétillant"
+    ]
+  },
+  {
+    "id": "flute",
+    "name": "Flûte",
+    "category": "incontournable",
+    "categoryLabel": "Incontournable",
+    "partie": 5,
+    "image": "assets/verres/flute.png",
+    "capacity": "150 à 180 ml",
+    "usage": "Cocktails au Champagne et vins effervescents",
+    "description": "Verre haut et effilé sur pied. Sa colonne étroite ralentit la déperdition du gaz carbonique et guide la colonne de bulles vers la surface pour une effervescence prolongée.",
+    "cocktails": [
+      "Bellini",
+      "French 75",
+      "Champagne Cocktail",
+      "Mimosa"
+    ]
+  },
+  {
+    "id": "digestif",
+    "name": "Verre Digestif",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/digestif.png",
+    "capacity": "60 à 120 ml",
+    "usage": "Liqueurs et digestifs d'après-repas (After dinner)",
+    "description": "Petit verre sur pied réservé aux alcools doux, liqueurs artisanales de plantes ou de fruits et eaux-de-vie blanches dégustées à température ambiante ou fraîches après le repas.",
+    "cocktails": [
+      "Liqueurs traditionnelles",
+      "Grappa",
+      "Eaux-de-vie de fruits"
+    ]
+  },
+  {
+    "id": "absinthe",
+    "name": "Verre à Absinthe",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/absinthe.png",
+    "capacity": "200 à 300 ml",
+    "usage": "Rituel traditionnel de l'absinthe",
+    "description": "Verre spécifique doté d'une bulle ou d'un renflement gradué à sa base permettant de mesurer la dose d'absinthe avant de verser l'eau glacée goutte à goutte sur le sucre posé sur la cuillère perforée.",
+    "cocktails": [
+      "Absinthe rituelle (effet louche)",
+      "Sazerac traditionnel"
+    ]
+  },
+  {
+    "id": "toddy",
+    "name": "Verre Toddy",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/toddy.png",
+    "capacity": "200 à 250 ml",
+    "usage": "Cocktails chauds et réconfortants (Hot drinks)",
+    "description": "Verre en verre trempé renforcé équipé d'une anse protectrice. Conçu pour résister aux chocs thermiques lors de l'ajout d'eau bouillante, de thé chaud ou de café chaud sans fissurer.",
+    "cocktails": [
+      "Hot Toddy",
+      "Irish Coffee",
+      "Grog chaud",
+      "Vin chaud épicé"
+    ]
+  },
+  {
+    "id": "punch",
+    "name": "Verre Punch",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/punch.png",
+    "capacity": "150 à 200 ml",
+    "usage": "Service individuel de punchs partagés",
+    "description": "Petite tasse ou coupe en verre souvent assortie au grand bol à punch collectif (Punch Bowl), utilisée pour servir les punchs festifs aux agrumes et épices.",
+    "cocktails": [
+      "Punch planteur traditionnel",
+      "Punch bowl festif partagé"
+    ]
+  },
+  {
+    "id": "hurricane",
+    "name": "Verre Hurricane",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/hurricane.png",
+    "capacity": "400 à 600 ml",
+    "usage": "Cocktails exotiques, fruités et généreux",
+    "description": "Grand verre aux courbes douces imitant le globe d'une lampe tempête. Sa très grande contenance convient aux cocktails tropicaux complexes à étages et aux garnitures luxuriantes.",
+    "cocktails": [
+      "Hurricane",
+      "Piña Colada géante",
+      "Blue Hawaiian",
+      "Singapore Sling"
+    ]
+  },
+  {
+    "id": "copa",
+    "name": "Verre Copa",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/copa.png",
+    "capacity": "500 à 700 ml",
+    "usage": "Gin & Tonic à l'espagnole (Gin Tonic Perfecto)",
+    "description": "Très grand verre ballon inspiré de la culture espagnole des bars à tapas. Il permet de marier une grande quantité de glace pure, du gin de dégustation et des garnitures botaniques aromatiques.",
+    "cocktails": [
+      "Spanish Gin Tonic",
+      "Cocktails floraux et herbacés",
+      "Spritz XXL"
+    ]
+  },
+  {
+    "id": "biere",
+    "name": "Verre / Chope à Bière",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/biere.png",
+    "capacity": "250 à 500 ml",
+    "usage": "Service de bières et cocktails brassés",
+    "description": "Chope solide à poignée épaisse ou verre tulipe, conçu pour réguler le col de mousse et maintenir la fraîcheur des bières et cocktails hybrides bière-spiritueux.",
+    "cocktails": [
+      "Black Velvet",
+      "Michelada",
+      "Monaco",
+      "Submarino"
+    ]
+  },
+  {
+    "id": "julep",
+    "name": "Timbale Julep",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/julep.png",
+    "capacity": "350 à 400 ml",
+    "usage": "Mint Julep et cocktails sur glace pilée tassée",
+    "description": "Timbale conique en métal argenté ou acier inoxydable. Emblème historique du Kentucky Derby, le contact continu avec la glace pilée crée une coque de givre blanche spectaculaire sur tout le tour.",
+    "cocktails": [
+      "Mint Julep officiel",
+      "Whiskey Julep",
+      "Georgia Mint Julep"
+    ]
+  },
+  {
+    "id": "tiki",
+    "name": "Mug Tiki",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/tiki.png",
+    "capacity": "400 à 600 ml",
+    "usage": "Cocktails de la culture Tiki et rhums arrangés",
+    "description": "Récipient sculpté en céramique émaillée représentant un masque, un totem ou un dieu polynésien. Élément visuel théâtral indissociable des cocktails polynésiens riches en rhums et épices.",
+    "cocktails": [
+      "Mai Tai",
+      "Zombie",
+      "Scorpion",
+      "Navy Grog",
+      "Painkiller"
+    ]
+  },
+  {
+    "id": "fantaisie",
+    "name": "Verre Fantaisie",
+    "category": "complementaire",
+    "categoryLabel": "Complémentaire",
+    "partie": 5,
+    "image": "assets/verres/fantaisie.png",
+    "capacity": "Variable",
+    "usage": "Créations signatures et service spectaculaire",
+    "description": "Verrerie déstructurée ou objets insolites (ampoules, oiseaux en verre soufflé, crânes, coquillages, fumerolles sous cloche). Utilisé dans les bars d'avant-garde pour marquer les esprits.",
+    "cocktails": [
+      "Créations signatures haute mixologie",
+      "Cocktails multisensoriels"
+    ]
+  }
+],
+  "materiel": [
+  {
+    "id": "doseur",
+    "name": "Doseur (Jigger)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/doseur.png",
+    "capacity": "Double cône (20/40 ml ou 25/50 ml)",
+    "usage": "Mesure exacte des volumes",
+    "description": "Outil essentiel en sablier en acier inoxydable. Il permet de doser au millilitre près les spiritueux, sirops et jus afin de garantir la régularité, le respect des fiches techniques et la rentabilité.",
+    "cocktails": [
+      "Utilisé pour l'ensemble des 36 cocktails officiels"
+    ]
+  },
+  {
+    "id": "verre_a_melange",
+    "name": "Verre à Mélange (Mixing Glass)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/verre_a_melange.png",
+    "capacity": "500 à 750 ml",
+    "usage": "Rafraîchir et mélanger les alcools limpides",
+    "description": "Récipient en verre lourd ou ciselé avec bec verseur. Conçu pour remuer à la cuillère les cocktails composés d'alcools et de vermouths afin de les rafraîchir et les diluer sans les troubler de micro-bulles.",
+    "cocktails": [
+      "Dry Martini",
+      "Manhattan",
+      "Negroni",
+      "Bamboo"
+    ]
+  },
+  {
+    "id": "passoire_cocktail",
+    "name": "Passoire à Cocktail (Hawthorne Strainer)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/passoire_cocktail.png",
+    "capacity": "Standard",
+    "usage": "Filtration de la glace après frappe au shaker",
+    "description": "Disque métallique perforé doté d'un ressort en spirale amovible. Le ressort s'adapte parfaitement à l'ouverture de la timbale de shaker pour retenir la glace pilée ou cube lors du versement.",
+    "cocktails": [
+      "Aviation",
+      "Cosmopolitan",
+      "Daiquiri",
+      "Margarita",
+      "Sidecar"
+    ]
+  },
+  {
+    "id": "passoire_fine",
+    "name": "Passoire Fine (Tamis Conique)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/passoire_fine.png",
+    "capacity": "Standard",
+    "usage": "Double filtration (Double strain)",
+    "description": "Petite passoire conique à tamis métallique ultra-serré. Tenue au-dessus du verre lors du service, elle intercepte les petits cristaux de glace, pulpes d'agrumes et résidus d'herbes pour un résultat limpide.",
+    "cocktails": [
+      "Gin Basil Smash",
+      "Aviation",
+      "Cosmopolitan",
+      "Daiquiri"
+    ]
+  },
+  {
+    "id": "pilon",
+    "name": "Pilon (Muddler)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/pilon.png",
+    "capacity": "Standard",
+    "usage": "Extraction des jus, huiles aromatiques et sucre",
+    "description": "Instrument cylindrique lourd en bois dur, inox ou polyéthylène. Permet de presser les morceaux de fruits (citron vert) ou d'exprimer avec délicatesse les feuilles de menthe ou basilic sans les hacher.",
+    "cocktails": [
+      "Caipirinha",
+      "Mojito",
+      "Gin Basil Smash",
+      "Old-Fashioned"
+    ]
+  },
+  {
+    "id": "cuillere_de_bar",
+    "name": "Cuillère de Bar (Bar Spoon)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/cuillere_de_bar.png",
+    "capacity": "1 cuillère de bar = 5 ml",
+    "usage": "Mélanger, rafraîchir, doser et guider les bulles",
+    "description": "Cuillère à long manche torsadé en spirale terminé par un pilon plat ou une goutte. La spirale tourne fluidement entre les doigts le long du verre à mélange et permet de faire glisser les sodas sans briser les bulles.",
+    "cocktails": [
+      "Dry Martini",
+      "Negroni",
+      "Spritz",
+      "Mojito",
+      "Americano"
+    ]
+  },
+  {
+    "id": "shaker_boston",
+    "name": "Shaker Boston (Double Tin)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/shaker_boston.png",
+    "capacity": "Grande timbale 800 ml + Petite timbale 500 ml",
+    "usage": "Frappe puissante, aération et émulsion rapide",
+    "description": "Composé de deux timbales inox (ou verre et métal) qui s'emboîtent avec un axe désaxé pour assurer une étanchéité par dépression. C'est l'ustensile roi de la vitesse et de l'aération vigoureuse.",
+    "cocktails": [
+      "Piña Colada",
+      "Whiskey Sour",
+      "Gin Basil Smash",
+      "Aviation",
+      "Cosmopolitan"
+    ]
+  },
+  {
+    "id": "presse_agrumes",
+    "name": "Presse-Agrumes (Juicer Manuel)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/presse_agrumes.png",
+    "capacity": "Demi-citron vert / jaune",
+    "usage": "Extraction minute de jus d'agrumes purs",
+    "description": "Presse-agrumes manuel à levier en métal émaillé ou inox. Il extrait le jus frais instantanément sans comprimer excessivement la membrane blanche amère (albédo) de l'écorce.",
+    "cocktails": [
+      "Daiquiri",
+      "Margarita",
+      "French 75",
+      "Sour"
+    ]
+  },
+  {
+    "id": "passoire_a_julep",
+    "name": "Passoire à Julep (Julep Strainer)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/passoire_a_julep.png",
+    "capacity": "Standard",
+    "usage": "Filtration exclusive du verre à mélange",
+    "description": "Coupelle ovale incurvée et perforée de multiples trous, sans ressort. Elle s'emboîte de biais dans le verre à mélange pour bloquer la glace rafraîchie lors de la verse.",
+    "cocktails": [
+      "Dry Martini",
+      "Manhattan",
+      "Negroni",
+      "Bamboo"
+    ]
+  },
+  {
+    "id": "eplucheur",
+    "name": "Éplucheur (Zesteur / Peeler)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/eplucheur.png",
+    "capacity": "Standard",
+    "usage": "Découpe nette de rubans et zestes d'agrumes",
+    "description": "Couteau économe en forme de Y avec lame très affûtée. Permet de prélever un zeste souple, régulier et saturé d'essences végétales sans entamer la partie blanche amère.",
+    "cocktails": [
+      "Horse's Neck",
+      "Dry Martini",
+      "Negroni",
+      "Old-Fashioned"
+    ]
+  },
+  {
+    "id": "bec_verseur",
+    "name": "Bec Verseur (Speed Pourer)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/bec_verseur.png",
+    "capacity": "Débit calibré (environ 10 ml/seconde)",
+    "usage": "Verse précise, rapide et fluide",
+    "description": "Bec en métal avec joint en caoutchouc à lamelles et tube de mise à l'air libre. Enfoncé dans le goulot des bouteilles, il garantit un filet de liquide régulier et sans à-coups.",
+    "cocktails": [
+      "Utilisé sur toutes les bouteilles de service rapide au bar"
+    ]
+  },
+  {
+    "id": "shaker_continental",
+    "name": "Shaker Continental (Parisien)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/shaker_continental.png",
+    "capacity": "500 à 700 ml",
+    "usage": "Shaker deux pièces au design classique européen",
+    "description": "Shaker tout inox constitué de deux timbales qui s'emboîtent sans décalage avec une ligne incurvée raffinée. Se manipule avec élégance et requiert une passoire à cocktail pour le service.",
+    "cocktails": [
+      "Short drinks et créations de palace"
+    ]
+  },
+  {
+    "id": "shaker_trois_pieces",
+    "name": "Shaker Trois Pièces (Cobbler Shaker)",
+    "category": "materiel",
+    "categoryLabel": "Matériel du Barman",
+    "partie": 6,
+    "image": "assets/materiel/shaker_trois_pieces.png",
+    "capacity": "350 à 500 ml",
+    "usage": "Service individuel tout-en-un",
+    "description": "Shaker historique comprenant une timbale inférieure, un couvercle intermédiaire doté d'une passoire perforée intégrée, et un petit bouchon chapeau pouvant servir de mesure d'appoint.",
+    "cocktails": [
+      "Service individuel au comptoir ou en salle"
+    ]
+  }
+]
 };

@@ -8,34 +8,58 @@
   <title>Mixology Master — QCM & Révision Officielle</title>
   
   <!-- Favicon & Stylesheet -->
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Plus Jakarta Sans', var(--font-sans);
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+  <!-- Desktop Floating Sidebar Dock (Speakeasy Layout) -->
+  <aside class="desktop-floating-dock" aria-label="Navigation principale">
+    <div class="dock-inner">
+      <button class="dock-btn active" id="dock-home" onclick="navigateTo('home')" title="Accueil & Modules">
+        <span class="dock-icon">🏠</span>
+        <span class="dock-label">Accueil</span>
+      </button>
+      <button class="dock-btn" id="dock-cocktails" onclick="navigateTo('cocktails')" title="36 Cocktails Officiels">
+        <span class="dock-icon">🍹</span>
+        <span class="dock-label">Cocktails</span>
+      </button>
+      <button class="dock-btn" id="dock-verrerie" onclick="navigateTo('verrerie')" title="Verrerie & Matériel (Parties 5 & 6)">
+        <span class="dock-icon">🥂</span>
+        <span class="dock-label">Verrerie</span>
+      </button>
+      <button class="dock-btn" id="dock-lexique" onclick="navigateTo('lexique')" title="Lexique Professionnel (Partie 9)">
+        <span class="dock-icon">📖</span>
+        <span class="dock-label">Lexique</span>
+      </button>
+    </div>
+  </aside>
 
   <!-- Top Sticky Header -->
   <header class="app-header">
     <div class="app-container" style="display: flex; width: 100%; align-items: center; justify-content: space-between;">
       <div class="brand" onclick="navigateTo('home')">
-        <span class="brand-icon">🍸</span>
+        <div class="brand-icon-wrap">
+          <span class="brand-icon">🍸</span>
+        </div>
         <div>
           <div class="brand-title">MIXOLOGY MASTER</div>
-          <div class="brand-subtitle">Référentiel Officiel 2025/2026</div>
+          <div class="brand-subtitle">
+            <span class="brand-badge-v2">VERSION 2.0</span> • Référentiel Officiel 2025/2026
+          </div>
         </div>
       </div>
       
       <div class="header-actions" style="display: flex; align-items: center; gap: 8px;">
-        <button class="btn btn-secondary" style="font-size: 0.8rem; padding: 6px 12px;" onclick="openOfficialModal()">
+        <button class="btn btn-secondary btn-header-pill" onclick="openReleaseNotesModal()" title="Nouveautés de la mise à jour">
+          ✨ Nouveautés
+        </button>
+        <button class="btn btn-secondary btn-header-pill" onclick="openOfficialModal()">
           📜 Le Socle
         </button>
-        <button class="btn btn-secondary btn-reset-progress" style="font-size: 0.8rem; padding: 6px 12px; border-color: rgba(239, 68, 68, 0.4); color: #f87171;" onclick="resetAllProgress()" title="Réinitialiser la progression">
+        <button class="btn btn-secondary btn-reset-progress btn-header-pill" onclick="resetAllProgress()" title="Réinitialiser la progression">
           🔄 Reset
         </button>
       </div>
@@ -56,7 +80,7 @@
           <span class="banner-icon">⭐</span>
           <div class="banner-text">
             <h4>Socle des Cocktails de Référence</h4>
-            <p>Conforme au programme officiel des formations barman & mixologie (2025/2026)</p>
+            <p>Conforme au programme officiel des formations barman & mixologie — Édition 2025 / 2026</p>
           </div>
         </div>
         <div class="banner-link-tag">
@@ -64,21 +88,110 @@
         </div>
       </div>
 
-      <!-- Stats & Global Progress Hero Card -->
-      <div class="stats-hero-card">
-        <div class="stat-item">
-          <div class="stat-label">Réussite Globale</div>
-          <div class="stat-value" id="global-score-display">0 <span>%</span></div>
-          <div class="stat-progress-bar">
-            <div class="stat-progress-fill" id="global-progress-bar" style="width: 0%;"></div>
+      <!-- Stats & Global Progress Hero Bento Card -->
+      <div class="stats-hero-bento">
+        <div class="hero-bento-header">
+          <div class="hero-bento-title-group">
+            <span class="hero-live-dot"></span>
+            <h3 class="hero-bento-title">Tableau de Bord & Analytics</h3>
           </div>
+          <span class="hero-version-pill">Tableau de bord V2</span>
         </div>
 
-        <div class="stat-item">
-          <div class="stat-label">Modules Complétés</div>
-          <div class="stat-value" id="modules-completed-display">0 <span>/ 9</span></div>
-          <div class="stat-progress-bar">
-            <div class="stat-progress-fill" id="modules-progress-bar" style="width: 0%;"></div>
+        <div class="hero-bento-body">
+          <!-- Left: Gauges Cluster (3 Circular Rings) -->
+          <div class="hero-gauges-cluster">
+            <!-- Gauge 1 : Global Mastery -->
+            <div class="hero-gauge-item" title="Taux de réussite globale">
+              <div class="circular-gauge-wrap">
+                <svg class="circular-gauge-svg" viewBox="0 0 88 88">
+                  <circle class="gauge-bg" cx="44" cy="44" r="36"></circle>
+                  <circle class="gauge-fill gauge-fill-mastery" id="gauge-circle-mastery" cx="44" cy="44" r="36" stroke-dasharray="226.2" stroke-dashoffset="226.2"></circle>
+                </svg>
+                <div class="gauge-center-text">
+                  <span class="gauge-num" id="global-score-display">0</span>
+                  <span class="gauge-unit">%</span>
+                </div>
+              </div>
+              <span class="gauge-caption">Cocktail Mastery</span>
+            </div>
+
+            <!-- Gauge 2 : Modules Completed -->
+            <div class="hero-gauge-item" title="Modules officiels validés">
+              <div class="circular-gauge-wrap">
+                <svg class="circular-gauge-svg" viewBox="0 0 88 88">
+                  <circle class="gauge-bg" cx="44" cy="44" r="36"></circle>
+                  <circle class="gauge-fill gauge-fill-modules" id="gauge-circle-modules" cx="44" cy="44" r="36" stroke-dasharray="226.2" stroke-dashoffset="226.2"></circle>
+                </svg>
+                <div class="gauge-center-text">
+                  <span class="gauge-num" id="modules-completed-gauge-num">0</span>
+                  <span class="gauge-unit">/9</span>
+                </div>
+              </div>
+              <span class="gauge-caption">Modules Socle</span>
+            </div>
+
+            <!-- Gauge 3 : 36 Cocktails Mastered -->
+            <div class="hero-gauge-item" title="Fiches cocktails maîtrisées">
+              <div class="circular-gauge-wrap">
+                <svg class="circular-gauge-svg" viewBox="0 0 88 88">
+                  <circle class="gauge-bg" cx="44" cy="44" r="36"></circle>
+                  <circle class="gauge-fill gauge-fill-cocktails" id="gauge-circle-cocktails" cx="44" cy="44" r="36" stroke-dasharray="226.2" stroke-dashoffset="226.2"></circle>
+                </svg>
+                <div class="gauge-center-text">
+                  <span class="gauge-num" id="cocktails-mastered-gauge-num">0</span>
+                  <span class="gauge-unit">/36</span>
+                </div>
+              </div>
+              <span class="gauge-caption">36 Cocktails</span>
+            </div>
+          </div>
+
+          <!-- Right: Key Learning Metrics Grid -->
+          <div class="hero-metrics-grid">
+            <div class="hero-metric-card">
+              <span class="metric-label">Taux de Réussite</span>
+              <div class="metric-value-row">
+                <span class="metric-val" id="metric-global-score">0%</span>
+                <span class="metric-tag gold">Précision</span>
+              </div>
+              <div class="stat-progress-bar">
+                <div class="stat-progress-fill" id="global-progress-bar" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="hero-metric-card">
+              <span class="metric-label">Modules Validés</span>
+              <div class="metric-value-row">
+                <span class="metric-val" id="modules-completed-display">0 <span>/ 9</span></span>
+                <span class="metric-tag amber">Socle</span>
+              </div>
+              <div class="stat-progress-bar">
+                <div class="stat-progress-fill" id="modules-progress-bar" style="width: 0%;"></div>
+              </div>
+            </div>
+
+            <div class="hero-metric-card">
+              <span class="metric-label">36 Fiches Cultes</span>
+              <div class="metric-value-row">
+                <span class="metric-val" id="metric-cocktails-mastered">0 <span>/ 36</span></span>
+                <span class="metric-tag cyan">Recettes</span>
+              </div>
+              <div class="stat-progress-bar">
+                <div class="stat-progress-fill" id="cocktails-progress-bar" style="width: 0%; background: var(--cyan-accent);"></div>
+              </div>
+            </div>
+
+            <div class="hero-metric-card">
+              <span class="metric-label">Questions Maîtrisées</span>
+              <div class="metric-value-row">
+                <span class="metric-val" id="metric-questions-count">95 <span>QCM</span></span>
+                <span class="metric-tag emerald">Examen</span>
+              </div>
+              <div class="stat-progress-bar">
+                <div class="stat-progress-fill" id="questions-progress-bar" style="width: 100%; background: linear-gradient(90deg, #10b981, #059669);"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -124,26 +237,47 @@
       </div>
 
       <div class="extra-grid">
-        <!-- Card 1: Le Défi de l'Écriture -->
-        <div class="module-card extra-card" style="border-left: 3px solid #f59e0b;">
+        <!-- Card 0: Verrerie & Matériel (Consultation Officielle) -->
+        <div class="module-card extra-card" style="border-left: 3px solid #38bdf8; cursor: pointer;" onclick="navigateTo('verrerie')">
           <div>
             <div class="module-card-header">
-              <span class="module-number-badge" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
+              <span class="module-number-badge" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border-color: rgba(56, 189, 248, 0.3);">
+                Parties 5 & 6
+              </span>
+              <span class="module-icon">🥂</span>
+            </div>
+            <h3 class="module-title">Verrerie & Matériel du Barman</h3>
+            <p class="module-subtitle">
+              Consultez les 20 verres officiels (Incontournables et Complémentaires) et les 13 outils du barman avec leurs fiches visuelles complètes.
+            </p>
+          </div>
+
+          <div class="module-footer">
+            <span class="module-score-status" style="color: #38bdf8;">33 fiches illustrées</span>
+            <span class="module-start-btn" style="background: rgba(56, 189, 248, 0.15); color: #38bdf8; border: 1px solid rgba(56, 189, 248, 0.3);">
+              Consulter ➔
+            </span>
+          </div>
+        </div>
+
+        <!-- Card 1: Le Défi de l'Écriture -->
+        <div class="module-card extra-card" style="border-left: 3px solid #f59e0b; cursor: pointer;" onclick="openWritingChallengeHub()">
+          <div>
+            <div class="module-card-header">
+              <span class="module-number-badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; border-color: rgba(245, 158, 11, 0.3);">
                 Mode Écriture
               </span>
               <span class="module-icon">✍️</span>
             </div>
             <h3 class="module-title">Le Défi de l'Écriture</h3>
             <p class="module-subtitle">
-              À partir de la liste des ingrédients, écrivez sans aucune faute d'orthographe le nom exact du cocktail classique.
+              À partir des ingrédients, de la garniture et du type de verre, écrivez sans aucune faute le nom exact du cocktail classique.
             </p>
           </div>
 
           <div class="module-footer">
-            <span class="module-score-status">Épellation & Récitation</span>
-            <span class="module-number-badge" style="background: rgba(255, 255, 255, 0.05); color: var(--text-muted); border-color: var(--border-color);">
-              🔒 Bientôt disponible
-            </span>
+            <span class="module-score-status" id="writing-challenge-card-status">36 classiques du socle</span>
+            <span class="module-start-btn">Relever le défi ➔</span>
           </div>
         </div>
 
@@ -329,6 +463,15 @@
     </section>
 
     <!-- ==========================================
+         VIEW : DÉFI DE L'ÉCRITURE (SPEAKEASY RECITATION)
+         ========================================== -->
+    <section id="view-writing-challenge" class="view-section hidden">
+      <div class="writing-challenge-container" id="writing-challenge-content">
+        <!-- Injected dynamically via JS -->
+      </div>
+    </section>
+
+    <!-- ==========================================
          VIEW 4 : COCKTAILS EXPLORER (36 RECETTES)
          ========================================== -->
     <section id="view-cocktails" class="view-section hidden">
@@ -358,6 +501,38 @@
 
       <!-- Cocktails Grid -->
       <div class="cocktails-grid" id="cocktails-grid-container">
+        <!-- Injected via JavaScript -->
+      </div>
+    </section>
+
+    <!-- ==========================================
+         VIEW 6 : VERRERIE & MATÉRIEL DU BARMAN (PARTIES 5 & 6)
+         ========================================== -->
+    <section id="view-verrerie" class="view-section hidden">
+      <div class="section-header">
+        <h2 class="section-title"><span>🥂</span> Verrerie & Matériel</h2>
+        <span class="section-badge" style="background: rgba(6, 182, 212, 0.15); color: #38bdf8; border: 1px solid rgba(6, 182, 212, 0.3);">
+          Parties 5 & 6 du Socle
+        </span>
+      </div>
+
+      <!-- Search & Filters -->
+      <div class="search-filter-box">
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input type="text" id="verrerie-search-input" class="search-input" placeholder="Rechercher un verre, un ustensile, une contenance, un cocktail..." oninput="filterVerrerie()">
+        </div>
+
+        <div class="filter-pills-row" id="verrerie-filter-pills">
+          <button class="filter-pill active" onclick="setVerrerieFilter('all')">Tous (33)</button>
+          <button class="filter-pill" onclick="setVerrerieFilter('incontournable')">⭐ Incontournables (10)</button>
+          <button class="filter-pill" onclick="setVerrerieFilter('complementaire')">✨ Complémentaires (10)</button>
+          <button class="filter-pill" onclick="setVerrerieFilter('materiel')">🛠️ Matériel (13)</button>
+        </div>
+      </div>
+
+      <!-- Verrerie & Material Grid -->
+      <div class="verrerie-grid" id="verrerie-grid-container">
         <!-- Injected via JavaScript -->
       </div>
     </section>
@@ -404,27 +579,47 @@
           Cette application interactive a été conçue pour offrir un outil d'apprentissage et de révision exhaustif, fondé à 100% sur le document officiel <strong>« Socle des cocktails de référence »</strong>.
         </p>
         <p>
-          Ce référentiel constitue la base réglementaire et technique pour les formations de barmans et mixologues en France (Mention Complémentaire Barman, Brevet Professionnel, concours et examens officiels).
+          Ce référentiel constitue la base réglementaire et technique pour les formations de barmans et mixologues en France, notamment pour la Mention Complémentaire Barman, le Brevet Professionnel ainsi que les concours et examens officiels.
         </p>
+
+        <!-- Direct PDF Access Card -->
+        <div style="background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(14, 18, 27, 0.85) 100%); border: 1px solid rgba(212, 175, 55, 0.35); padding: 14px 16px; border-radius: var(--radius-md); display: flex; align-items: center; justify-content: space-between; gap: 12px; margin: 4px 0;">
+          <div style="display: flex; align-items: center; gap: 12px;">
+            <span style="font-size: 1.8rem;">📥</span>
+            <div>
+              <div style="font-weight: 700; color: #fbbf24; font-size: 0.95rem;">Document PDF Officiel du Référentiel</div>
+              <div style="font-size: 0.78rem; color: #94a3b8;">Format PDF complet disponible en consultation directe ou téléchargement</div>
+            </div>
+          </div>
+          <a href="docs/socle-des-cocktails-de-re-ference-version-finale-12-2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; border-color: rgba(212, 175, 55, 0.5); color: #fbbf24; font-weight: 700; white-space: nowrap;">
+            Ouvrir le PDF ➔
+          </a>
+        </div>
+
         <div style="background: rgba(245, 158, 11, 0.1); border-left: 3px solid #f59e0b; padding: 12px; border-radius: 4px; font-size: 0.85rem;">
           <strong>Les 9 axes d'apprentissage :</strong>
           <ul style="margin-left: 18px; margin-top: 6px;">
             <li>1. Guide des bonnes pratiques pour les créations</li>
-            <li>2. Catégories & Types de cocktails (Short/Long, Before/After/All Day)</li>
-            <li>3. Familles de cocktails (Sour, Fizz, Colada, Julep, Tiki...)</li>
-            <li>4. Méthodes de réalisation (Shaker, Verre à mélange, Direct, Blender)</li>
-            <li>5. Verrerie de service (Incontournables et Complémentaires)</li>
+            <li>2. Catégories & Types de cocktails : Short ou Long drinks, Before ou After Dinner, All Day</li>
+            <li>3. Familles de cocktails : Sour, Fizz, Colada, Julep, Tiki et autres</li>
+            <li>4. Méthodes de réalisation : Shaker, Verre à mélange, Direct au verre, Blender</li>
+            <li>5. Verrerie de service : Incontournables et Complémentaires</li>
             <li>6. Matériel et ustensiles du barman</li>
             <li>7. Fiches techniques des 36 cocktails cultes</li>
-            <li>8. Calcul du Titre Alcoométrique Volumique (TAV)</li>
+            <li>8. Calcul du Titre Alcoométrique Volumique — TAV</li>
             <li>9. Lexique professionnel officiel</li>
           </ul>
         </div>
       </div>
 
-      <button class="btn btn-primary" style="width: 100%; margin-top: 20px;" onclick="closeOfficialModal()">
-        J'ai compris, place aux révisions !
-      </button>
+      <div style="display: flex; gap: 12px; margin-top: 20px; flex-wrap: wrap;">
+        <a href="docs/socle-des-cocktails-de-re-ference-version-finale-12-2026.pdf" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="flex: 1; text-align: center; text-decoration: none; display: flex; align-items: center; justify-content: center; gap: 8px; border-color: rgba(212, 175, 55, 0.4); color: #fbbf24; font-weight: 700;">
+          📄 Consulter le document officiel
+        </a>
+        <button class="btn btn-primary" style="flex: 1;" onclick="closeOfficialModal()">
+          J'ai compris, place aux révisions !
+        </button>
+      </div>
     </div>
   </div>
 
@@ -434,6 +629,99 @@
   <div class="modal-overlay" id="modal-cocktail" onclick="closeModalOnOverlay(event, 'modal-cocktail')">
     <div class="modal-card" id="cocktail-detail-content">
       <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL : VERRERIE & MATÉRIEL DETAIL
+       ========================================== -->
+  <div class="modal-overlay" id="modal-verrerie" onclick="closeModalOnOverlay(event, 'modal-verrerie')">
+    <div class="modal-card" id="verrerie-detail-content">
+      <!-- Injected via JavaScript -->
+    </div>
+  </div>
+
+  <!-- ==========================================
+       MODAL : NOUVEAUTÉS & MISE À JOUR (RELEASE NOTES)
+       ========================================== -->
+  <div class="modal-overlay" id="modal-release-notes" onclick="closeModalOnOverlay(event, 'modal-release-notes')">
+    <div class="modal-card" style="max-width: 620px;">
+      <button class="modal-close-btn" onclick="closeReleaseNotesModal()">✕</button>
+      
+      <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+        <span style="font-size: 2.2rem;">🍸</span>
+        <div>
+          <div style="display: flex; align-items: center; gap: 8px;">
+            <h3 style="font-size: 1.35rem; font-weight: 800; color: #fbbf24; margin: 0;">
+              Mise à jour disponible
+            </h3>
+            <span class="hero-version-pill" style="font-size: 0.72rem; padding: 2px 8px;">Version 2.0</span>
+          </div>
+          <p style="font-size: 0.82rem; color: #94a3b8; margin: 2px 0 0 0;">
+            Découvrez les nouveautés majeures de la Version 2.0
+          </p>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 12px; margin: 18px 0;">
+        <!-- Feature 1: Défi de l'Écriture -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(245, 158, 11, 0.25); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">✍️</span>
+          <div>
+            <div style="font-weight: 800; color: #fcebc5; font-size: 0.95rem; margin-bottom: 2px;">
+              Le Défi de l'Écriture
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Nouveau mode interactif : retrouvez de mémoire le nom exact des 36 cocktails à partir de leurs dosages, garnitures et verres de service.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 2: PDF Officiel -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">📄</span>
+          <div>
+            <div style="font-weight: 800; color: #7dd3fc; font-size: 0.95rem; margin-bottom: 2px;">
+              Document Officiel Téléchargeable
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Accès direct et téléchargement du PDF officiel complet du socle national des cocktails de référence 2025 / 2026.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 3: Recherche Intelligente -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">🔍</span>
+          <div>
+            <div style="font-weight: 800; color: #34d399; font-size: 0.95rem; margin-bottom: 2px;">
+              Recherche Instantanée & Tolérante
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Moteur de recherche unifié sur les 36 fiches cocktails, la verrerie et le lexique, insensible aux accents, tirets et apostrophes.
+            </p>
+          </div>
+        </div>
+
+        <!-- Feature 4: Reset & Version 2.0 -->
+        <div style="display: flex; gap: 12px; padding: 12px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: var(--radius-md);">
+          <span style="font-size: 1.6rem;">🔄</span>
+          <div>
+            <div style="font-weight: 800; color: #ffffff; font-size: 0.95rem; margin-bottom: 2px;">
+              Bouton Reset & Refonte Interface V2
+            </div>
+            <p style="font-size: 0.84rem; color: #cbd5e1; margin: 0; line-height: 1.45;">
+              Remise à zéro des scores en un clic, tableau de bord analytics et interface sombre moderne.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap;">
+        <button class="btn btn-primary" style="flex: 1;" onclick="closeReleaseNotesModal()">
+          C'est parti, explorer les nouveautés ➔
+        </button>
+      </div>
     </div>
   </div>
 
@@ -449,6 +737,10 @@
       <span class="nav-item-icon">🍹</span>
       <span>36 Cocktails</span>
     </button>
+    <button class="nav-item" id="nav-verrerie" onclick="navigateTo('verrerie')">
+      <span class="nav-item-icon">🥂</span>
+      <span>Verrerie</span>
+    </button>
     <button class="nav-item" id="nav-lexique" onclick="navigateTo('lexique')">
       <span class="nav-item-icon">📖</span>
       <span>Lexique</span>
@@ -456,7 +748,7 @@
   </nav>
 
   <!-- Application Logic & Data -->
-  <script src="data.js"></script>
-  <script src="app.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
